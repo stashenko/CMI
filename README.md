@@ -1,1 +1,2 @@
 # CMI
+Locale_RU
