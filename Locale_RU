@@ -1155,11 +1155,10 @@ command:
       total: '&7Итого'
   ctellraw:
     help:
-      info: '&eSend tellraw type message'
+      info: '&eОтправить сообщение типа Tellraw'
       args: '[playerName/all] [formattedMessage]'
       explanation:
-      - Usage is same as shown in http://www.zrips.net/cmi/custom-text/ aka customtext
-        command
+      - Использование такое же, как показано в http://www.zrips.net/cmi/custom-text/
   ctext:
     help:
       info: '&eПоказывает Пользовательский Текст'
@@ -1641,7 +1640,7 @@ command:
     info:
       title: '&6[playerDisplayName] &e-> &6[permission]'
       none: '&eРазрешение не установлено для игрока, и он не OP. Результат - &6[state]'
-      softSet: '&eSet by plugin.yml to &6[state]'
+      softSet: '&eЗадается в plugin.yml &6[state]'
       hardSet: '&eЖесткий набор для &6[state] &eдля плагинов'
       notHardSet: '&eЖесткий набор может привести к ложному в некоторых случаях'
       ops: '&eРезультаты, &6[state], &eуказывают, что игрок - это OP'
@@ -2499,7 +2498,7 @@ command:
       SenderMsg: '&7[&8me &7-> &8[playerDisplayName]&7]&f [message]'
       consoleMsg: '[[senderDisplayName] -> [playerDisplayName]] [message]'
       noPM: '&cИгрок не принимает личные сообщения'
-      badGroup: '&cCan''t send private messages to this group of players'
+      badGroup: '&cНе могу отправлять личные сообщения этой группе игроков'
   msgtoggle:
     help:
       info: '&eПереключить личные сообщения'
