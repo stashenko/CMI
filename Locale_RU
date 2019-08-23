@@ -149,6 +149,7 @@ info:
   sunSpeeding: Сон [count] на протяжении [total] [hour] часов в скорости [speed]X
   sunSpeedingTitle: '&7[hour]'
   sunSpeedingSubTitle: '&f[count]&7/&f[total] &7(&f[speed]X&7)'
+  repairConfirm: '&eНажмите, чтобы подтвердить ремонт &7[items] &eза &7[cost]'
   maintenance: '&7Режим технического обслуживания'
   notSet: не задано
   startedEditingPainting: '&eВы включили режим редактирования. Нажмите на любой другой
@@ -265,6 +266,7 @@ info:
     custom: Неизвестный
     dragon_breath: Дыхание_дракона
     drowning: Утопление
+    dryout: dryout
     entity_attack: Атака_мобов
     entity_explosion: Взрыв
     entity_sweep_attack: Атака_стрел
@@ -287,68 +289,81 @@ info:
     void: Пустота
     wither: Иссушение
   Biomes:
-    BEACHES: Пляжи
+    BADLANDS: Badlands
+    BADLANDS_PLATEAU: Badlands plateau
+    BAMBOO_JUNGLE: Bamboo jungle
+    BAMBOO_JUNGLE_HILLS: Bamboo jungle hills
+    BEACH: Beach
     BIRCH_FOREST: Берёзовый_лес
     BIRCH_FOREST_HILLS: Холмы_берёзового_леса
-    COLD_BEACH: Холодный_пляж
+    COLD_OCEAN: Cold ocean
+    DARK_FOREST: Dark forest
+    DARK_FOREST_HILLS: Dark forest hills
+    DEEP_COLD_OCEAN: Deep cold ocean
+    DEEP_FROZEN_OCEAN: Deep frozen ocean
+    DEEP_LUKEWARM_OCEAN: Deep lukewarm ocean
     DEEP_OCEAN: Глубокий_океан
+    DEEP_WARM_OCEAN: Deep warm ocean
     DESERT: Пустыня
     DESERT_HILLS: Пустынные_холмы
-    EXTREME_HILLS: Экстремальные холмы
-    EXTREME_HILLS_WITH_TREES: Экстремальные холмы с деревьями
+    DESERT_LAKES: Desert lakes
+    END_BARRENS: End barrens
+    END_HIGHLANDS: End highlands
+    END_MIDLANDS: End midlands
+    ERODED_BADLANDS: Eroded badlands
+    FLOWER_FOREST: Flower forest
     FOREST: Лес
-    FOREST_HILLS: Лесные_холмы
     FROZEN_OCEAN: Замёрзший_океан
     FROZEN_RIVER: Замёрзшая_река
-    HELL: Ад
-    ICE_FLATS: Ледяные_равнины
-    ICE_MOUNTAINS: Ледяные_горы
+    GIANT_SPRUCE_TAIGA: Giant spruce taiga
+    GIANT_SPRUCE_TAIGA_HILLS: Giant spruce taiga hills
+    GIANT_TREE_TAIGA: Giant tree taiga
+    GIANT_TREE_TAIGA_HILLS: Giant tree taiga hills
+    GRAVELLY_MOUNTAINS: Gravelly mountains
+    ICE_SPIKES: Ice spikes
     JUNGLE: Джунгли
     JUNGLE_EDGE: Край_джунглей
     JUNGLE_HILLS: Холмы_в_Джунглях
-    MESA: Столовая гора
-    MESA_CLEAR_ROCK: Mesa clear rock
-    MESA_ROCK: Mesa rock
-    MUSHROOM_ISLAND: Mushroom island
-    MUSHROOM_ISLAND_SHORE: Mushroom island shore
-    MUTATED_BIRCH_FOREST: Mutated birch forest
-    MUTATED_BIRCH_FOREST_HILLS: Mutated birch forest hills
-    MUTATED_DESERT: Mutated desert
-    MUTATED_EXTREME_HILLS: Mutated extreme hills
-    MUTATED_EXTREME_HILLS_WITH_TREES: Mutated extreme hills with trees
-    MUTATED_FOREST: Mutated forest
-    MUTATED_ICE_FLATS: Mutated ice flats
-    MUTATED_JUNGLE: Mutated jungle
-    MUTATED_JUNGLE_EDGE: Mutated jungle edge
-    MUTATED_MESA: Mutated mesa
-    MUTATED_MESA_CLEAR_ROCK: Mutated mesa clear rock
-    MUTATED_MESA_ROCK: Mutated mesa rock
-    MUTATED_PLAINS: Mutated plains
-    MUTATED_REDWOOD_TAIGA: Mutated redwood taiga
-    MUTATED_REDWOOD_TAIGA_HILLS: Mutated redwood taiga hills
-    MUTATED_ROOFED_FOREST: Mutated roofed forest
-    MUTATED_SAVANNA: Mutated savanna
-    MUTATED_SAVANNA_ROCK: Mutated savanna rock
-    MUTATED_SWAMPLAND: Mutated swampland
-    MUTATED_TAIGA: Mutated taiga
-    MUTATED_TAIGA_COLD: Mutated taiga cold
+    LUKEWARM_OCEAN: Lukewarm ocean
+    MODIFIED_BADLANDS_PLATEAU: Modified badlands plateau
+    MODIFIED_GRAVELLY_MOUNTAINS: Modified gravelly mountains
+    MODIFIED_JUNGLE: Modified jungle
+    MODIFIED_JUNGLE_EDGE: Modified jungle edge
+    MODIFIED_WOODED_BADLANDS_PLATEAU: Modified wooded badlands plateau
+    MOUNTAINS: Mountains
+    MOUNTAIN_EDGE: Mountain edge
+    MUSHROOM_FIELDS: Mushroom fields
+    MUSHROOM_FIELD_SHORE: Mushroom field shore
+    NETHER: Nether
     OCEAN: Океан
     PLAINS: Равнины
-    REDWOOD_TAIGA: Redwood taiga
-    REDWOOD_TAIGA_HILLS: Redwood taiga hills
     RIVER: Река
-    ROOFED_FOREST: Roofed forest
     SAVANNA: Саванна
-    SAVANNA_ROCK: Savanna rock
-    SKY: Sky
-    SMALLER_EXTREME_HILLS: Smaller extreme hills
-    STONE_BEACH: Stone beach
-    SWAMPLAND: Swampland
+    SAVANNA_PLATEAU: Savanna plateau
+    SHATTERED_SAVANNA: Shattered savanna
+    SHATTERED_SAVANNA_PLATEAU: Shattered savanna plateau
+    SMALL_END_ISLANDS: Small end islands
+    SNOWY_BEACH: Snowy beach
+    SNOWY_MOUNTAINS: Snowy mountains
+    SNOWY_TAIGA: Snowy taiga
+    SNOWY_TAIGA_HILLS: Snowy taiga hills
+    SNOWY_TAIGA_MOUNTAINS: Snowy taiga mountains
+    SNOWY_TUNDRA: Snowy tundra
+    STONE_SHORE: Stone shore
+    SUNFLOWER_PLAINS: Sunflower plains
+    SWAMP: Swamp
+    SWAMP_HILLS: Swamp hills
     TAIGA: Тайга
-    TAIGA_COLD: Холодная тайга
-    TAIGA_COLD_HILLS: Taiga cold hills
     TAIGA_HILLS: Таёжные_холмы
-    VOID: Void
+    TAIGA_MOUNTAINS: Taiga mountains
+    TALL_BIRCH_FOREST: Tall birch forest
+    TALL_BIRCH_HILLS: Tall birch hills
+    THE_END: The end
+    THE_VOID: The void
+    WARM_OCEAN: Warm ocean
+    WOODED_BADLANDS_PLATEAU: Wooded badlands plateau
+    WOODED_HILLS: Wooded hills
+    WOODED_MOUNTAINS: Wooded mountains
   EntityType:
     area_effect_cloud: Зона_частиц_эффектов
     armor_stand: Стойка_для_брони
@@ -356,14 +371,17 @@ info:
     bat: Летучая_мышь
     blaze: Ифрит
     boat: Лодка
+    cat: Кот
     cave_spider: Пещерный_паук
     chicken: Цыплёнок
-    complex_part: Сложная_часть
+    cod: Треска
     cow: Корова
     creeper: Крипер
+    dolphin: Дельфин
     donkey: Осёл
     dragon_fireball: Драконий_файрбол
     dropped_item: Выброшенный_предмет
+    drowned: Утопленник
     egg: Яйцо
     elder_guardian: Древний_страж
     enderman: Эндермен
@@ -379,6 +397,7 @@ info:
     fireball: Файрбол
     firework: Фейерверк
     fishing_hook: Рыболовный_крючок
+    fox: Лиса
     ghast: Гаст
     giant: Гигант
     guardian: Страж
@@ -389,7 +408,6 @@ info:
     item_frame: Пламя
     leash_hitch: Поводок
     lightning: Молния
-    lingering_potion: Оседающие_зелья
     llama: Лама
     llama_spit: Плевок_ламы
     magma_cube: Магма-куб
@@ -404,13 +422,19 @@ info:
     mushroom_cow: Грибная_корова
     ocelot: Оцелот
     painting: Картина
+    panda: Панда
     parrot: Попугай
+    phantom: Фантом
     pig: Свинья
     pig_zombie: Свинозомби
+    pillager: Разбойник
     player: Игрок
     polar_bear: Полярный_медведь
     primed_tnt: Зажжённый_динамит
+    pufferfish: Иглобрюх
     rabbit: Кролик
+    ravager: Разоритель
+    salmon: Лосось
     sheep: Овца
     shulker: Шалкер
     shulker_bullet: Пуля_шалкера
@@ -427,12 +451,15 @@ info:
     squid: Спрут
     stray: Зимогор
     thrown_exp_bottle: Брошеная_бутылка_с_опытом
-    tipped_arrow: Стрела
+    trader_llama: Лама Торговец
+    trident: Трезубец
+    tropical_fish: Тропическая рыба
+    turtle: Черепаха
     unknown: Неизвестно
     vex: Досаждатель
     villager: Житель
     vindicator: Поборник
-    weather: Погода
+    wandering_trader: Странствующий торговей
     witch: Ведьма
     wither: Иссушитель
     wither_skeleton: Скелет-иссушитель
@@ -442,66 +469,80 @@ info:
     zombie_horse: Зомби-лошадь
     zombie_villager: Зомби-житель
   EnchantAliases:
-    protection_environmental:
-    - Защита
     protection_fire:
     - Защита_от_огня
-    protection_fall:
-    - Защита_от_падения
-    protection_explosions:
-    - Защита_от_взрыва
-    protection_projectile:
-    - Защита_от_снарядов
-    oxygen:
-    - Подводное_дыхание
-    water_worker:
-    - Работа_под_водой
-    mending:
-    - Починка
-    thorns:
-    - Шипы
-    vanishing_curse:
-    - Проклятье_утраты
-    depth_strider:
-    - Хождение_под_водой
-    frost_walker:
-    - Заморозка_воды
-    binding_curse:
-    - Связующее_заклинание
     damage_all:
     - Острота
-    damage_undead:
-    - Небесная_кара
-    damage_arthropods:
-    - Бич_членистоногих
-    knockback:
-    - Отдача
-    fire_aspect:
-    - Заговор_огня
-    loot_bonus_mobs:
-    - Добыча
-    sweeping_edge:
-    - Разящий_клинок
-    dig_speed:
-    - Эффективность
-    silk_touch:
-    - Шелковое_касание
-    durability:
-    - Прочность
-    loot_bonus_blocks:
-    - Удача
-    arrow_damage:
-    - Сила
-    arrow_knockback:
-    - Отталкиваение
     arrow_fire:
     - Огонь
-    arrow_infinite:
-    - Бесконечность
+    water_worker:
+    - Работа_под_водой
+    arrow_knockback:
+    - Отталкиваение
+    loyalty:
+    - LOYALTY
+    depth_strider:
+    - Хождение_под_водой
+    vanishing_curse:
+    - Проклятье_утраты
+    durability:
+    - Прочность
+    knockback:
+    - Отдача
     luck:
     - Удача
+    binding_curse:
+    - Связующее_заклинание
+    loot_bonus_blocks:
+    - Удача
+    protection_environmental:
+    - Защита
+    dig_speed:
+    - Эффективность
+    mending:
+    - Починка
+    frost_walker:
+    - Заморозка_воды
     lure:
     - Приманка
+    loot_bonus_mobs:
+    - Добыча
+    piercing:
+    - PIERCING
+    protection_explosions:
+    - Защита_от_взрыва
+    damage_undead:
+    - Небесная_кара
+    multishot:
+    - MULTISHOT
+    fire_aspect:
+    - Заговор_огня
+    channeling:
+    - CHANNELING
+    sweeping_edge:
+    - Разящий_клинок
+    thorns:
+    - Шипы
+    damage_arthropods:
+    - Бич_членистоногих
+    oxygen:
+    - Подводное_дыхание
+    riptide:
+    - RIPTIDE
+    silk_touch:
+    - Шелковое_касание
+    quick_charge:
+    - QUICKCHARGE
+    protection_projectile:
+    - Защита_от_снарядов
+    impaling:
+    - IMPALING
+    protection_fall:
+    - Защита_от_падения
+    arrow_damage:
+    - Сила
+    arrow_infinite:
+    - Бесконечность
   PotionEffectAliases:
     speed:
     - Скорость
@@ -557,6 +598,16 @@ info:
     - Удача
     unluck:
     - Неудача
+    slow_falling:
+    - Slow falling
+    conduit_power:
+    - Conduit power
+    dolphins_grace:
+    - Dolphins grace
+    bad_omen:
+    - Bad omen
+    hero_of_the_village:
+    - Hero of the village
 direction:
   n: Север
   ne: Северо-восток
