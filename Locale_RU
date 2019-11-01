@@ -289,81 +289,81 @@ info:
     void: Пустота
     wither: Иссушение
   Biomes:
-    BADLANDS: Badlands
-    BADLANDS_PLATEAU: Badlands plateau
-    BAMBOO_JUNGLE: Bamboo jungle
-    BAMBOO_JUNGLE_HILLS: Bamboo jungle hills
-    BEACH: Beach
-    BIRCH_FOREST: Берёзовый_лес
-    BIRCH_FOREST_HILLS: Холмы_берёзового_леса
-    COLD_OCEAN: Cold ocean
-    DARK_FOREST: Dark forest
-    DARK_FOREST_HILLS: Dark forest hills
-    DEEP_COLD_OCEAN: Deep cold ocean
-    DEEP_FROZEN_OCEAN: Deep frozen ocean
-    DEEP_LUKEWARM_OCEAN: Deep lukewarm ocean
-    DEEP_OCEAN: Глубокий_океан
-    DEEP_WARM_OCEAN: Deep warm ocean
-    DESERT: Пустыня
-    DESERT_HILLS: Пустынные_холмы
-    DESERT_LAKES: Desert lakes
-    END_BARRENS: End barrens
-    END_HIGHLANDS: End highlands
-    END_MIDLANDS: End midlands
-    ERODED_BADLANDS: Eroded badlands
-    FLOWER_FOREST: Flower forest
-    FOREST: Лес
-    FROZEN_OCEAN: Замёрзший_океан
-    FROZEN_RIVER: Замёрзшая_река
-    GIANT_SPRUCE_TAIGA: Giant spruce taiga
-    GIANT_SPRUCE_TAIGA_HILLS: Giant spruce taiga hills
-    GIANT_TREE_TAIGA: Giant tree taiga
-    GIANT_TREE_TAIGA_HILLS: Giant tree taiga hills
-    GRAVELLY_MOUNTAINS: Gravelly mountains
-    ICE_SPIKES: Ice spikes
-    JUNGLE: Джунгли
-    JUNGLE_EDGE: Край_джунглей
-    JUNGLE_HILLS: Холмы_в_Джунглях
-    LUKEWARM_OCEAN: Lukewarm ocean
-    MODIFIED_BADLANDS_PLATEAU: Modified badlands plateau
-    MODIFIED_GRAVELLY_MOUNTAINS: Modified gravelly mountains
-    MODIFIED_JUNGLE: Modified jungle
-    MODIFIED_JUNGLE_EDGE: Modified jungle edge
-    MODIFIED_WOODED_BADLANDS_PLATEAU: Modified wooded badlands plateau
-    MOUNTAINS: Mountains
-    MOUNTAIN_EDGE: Mountain edge
-    MUSHROOM_FIELDS: Mushroom fields
-    MUSHROOM_FIELD_SHORE: Mushroom field shore
-    NETHER: Nether
     OCEAN: Океан
     PLAINS: Равнины
-    RIVER: Река
-    SAVANNA: Саванна
-    SAVANNA_PLATEAU: Savanna plateau
-    SHATTERED_SAVANNA: Shattered savanna
-    SHATTERED_SAVANNA_PLATEAU: Shattered savanna plateau
-    SMALL_END_ISLANDS: Small end islands
-    SNOWY_BEACH: Snowy beach
-    SNOWY_MOUNTAINS: Snowy mountains
-    SNOWY_TAIGA: Snowy taiga
-    SNOWY_TAIGA_HILLS: Snowy taiga hills
-    SNOWY_TAIGA_MOUNTAINS: Snowy taiga mountains
-    SNOWY_TUNDRA: Snowy tundra
-    STONE_SHORE: Stone shore
-    SUNFLOWER_PLAINS: Sunflower plains
-    SWAMP: Swamp
-    SWAMP_HILLS: Swamp hills
+    DESERT: Пустыня
+    MOUNTAINS: Горы
+    FOREST: Лес
     TAIGA: Тайга
+    SWAMP: Болото
+    RIVER: Река
+    NETHER: Ад
+    THE_END: Эндер-мир
+    FROZEN_OCEAN: Замёрзший_океан
+    FROZEN_RIVER: Замёрзшая_река
+    SNOWY_TUNDRA: Зимняя_тундра
+    SNOWY_MOUNTAINS: Заснеженные_горы
+    MUSHROOM_FIELDS: Грибные поля
+    MUSHROOM_FIELD_SHORE: Берег_грибных_полей
+    BEACH: Пляж
+    DESERT_HILLS: Пустынные_холмы
+    WOODED_HILLS: Лесистые_холмы
     TAIGA_HILLS: Таёжные_холмы
-    TAIGA_MOUNTAINS: Taiga mountains
-    TALL_BIRCH_FOREST: Tall birch forest
-    TALL_BIRCH_HILLS: Tall birch hills
-    THE_END: The end
-    THE_VOID: The void
-    WARM_OCEAN: Warm ocean
-    WOODED_BADLANDS_PLATEAU: Wooded badlands plateau
-    WOODED_HILLS: Wooded hills
-    WOODED_MOUNTAINS: Wooded mountains
+    MOUNTAIN_EDGE: Горная_страна
+    JUNGLE: Джунгли
+    JUNGLE_HILLS: Холмы_в_Джунглях
+    JUNGLE_EDGE: Край_джунглей
+    DEEP_OCEAN: Глубокий_океан
+    STONE_SHORE: Каменный_берег
+    SNOWY_BEACH: Заснеженный_берег
+    BIRCH_FOREST: Берёзовый_лес
+    BIRCH_FOREST_HILLS: Холмы_берёзового_леса
+    DARK_FOREST: Темный_лес
+    SNOWY_TAIGA: Заснеженая_тайга
+    SNOWY_TAIGA_HILLS: Холмы_заснеженной_тайги
+    GIANT_TREE_TAIGA: Тайга_гигантских_деревьев
+    GIANT_TREE_TAIGA_HILLS: Хомлы_тайги_гигантских_деревьев
+    WOODED_MOUNTAINS: Лесистые_горы
+    SAVANNA: Саванна
+    SAVANNA_PLATEAU: Плато_саванны
+    BADLANDS: Пустырь
+    WOODED_BADLANDS_PLATEAU: Лесистое_плоскогорье
+    BADLANDS_PLATEAU: Пустырное_плато
+    SMALL_END_ISLANDS: Малые_острова_Края
+    END_MIDLANDS: Средние_острова_Края
+    END_HIGHLANDS: Материки_Края
+    END_BARRENS: Степи_Края
+    WARM_OCEAN: Тёплый_океан
+    LUKEWARM_OCEAN: Прохладный_океан
+    COLD_OCEAN: Холодный_океан
+    DEEP_WARM_OCEAN: Глубокий_тёплый_океан
+    DEEP_LUKEWARM_OCEAN: Глубокий_тепловатый_океан
+    DEEP_COLD_OCEAN: Глубокий_холодный_Океан
+    DEEP_FROZEN_OCEAN: Глубокий_замёрзший_океан
+    THE_VOID: Пустошь
+    SUNFLOWER_PLAINS: Подсолнуховая_равнина
+    DESERT_LAKES: Пустынные_озёра
+    GRAVELLY_MOUNTAINS: Гравийные_горы
+    FLOWER_FOREST: Цветочный_лес
+    TAIGA_MOUNTAINS: Горы_Тайги
+    SWAMP_HILLS: Болотные_холмы
+    ICE_SPIKES: Ледяные_шипы
+    MODIFIED_JUNGLE: Изменённые_джунгли
+    MODIFIED_JUNGLE_EDGE: Опушка_изменённых_джунглей
+    TALL_BIRCH_FOREST: Лес_высоких_берёз
+    TALL_BIRCH_HILLS: Высокие_берёзовые_холмы
+    DARK_FOREST_HILLS: Холмы_тёмного_леса
+    SNOWY_TAIGA_MOUNTAINS: Snowy taiga mountains
+    GIANT_SPRUCE_TAIGA: Снежные_горы_Тайги
+    GIANT_SPRUCE_TAIGA_HILLS: Гигантские_холмы_еловой_тайги
+    MODIFIED_GRAVELLY_MOUNTAINS: Изменённые_гравийные_горы
+    SHATTERED_SAVANNA: Разрушенная_Саванна
+    SHATTERED_SAVANNA_PLATEAU: Плато_разрушенной_Саванны
+    ERODED_BADLANDS: Эрозированные_бесплодные_земли
+    MODIFIED_WOODED_BADLANDS_PLATEAU: Изменённо_лесистое_плато_бесплодных_земель
+    MODIFIED_BADLANDS_PLATEAU: Изменённое_плато_бесплодных_земель
+    BAMBOO_JUNGLE: Бамбуковые_Джунгли
+    BAMBOO_JUNGLE_HILLS: Холмы_бамбуковых_джунглей
   EntityType:
     area_effect_cloud: Зона_частиц_эффектов
     armor_stand: Стойка_для_брони
@@ -479,10 +479,12 @@ info:
     - Работа_под_водой
     arrow_knockback:
     - Отталкиваение
+    multshot:
+    - Мульти-выстрел
     loyalty:
-    - LOYALTY
+    - Лояльность
     depth_strider:
-    - Хождение_под_водой
+    - Подводная_ходьба
     vanishing_curse:
     - Проклятье_утраты
     durability:
@@ -492,7 +494,7 @@ info:
     luck:
     - Удача
     binding_curse:
-    - Связующее_заклинание
+    - Проклятье_несъёмности
     loot_bonus_blocks:
     - Удача
     protection_environmental:
@@ -508,17 +510,15 @@ info:
     loot_bonus_mobs:
     - Добыча
     piercing:
-    - PIERCING
+    - Пронзающая_стрела
     protection_explosions:
     - Защита_от_взрыва
     damage_undead:
     - Небесная_кара
-    multishot:
-    - MULTISHOT
     fire_aspect:
     - Заговор_огня
     channeling:
-    - CHANNELING
+    - Громовержец
     sweeping_edge:
     - Разящий_клинок
     thorns:
@@ -528,15 +528,15 @@ info:
     oxygen:
     - Подводное_дыхание
     riptide:
-    - RIPTIDE
+    - Тягун
     silk_touch:
     - Шелковое_касание
     quick_charge:
-    - QUICKCHARGE
+    - Быстрая_перезарядка
     protection_projectile:
     - Защита_от_снарядов
     impaling:
-    - IMPALING
+    - Пронзатель
     protection_fall:
     - Защита_от_падения
     arrow_damage:
@@ -553,7 +553,7 @@ info:
     slow_digging:
     - Замедленное_копание
     increase_damage:
-    - Усиленный_урок
+    - Увеличенный_урон
     heal:
     - Лечение
     harm:
@@ -599,15 +599,15 @@ info:
     unluck:
     - Неудача
     slow_falling:
-    - Slow falling
+    - Замедленное_падение
     conduit_power:
-    - Conduit power
+    - Сила_морей
     dolphins_grace:
-    - Dolphins grace
+    - Дельфинья_грация
     bad_omen:
-    - Bad omen
+    - Дурное_знамение
     hero_of_the_village:
-    - Hero of the village
+    - Герой_среди_жителей
 direction:
   n: Север
   ne: Северо-восток
@@ -4211,7 +4211,7 @@ command:
       - /storm
       - /sun lock
       - /sun 120
-      - /sun STM-Vanilla
+      - /sun Название_Мира
     info:
       currentState: '&6[world] &e-> &6[weather] &eна время: &6[time]'
       sunny: солнечная погода
