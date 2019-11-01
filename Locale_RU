@@ -150,7 +150,7 @@ info:
   sunSpeedingTitle: '&7[hour]'
   sunSpeedingSubTitle: '&f[count]&7/&f[total] &7(&f[speed]X&7)'
   repairConfirm: '&eНажмите, чтобы подтвердить ремонт &7[items] &eза &7[cost]'
-  bookDate: '&7Написано &f[date]'
+  bookDate: '&7Written at &f[date]'
   maintenance: '&7Режим технического обслуживания'
   notSet: не задано
   startedEditingPainting: '&eВы включили режим редактирования. Нажмите на любой другой
@@ -289,81 +289,68 @@ info:
     void: Пустота
     wither: Иссушение
   Biomes:
-    OCEAN: Океан
-    PLAINS: Равнины
-    DESERT: Пустыня
-    MOUNTAINS: Горы
-    FOREST: Лес
-    TAIGA: Тайга
-    SWAMP: Болото
-    RIVER: Река
-    NETHER: Ад
-    THE_END: Эндер-мир
-    FROZEN_OCEAN: Замёрзший_океан
-    FROZEN_RIVER: Замёрзшая_река
-    SNOWY_TUNDRA: Зимняя_тундра
-    SNOWY_MOUNTAINS: Заснеженные_горы
-    MUSHROOM_FIELDS: Грибные поля
-    MUSHROOM_FIELD_SHORE: Берег_грибных_полей
-    BEACH: Пляж
-    DESERT_HILLS: Пустынные_холмы
-    WOODED_HILLS: Лесистые_холмы
-    TAIGA_HILLS: Таёжные_холмы
-    MOUNTAIN_EDGE: Горная_страна
-    JUNGLE: Джунгли
-    JUNGLE_HILLS: Холмы_в_Джунглях
-    JUNGLE_EDGE: Край_джунглей
-    DEEP_OCEAN: Глубокий_океан
-    STONE_SHORE: Каменный_берег
-    SNOWY_BEACH: Заснеженный_берег
+    BEACHES: Пляжи
     BIRCH_FOREST: Берёзовый_лес
     BIRCH_FOREST_HILLS: Холмы_берёзового_леса
-    DARK_FOREST: Темный_лес
-    SNOWY_TAIGA: Заснеженая_тайга
-    SNOWY_TAIGA_HILLS: Холмы_заснеженной_тайги
-    GIANT_TREE_TAIGA: Тайга_гигантских_деревьев
-    GIANT_TREE_TAIGA_HILLS: Хомлы_тайги_гигантских_деревьев
-    WOODED_MOUNTAINS: Лесистые_горы
+    COLD_BEACH: Холодные пляжи
+    DEEP_OCEAN: Глубокий_океан
+    DESERT: Пустыня
+    DESERT_HILLS: Пустынные_холмы
+    EXTREME_HILLS: Экстримальные холмы
+    EXTREME_HILLS_WITH_TREES: Extreme hills with trees
+    FOREST: Лес
+    FOREST_HILLS: Лесистые холмы
+    FROZEN_OCEAN: Замёрзший_океан
+    FROZEN_RIVER: Замёрзшая_река
+    HELL: Hell
+    ICE_FLATS: Ледяное плато
+    ICE_MOUNTAINS: Ледяные горы
+    JUNGLE: Джунгли
+    JUNGLE_EDGE: Край_джунглей
+    JUNGLE_HILLS: Холмы_в_Джунглях
+    MESA: Mesa
+    MESA_CLEAR_ROCK: Mesa clear rock
+    MESA_ROCK: Mesa rock
+    MUSHROOM_ISLAND: Mushroom island
+    MUSHROOM_ISLAND_SHORE: Mushroom island shore
+    MUTATED_BIRCH_FOREST: Mutated birch forest
+    MUTATED_BIRCH_FOREST_HILLS: Mutated birch forest hills
+    MUTATED_DESERT: Mutated desert
+    MUTATED_EXTREME_HILLS: Mutated extreme hills
+    MUTATED_EXTREME_HILLS_WITH_TREES: Mutated extreme hills with trees
+    MUTATED_FOREST: Mutated forest
+    MUTATED_ICE_FLATS: Mutated ice flats
+    MUTATED_JUNGLE: Mutated jungle
+    MUTATED_JUNGLE_EDGE: Mutated jungle edge
+    MUTATED_MESA: Mutated mesa
+    MUTATED_MESA_CLEAR_ROCK: Mutated mesa clear rock
+    MUTATED_MESA_ROCK: Mutated mesa rock
+    MUTATED_PLAINS: Mutated plains
+    MUTATED_REDWOOD_TAIGA: Mutated redwood taiga
+    MUTATED_REDWOOD_TAIGA_HILLS: Mutated redwood taiga hills
+    MUTATED_ROOFED_FOREST: Mutated roofed forest
+    MUTATED_SAVANNA: Mutated savanna
+    MUTATED_SAVANNA_ROCK: Mutated savanna rock
+    MUTATED_SWAMPLAND: Mutated swampland
+    MUTATED_TAIGA: Mutated taiga
+    MUTATED_TAIGA_COLD: Mutated taiga cold
+    OCEAN: Океан
+    PLAINS: Равнины
+    REDWOOD_TAIGA: Redwood taiga
+    REDWOOD_TAIGA_HILLS: Redwood taiga hills
+    RIVER: Река
+    ROOFED_FOREST: Roofed forest
     SAVANNA: Саванна
-    SAVANNA_PLATEAU: Плато_саванны
-    BADLANDS: Пустырь
-    WOODED_BADLANDS_PLATEAU: Лесистое_плоскогорье
-    BADLANDS_PLATEAU: Пустырное_плато
-    SMALL_END_ISLANDS: Малые_острова_Края
-    END_MIDLANDS: Средние_острова_Края
-    END_HIGHLANDS: Материки_Края
-    END_BARRENS: Степи_Края
-    WARM_OCEAN: Тёплый_океан
-    LUKEWARM_OCEAN: Прохладный_океан
-    COLD_OCEAN: Холодный_океан
-    DEEP_WARM_OCEAN: Глубокий_тёплый_океан
-    DEEP_LUKEWARM_OCEAN: Глубокий_тепловатый_океан
-    DEEP_COLD_OCEAN: Глубокий_холодный_Океан
-    DEEP_FROZEN_OCEAN: Глубокий_замёрзший_океан
-    THE_VOID: Пустошь
-    SUNFLOWER_PLAINS: Подсолнуховая_равнина
-    DESERT_LAKES: Пустынные_озёра
-    GRAVELLY_MOUNTAINS: Гравийные_горы
-    FLOWER_FOREST: Цветочный_лес
-    TAIGA_MOUNTAINS: Горы_Тайги
-    SWAMP_HILLS: Болотные_холмы
-    ICE_SPIKES: Ледяные_шипы
-    MODIFIED_JUNGLE: Изменённые_джунгли
-    MODIFIED_JUNGLE_EDGE: Опушка_изменённых_джунглей
-    TALL_BIRCH_FOREST: Лес_высоких_берёз
-    TALL_BIRCH_HILLS: Высокие_берёзовые_холмы
-    DARK_FOREST_HILLS: Холмы_тёмного_леса
-    SNOWY_TAIGA_MOUNTAINS: Snowy taiga mountains
-    GIANT_SPRUCE_TAIGA: Снежные_горы_Тайги
-    GIANT_SPRUCE_TAIGA_HILLS: Гигантские_холмы_еловой_тайги
-    MODIFIED_GRAVELLY_MOUNTAINS: Изменённые_гравийные_горы
-    SHATTERED_SAVANNA: Разрушенная_Саванна
-    SHATTERED_SAVANNA_PLATEAU: Плато_разрушенной_Саванны
-    ERODED_BADLANDS: Эрозированные_бесплодные_земли
-    MODIFIED_WOODED_BADLANDS_PLATEAU: Изменённо_лесистое_плато_бесплодных_земель
-    MODIFIED_BADLANDS_PLATEAU: Изменённое_плато_бесплодных_земель
-    BAMBOO_JUNGLE: Бамбуковые_Джунгли
-    BAMBOO_JUNGLE_HILLS: Холмы_бамбуковых_джунглей
+    SAVANNA_ROCK: Savanna rock
+    SKY: Sky
+    SMALLER_EXTREME_HILLS: Smaller extreme hills
+    STONE_BEACH: Stone beach
+    SWAMPLAND: Swampland
+    TAIGA: Тайга
+    TAIGA_COLD: Taiga cold
+    TAIGA_COLD_HILLS: Taiga cold hills
+    TAIGA_HILLS: Таёжные_холмы
+    VOID: Void
   EntityType:
     area_effect_cloud: Зона_частиц_эффектов
     armor_stand: Стойка_для_брони
@@ -457,80 +444,66 @@ info:
     zombie_horse: Зомби-лошадь
     zombie_villager: Зомби-житель
   EnchantAliases:
-    protection_fire:
-    - Защита_от_огня
-    damage_all:
-    - Острота
-    arrow_fire:
-    - Огонь
-    water_worker:
-    - Работа_под_водой
-    arrow_knockback:
-    - Отталкиваение
-    multshot:
-    - Мульти-выстрел
-    loyalty:
-    - Лояльность
-    depth_strider:
-    - Подводная_ходьба
-    vanishing_curse:
-    - Проклятье_утраты
-    durability:
-    - Прочность
-    knockback:
-    - Отдача
-    luck:
-    - Удача
-    binding_curse:
-    - Проклятье_несъёмности
-    loot_bonus_blocks:
-    - Удача
     protection_environmental:
     - Защита
-    dig_speed:
-    - Эффективность
-    mending:
-    - Починка
-    frost_walker:
-    - Заморозка_воды
-    lure:
-    - Приманка
-    loot_bonus_mobs:
-    - Добыча
-    piercing:
-    - Пронзающая_стрела
-    protection_explosions:
-    - Защита_от_взрыва
-    damage_undead:
-    - Небесная_кара
-    fire_aspect:
-    - Заговор_огня
-    channeling:
-    - Громовержец
-    sweeping_edge:
-    - Разящий_клинок
-    thorns:
-    - Шипы
-    damage_arthropods:
-    - Бич_членистоногих
-    oxygen:
-    - Подводное_дыхание
-    riptide:
-    - Тягун
-    silk_touch:
-    - Шелковое_касание
-    quick_charge:
-    - Быстрая_перезарядка
-    protection_projectile:
-    - Защита_от_снарядов
-    impaling:
-    - Пронзатель
+    protection_fire:
+    - Защита_от_огня
     protection_fall:
     - Защита_от_падения
+    protection_explosions:
+    - Защита_от_взрыва
+    protection_projectile:
+    - Защита_от_снарядов
+    oxygen:
+    - Подводное_дыхание
+    water_worker:
+    - Работа_под_водой
+    mending:
+    - Починка
+    thorns:
+    - Шипы
+    vanishing_curse:
+    - Проклятье_утраты
+    depth_strider:
+    - Подводная_ходьба
+    frost_walker:
+    - Заморозка_воды
+    binding_curse:
+    - Проклятье_несъёмности
+    damage_all:
+    - Острота
+    damage_undead:
+    - Небесная_кара
+    damage_arthropods:
+    - Бич_членистоногих
+    knockback:
+    - Отдача
+    fire_aspect:
+    - Заговор_огня
+    loot_bonus_mobs:
+    - Добыча
+    sweeping_edge:
+    - Разящий_клинок
+    dig_speed:
+    - Эффективность
+    silk_touch:
+    - Шелковое_касание
+    durability:
+    - Прочность
+    loot_bonus_blocks:
+    - Удача
     arrow_damage:
     - Сила
+    arrow_knockback:
+    - Отталкиваение
+    arrow_fire:
+    - Огонь
     arrow_infinite:
     - Бесконечность
+    luck:
+    - Удача
+    lure:
+    - Приманка
   PotionEffectAliases:
     speed:
     - Скорость
@@ -586,16 +559,6 @@ info:
     - Удача
     unluck:
     - Неудача
-    slow_falling:
-    - Замедленное_падение
-    conduit_power:
-    - Сила_морей
-    dolphins_grace:
-    - Дельфинья_грация
-    bad_omen:
-    - Дурное_знамение
-    hero_of_the_village:
-    - Герой_среди_жителей
 direction:
   n: Север
   ne: Северо-восток
@@ -1217,6 +1180,7 @@ command:
       unCuffed: '&6[playerDisplayName] &eбольше не ограничен в командах'
       free: '&eТеперь вы снова можете использовать доступные вам команды'
       gotCuffed: '&eВы были в наручниках'
+      cuffedInfo: '&eВы в наручниках'
       cantCuff: '&cВы не можете ограничивать этого игрока!'
   customrecipe:
     help:
@@ -1295,6 +1259,8 @@ command:
     info:
       color: '&eТекущий цвет - &c[red],&2[green],&9[blue] &eHex:&6#[hex]'
       custom: '&eВключен пользовательский цветовой режим: &6[mode]'
+      bound: '&eПривязано к: &6'
+      boundName: '[playerName]'
   editctext:
     help:
       info: '&eРедактор Пользовательского Текста'
@@ -1394,6 +1360,7 @@ command:
       clearedInvalid: '&eУдалено &6[amount] &eнедействительных чар с предмета'
       inccorectId: '&eНеправильное имя или id зачарования.'
       wrongItem: '&eНеправильный предмет в руке'
+      enchantlimit: '&cYou dont have access to this enchantment'
       levellimit: '&cУровень зачарования превышен, максимальный уровень &e[level].'
       posible: '&eВозможные зачарования: '
       posibleList: '&6[enchant]'
@@ -1473,7 +1440,7 @@ command:
   fixchunk:
     help:
       info: '&eСканирование на битые чанки'
-      args: '&ew &6[ИмяМира]&e r &6[радиус в чанках]&e c &6[x:z]&e '
+      args: '&ew &6[Имя_Мира]&e r &6[радиус в чанках]&e c &6[x:z]&e '
       explanation:
       - '&6Подкоманды:'
       - '- &6stats &e- Показывает текущее состояние сканирования'
@@ -1485,9 +1452,9 @@ command:
       - '- &6messages [true/false] &e- Устанавливает отправку сообщений на off или
         on'
       - 'Пример:'
-      - /fixchunk w СЕРВЕР
-      - /fixchunk w СЕРВЕР r 50 c 1024:-2048
-      - /fixchunk w СЕРВЕР r g
+      - /fixchunk w Имя_Мира
+      - /fixchunk w Имя_Мира r 50 c 1024:-2048
+      - /fixchunk w Имя_Мира r g
       - /fixchunk fix
     info:
       startScanning: '&eНайдено &6[amount] &eчанков для проверки. Начинаем!'
@@ -1737,6 +1704,10 @@ command:
       intervalLore:
       - '&7Как часто в секундах обновлять информацию о голограмме'
       - '&7Если текст не изменяется, установи значение -1'
+      pageInterval: '&7Меняйте страницу каждые &6[second] &7сек.'
+      pageIntervalLore:
+      - '&7Как часто в секундах страница голограммы изменяется автоматически'
+      pageIntervalNoPages: '&4У этой голограммы еще нет страниц'
       text: '&7Интервал для текста: &6[space]'
       usync: '&7Синхронное изменение текста: &6[state]'
       reqPermission: '&7Требуется разрешение на просмотр: &6[state]'
@@ -2067,7 +2038,7 @@ command:
     info:
       jailed: '&eВы заперли игрока &6[playerDisplayName] &eв тюрьме на [time]'
       jailedPlayer: '&6[playerDisplayName] &eзаперт в тюрьме на &6[time]'
-      reasson: ' &eПричина: &c[reasson]'
+      reason: ' &eЗа: &c[reason]'
       leftTime: '!title!&7Осталось времени:!subtitle![time]'
       jailedTarget: '&eВы были посажены в трюрьму на &6[time]'
       cantTalk: '&cВы не можете говорить находясь в тюрьме'
@@ -2087,6 +2058,7 @@ command:
       exist: '&cТюрьма с таким именем уже существует'
       createdJail: '&eНовая тюрьма удачно создана (&6[jail]&e)'
       createdCell: '&eУспешно создана новая тюремная камера (&6[jail]&e:&6[cellId]&e)'
+      collides: '&cСталкивается с &eтюрьмой &6[jailName]'
       jailList: '&e[place]. &6[jail] &eКамеры:&6[cells] &eКоличество заключенных:
         &6[amount]    '
       editCells: '&eИзменить список камер'
@@ -2172,6 +2144,8 @@ command:
       noFoundKit: '&eНеудалось найти какой-либо набор'
       givenKit: '&eВы выдали набор &6[kit] &eдля &6[playerDisplayName]'
       title: '&8Наборы'
+      nameCanUse: '&6[kitName]'
+      nameCantUse: '&7[kitName]'
       group: '&eГруппы: &6[group]'
       left: '&6Левое &eнажатие для использования'
       right: '&6Правое &eнажатие для предпросмотра'
@@ -2657,6 +2631,7 @@ command:
     info:
       feedback: '&eПинг: &6[ping]'
       selffeedback: '&eВаш пинг - &6[ping]ms'
+      customMessage: '[message]'
   placeholders:
     help:
       info: '&eСписок всех placeholders'
@@ -2685,7 +2660,7 @@ command:
       info: '&eПоказывает топ игроков по времени проведённому в игре'
       args: '[страница]'
     info:
-      topLine: '&e----- TopPlaytime &e-----'
+      topLine: '&e----- Топ Долгожителей &e-----'
       scanning: '&eДанные в данное время сканируются, подождите минуту и повторите
         снова'
       loading: '&eДанные ещё не загружены. Процесс сканирования начат. Результат Вы
@@ -2936,6 +2911,8 @@ command:
     info:
       feedback: '&eВы отремонтировали &3[amount]&e предметов для &3[playerDisplayName]&e
         (&3[offon]&e).'
+      feedbackMoney: '&eВы восстановили &3[amount]&e предметов для &3[playerDisplayName]&e
+        (&3[offon]&e). Стоимость: &7[cost]'
       itemOwner: '&eПоследний ремонтировал: &6[owner]'
       cantUse: '!title!&cНе можете использовать этот предмет!!subtitle!&eОтремонтируйте
         его самостоятельно!'
@@ -3214,8 +3191,6 @@ command:
       args: '[Ник игрока/uuid]'
     info:
       feedback: '&6[playerDisplayName] &eв данный момент &6[offon] &eзаходил &6[time]'
-      online: '&6онлайн'
-      offline: '&6оффлайн'
   sell:
     help:
       info: '&eПродать предметы из инвентаря'
@@ -3349,7 +3324,7 @@ command:
       args: (Ник игрока) (-t:Ник цели) (тип) (скорость)
   signspy:
     help:
-      info: '&eВключить SignSpy'
+      info: '&eВключить Шпиона за надписями на табличках'
       args: (Ник игрока)
       explanation:
       - cmi.command.signspy.hide - Прячет созданные таблички от signspy
@@ -3402,7 +3377,7 @@ command:
       gotSmited: '&eАй! Вас ударили молнией!'
   socialspy:
     help:
-      info: '&eПереключить соц.шпиона'
+      info: '&eПереключить шпиона чата'
       args: (Ник игрока)
     info:
       msg: '&2Spy&7[&8[senderDisplayName] &7-> &8[playerDisplayName]&7]&f [message]'
@@ -3668,14 +3643,14 @@ command:
       performed: '&eВыполнена ''&6[command]&e'' команда игроку &6[playerDisplayName]'
   suicide:
     help:
-      info: '&eСамоубейся, пожалуйста'
+      info: '&eУбей себя, пожалуйста'
       args: '[Ник игрока] (-s)'
     info:
       feedback: '&eПрощай, жестокий мир!...'
       message: '&6[playerDisplayName] &eпокончил с собой.'
   switchplayerdata:
     help:
-      info: '&eПереключает все данные от одногоигрока к другому'
+      info: '&eПереключает все данные от одного игрока к другому'
       args: '[sourcePlayerName/uuid] [targetPlayerName/uuid]'
       explanation:
       - Используйте UUID Для более точных переводов, особенно если имена совпадают
@@ -4039,6 +4014,12 @@ command:
       notMuted: '&eИгрок не получал мут'
       unmuted: '&eИгрок может говорить'
       unmutedTarget: '&eС вас сняли мут'
+  unmutechat:
+    help:
+      info: '&eВключить публичный чат'
+      args: (-s)
+    info:
+      unmuted: '&eВключен публичный чат'
   usermeta:
     help:
       info: '&eУправлять данными игрока'
@@ -4055,7 +4036,7 @@ command:
       list: '&e[place]. &6[key]&e: [value]   '
   util:
     help:
-      info: '&Инструменты админа'
+      info: '&Убрать невидемые стойки для брони'
       args: (removeseats/testtarget)
     info:
       removedSits: '&eУдалено &6[count] &eпустых сидячих мест со всех миров.'
@@ -4098,7 +4079,7 @@ command:
       cmiVersionNew: '&e-> [newVersion]'
       Server: '&eВерсия сервера: &6[version]'
       Vault: '&eВерсия плагина Vault: &6[version]'
-      Bungee: ' &eBungeeCord '
+      Bungee: ' &eБанжа '
   viewrange:
     help:
       info: '&eИзменяет радиус обзора'
@@ -4170,7 +4151,7 @@ command:
     info:
       totalPoints: '&7---- &e[playerDisplayName] &eобщие очки предупреждений: &6[totalPoints]
         &7----'
-      noWarnings: '&eИгрок чист и бел как колумбийский кокаин'
+      noWarnings: '&eИгрок не имеет предупреждений'
       list: '&7[place]. &e[time] &6при помощи [warnedBy] &cза: &7[warnedFor]'
       hover:
       - '&7Истечение срока давности через: &e[time]'
@@ -4199,7 +4180,7 @@ command:
       - /storm
       - /sun lock
       - /sun 120
-      - /sun Название_Мира
+      - /sun STM-Vanilla
     info:
       currentState: '&6[world] &e-> &6[weather] &eна время: &6[time]'
       sunny: солнечная погода
@@ -4226,7 +4207,7 @@ command:
       explanation:
       - Требуется разрешение cmi.command.world.[название мира]
     info:
-      here: '&eУже здесь'
+      here: '&eВы уже в этом мире'
   worth:
     help:
       info: '&eПроверить ценность предмета'
