@@ -150,6 +150,7 @@ info:
   sunSpeedingTitle: '&7[hour]'
   sunSpeedingSubTitle: '&f[count]&7/&f[total] &7(&f[speed]X&7)'
   repairConfirm: '&eНажмите, чтобы подтвердить ремонт &7[items] &eза &7[cost]'
+  bookDate: '&7Написано &f[date]'
   maintenance: '&7Режим технического обслуживания'
   notSet: не задано
   startedEditingPainting: '&eВы включили режим редактирования. Нажмите на любой другой
@@ -266,7 +267,6 @@ info:
     custom: Неизвестный
     dragon_breath: Дыхание_дракона
     drowning: Утопление
-    dryout: dryout
     entity_attack: Атака_мобов
     entity_explosion: Взрыв
     entity_sweep_attack: Атака_стрел
@@ -371,17 +371,14 @@ info:
     bat: Летучая_мышь
     blaze: Ифрит
     boat: Лодка
-    cat: Кот
     cave_spider: Пещерный_паук
     chicken: Цыплёнок
-    cod: Треска
+    complex_part: Сложная_часть
     cow: Корова
     creeper: Крипер
-    dolphin: Дельфин
     donkey: Осёл
     dragon_fireball: Драконий_файрбол
     dropped_item: Выброшенный_предмет
-    drowned: Утопленник
     egg: Яйцо
     elder_guardian: Древний_страж
     enderman: Эндермен
@@ -397,7 +394,6 @@ info:
     fireball: Файрбол
     firework: Фейерверк
     fishing_hook: Рыболовный_крючок
-    fox: Лиса
     ghast: Гаст
     giant: Гигант
     guardian: Страж
@@ -408,6 +404,7 @@ info:
     item_frame: Пламя
     leash_hitch: Поводок
     lightning: Молния
+    lingering_potion: Затяжное_зелье
     llama: Лама
     llama_spit: Плевок_ламы
     magma_cube: Магма-куб
@@ -422,19 +419,13 @@ info:
     mushroom_cow: Грибная_корова
     ocelot: Оцелот
     painting: Картина
-    panda: Панда
     parrot: Попугай
-    phantom: Фантом
     pig: Свинья
     pig_zombie: Свинозомби
-    pillager: Разбойник
     player: Игрок
     polar_bear: Полярный_медведь
     primed_tnt: Зажжённый_динамит
-    pufferfish: Иглобрюх
     rabbit: Кролик
-    ravager: Разоритель
-    salmon: Лосось
     sheep: Овца
     shulker: Шалкер
     shulker_bullet: Пуля_шалкера
@@ -451,15 +442,12 @@ info:
     squid: Спрут
     stray: Зимогор
     thrown_exp_bottle: Брошеная_бутылка_с_опытом
-    trader_llama: Лама Торговец
-    trident: Трезубец
-    tropical_fish: Тропическая рыба
-    turtle: Черепаха
+    tipped_arrow: Наконечник_стрелы
     unknown: Неизвестно
     vex: Досаждатель
     villager: Житель
     vindicator: Поборник
-    wandering_trader: Странствующий торговей
+    weather: Иссушитель
     witch: Ведьма
     wither: Иссушитель
     wither_skeleton: Скелет-иссушитель
