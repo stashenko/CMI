@@ -1086,8 +1086,8 @@ command:
       format: '&3|&f[chatRoomName]&3| &6[playerDisplayName]: &r[message]'
       nobody: '&4В комнате чата никого нет'
       notOwner: '&4Только владелец комнаты чата может сделать это'
-      wrongName: '&4Wrong chat room name'
-      takenName: '&4Chat room name is taken, use different one'
+      wrongName: '&4Неверное название комнаты чата'
+      takenName: '&4Это имя комнаты чата занято, используйте другое'
       notIn: '&4Пользователь не в комнате чата'
       cantJoin: '&4Комната чата является приватной, и у вас нет приглашения'
       kicked: '&6[playerDisplayName] &eкикнут из комнаты чата'
@@ -1097,8 +1097,8 @@ command:
       globalListPrivate: '&2(P)'
       globalListJoined: '&2+'
       globalListHover:
-        Owner: '&7Owner: [playerDisplayName]'
-        Ends: ' &7Expires in: [time]'
+        Owner: '&7Владелец: [playerDisplayName]'
+        Ends: ' &7Истекает через: [time]'
         Names: '&7[playerDisplayName]'
   checkaccount:
     help:
@@ -3940,7 +3940,7 @@ command:
     info:
       same: '&eЦель и источник совпадают'
       transferred: '&6[sourceName] &eданные переключены &6[Name]'
-      failed: '&cFailed to switch player data'
+      failed: '&cНе удалось переключить данные игрока'
   tablistupdate:
     help:
       info: '&eОбновление таб-листа для всех или конкретного игрока'
