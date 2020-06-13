@@ -110,8 +110,8 @@ info:
   ShulkerBox: Шалкер сундук
   CantuseShulkerBox: '&cЯ не могу использовать Шалкер сундук, пока вы сражаетесь с
     игроком. Подождите &6[time]'
-  CantUseNonEncrypted: '!actionbar!&c&lКоманды для этого предмета не зашифрованы. Не
-    могу их использовать!'
+  CantUseNonEncrypted: '!actionbar!&c&lКоманды для этого предмета не зашифрованы.
+    Не могу их использовать!'
   CantDecode: '!actionbar!&c&lНе могу декодировать сообщение или команду. Файл содержит
     неверный ключ для этой задачи. Об этом сообщите администрации сервера'
   Show: '&eПоказать'
@@ -144,7 +144,8 @@ info:
   wrongWorld: '&cНе могу сделать это в текущем мире'
   differentWorld: '&cРазличные миры'
   HaveItem: '&cУ вас &6[amount]x [itemName] &cв вашем инвентаре'
-  ItemWillBreak: '!actionbar!&e&lВаш предмет (&6&l[itemName]&e&l) скоро сломается! &e&l[current]&6&l/&e&l[max]'
+  ItemWillBreak: '!actionbar!&e&lВаш предмет (&6&l[itemName]&e&l) скоро сломается!
+    &e&l[current]&6&l/&e&l[max]'
   ArmorWillBreak: '!actionbar!&e&lВаш предмет [itemName] скоро сломается! &e&l[current]&6&l/&e&l[max]'
   cantDoForPlayer: '&4Вы не можете сделать это с этим игроком'
   cantDoForYourSelf: '&eВы не можете сделать это для себя'
@@ -212,8 +213,7 @@ info:
     warmup: '&eЭффект тотема: [time]'
     cantConsume: '&eИспользование тотема отклонено из-за его времени перезарядки'
   Inventory:
-    FullDrop: '&5Не все предметы умещаются в вашем инвентаре. Они сброшены на
-      землю'
+    FullDrop: '&cНе все предметы умещаются в вашем инвентаре. Они сброшены на землю'
   InventorySave:
     info: '&fИнфо: &f[playerDisplayName]'
     saved: '&e[time] &eИнвентарь, сохраненный с идентификатором: &e[id]'
@@ -228,8 +228,8 @@ info:
     Deleted: '&eСохраненный инвентарь успешно удален!'
     Restored: '&eВы восстановили ресурс &e[sourcename] &eдля игрока &e[targetname]
       &e.'
-    GotRestored: '&eВаш инвентарь восстановлен из &e[sourcename] &eсохранения
-      инвентаря &e[time]'
+    GotRestored: '&eВаш инвентарь восстановлен из &e[sourcename] &eсохранения инвентаря
+      &e[time]'
     LoadForSelf: '&eЗагрузите этот инвентарь для себя'
     LoadForOwner: '&eЗагрузите этот инвентарь для владельца'
     NextInventory: '&eСледующий инвентарь'
@@ -647,7 +647,7 @@ direction:
   nw: Северо-запад
 modify:
   middlemouse: '&2Средняя кнопка мыши для редактирования'
-  newItem: '&fПомести здесь новый пункт'
+  newItem: '&fПоложите новый предмет'
   newLine: '&2<Новая Линия>'
   newLineHover: '&2Добавить линию'
   newPage: '&2<Новая Страница>'
@@ -674,9 +674,9 @@ modify:
   editSymbol: '&e✎'
   editSymbolHover: '&eРедактировать &6[text]'
   editLineColor: '&f'
-  listUpSymbol: '&6⇑'
+  listUpSymbol: '&6 ⇑ '
   listUpSymbolHover: '&eВверх'
-  listDownSymbol: '&6⇓'
+  listDownSymbol: '&6 ⇓ '
   listDownSymbolHover: '&eВниз'
   listNumber: '&e[number].'
   ChangeHover: '&eНажмите, чтобы изменить'
@@ -695,8 +695,8 @@ modify:
 warp:
   list: '&e[pos]. &6[warpName] &f- &f[worldName] ([x]:[y]:[z])'
 teleportation:
-  relocation: '!actionbar!&4&lМесто вашего телепорта опасно. Вы телепортированы
-    в безопасное место.'
+  relocation: '!actionbar!&4&lМесто вашего телепорта опасно. Вы телепортированы в
+    безопасное место.'
 afk:
   'on': '&6AFK'
   'off': '&fИграет'
@@ -819,7 +819,8 @@ command:
       info: '&eУстановить воздух игроку'
       args: '[Ник игрока] [количество]'
     info:
-      feedback: '&eВы установили &3[amount]&e ед. воздуха для игрока &3[playerName]&e (&3[offon]&e).'
+      feedback: '&eВы установили &3[amount]&e ед. воздуха для игрока &3[playerName]&e
+        (&3[offon]&e).'
       targetFeedback: '&eВаш воздух установлен на &3[amount]&e, это сделал &3[senderDisplayName]&e.'
       current: '&eТекущий воздух игрока &3[playerDisplayName]&e: &3[amount]'
   alert:
@@ -984,7 +985,7 @@ command:
       args: ''
   blockinfo:
     help:
-      info: '&eПроверка информации о блоке'
+      info: '&eПроверка информации о блоке на который смотрите'
       args: ''
     info:
       Info: ' &eId: &6[id][data] &eMaterial: &6[name][ndata]'
@@ -1056,13 +1057,13 @@ command:
       targetfeedback: '&eВас поджег &3[senderDisplayName]&e на &6[time]&e.'
   charges:
     help:
-      info: '&eПоказывает раздачи'
+      info: '&eПоказывает раздачи спавнеров'
       args: '[Ник игрока] [add/set/take/clear/reset] (-f)'
     info:
       charges: '&e* Раздачи: &6[current]&e/&6[max] [bypass]'
       cd: '&e* CD: &6[cdtime] &eДалее в: &6[time]'
       bypass: '&6(Bypass)'
-      allUsed: '&eВсе раздачи израсходованы! Далее в [time]'
+      allUsed: '&eВсе раздачи израсходованы! Далее через [time]'
       noGroup: '&eНе назначена группа'
       cantBreak: '&eВы не можете сломать, пока не будет назначена группа'
       minusCd: '&e Минус &6[sec]&eсек на перезагрузку'
@@ -1085,11 +1086,20 @@ command:
       format: '&3|&f[chatRoomName]&3| &6[playerDisplayName]: &r[message]'
       nobody: '&4В комнате чата никого нет'
       notOwner: '&4Только владелец комнаты чата может сделать это'
+      wrongName: '&4Wrong chat room name'
+      takenName: '&4Chat room name is taken, use different one'
       notIn: '&4Пользователь не в комнате чата'
       cantJoin: '&4Комната чата является приватной, и у вас нет приглашения'
       kicked: '&6[playerDisplayName] &eкикнут из комнаты чата'
       gotKicked: '&4Вас кикннули из комнаты чата &f[chatRoomName]'
       list: '&e[chatRoomName]&e: &f[list]'
+      globalList: '&7[number]. [joined]&e[chatRoomName][private]&e: &7[count][expires]'
+      globalListPrivate: '&2(P)'
+      globalListJoined: '&2+'
+      globalListHover:
+        Owner: '&7Owner: [playerDisplayName]'
+        Ends: ' &7Expires in: [time]'
+        Names: '&7[playerDisplayName]'
   checkaccount:
     help:
       info: '&eПроверить игрока на наличие другие аккаунтов'
@@ -1291,7 +1301,7 @@ command:
   ctellraw:
     help:
       info: '&eОтправить сообщение типа Tellraw'
-      args: '[playerName/all] [formattedMessage]'
+      args: '[Ник игрока/all] [formattedMessage]'
       explanation:
       - Использование такое же, как показано в http://www.zrips.net/cmi/custom-text/
   ctext:
@@ -1348,7 +1358,7 @@ command:
       info: '&eУтилизировать ненужные предметы'
       args: (Ник игрока)
     info:
-      title: '&cПомести все предметы, которые вам не нужны'
+      title: '&cПоместите все предметы сюда'
   distance:
     help:
       info: '&eПроверить расстояние между двумя точками'
@@ -1457,11 +1467,10 @@ command:
       info: '&eИзменение варпов'
       args: (Название варпа)
     info:
-      exists: '&cWarp by this name (&f[newName]&c) already exists. Pick different
-        one'
+      exists: '&cВарпс этим именем (&f [newName] &c) уже существует. Выберите другой'
       updated: '&eВарп с названием &f[oldName]&e изменен на &f[newName]'
-      placeItem: '&2Помести элемент для установки пользовательского значка'
-      placeOffItem: '&2Помести элемент, чтобы установить пользовательский значок'
+      placeItem: '&2Поместите элемент для установки пользовательского значка'
+      placeOffItem: '&2Поместите элемент, чтобы установить пользовательский значок'
       autoLore: '&2Автоматическое знание: [state]'
       randomizeYaw: '&2Рандомизировать направление: [state]'
       permission: '&2Требуется право на использование: [state]'
@@ -1598,8 +1607,8 @@ command:
         on'
       - 'Пример:'
       - /fixchunk w Имя_Мира
-      - /fixchunk w Имя_Мира r 50 c 1024:-2048
-      - /fixchunk w Имя_Мира r g
+      - /fixchunk w Имя_Мира r50 c1024:-2048
+      - /fixchunk w Имя_Мира rg
       - /fixchunk fix
     info:
       startScanning: '&eНайдено &6[amount] &eчанков для проверки. Начинаем!'
@@ -1879,7 +1888,7 @@ command:
       relocateLore:
       - '&fПереносит голограмму в'
       - '&fваше текущее местоположение'
-      los: '&fРассмотрим линию видимости: &6[state]'
+      los: '&fСкрывать за блоками: &6[state]'
       losLore:
       - '&fИнтервал проверки: [interval]'
       interact: '&fИнтерактивный стол: &6[state]'
@@ -1890,18 +1899,21 @@ command:
       - '&fИмейте в виду, что режим большой кнопки'
       - '&fне позволит вам пройти сквозь неё'
       order: '&fРазмещение вниз: &6[state]'
-      autoButton: '&fАвтоматически генерировать кнопки нумерации страниц'
+      autoButton: '&fСгенерировать кнопки нумерации страниц'
       autoButtonLore:
       - '&eТекущая голограмма не'
       - '&eимеет созданных страниц'
-      - '&eИспользуйте &6!nextpage! &eв качестве новой строки, чтобы сделать следующую
-        страницу'
+      - '&eИспользуйте &6!nextpage!'
+      - '&eв качестве новой строки,'
+      - '&eчтобы сделать следующую страницу'
       autoButtonForward: '&2На этой голограмме уже создана кнопка Вперед'
       autoButtonBackward: '&2На этой голограмме уже создана кнопка Назад'
-      moveX: '&fX:&e[x]'
-      moveY: '&fY:&e[y]'
-      moveZ: '&fZ:&e[z]'
+      moveX: '&aЛПМ-Запад&6/&bПКМ-Восток&6: &e[x]'
+      moveY: '&aЛПМ-Вниз&6/&bПКМ-Вверх&6: &e[y]'
+      moveZ: '&aЛПМ-Север&6/&bПКМ-Юг&6: &e[z]'
       shift:
+      - '&fВключите бар-компас &6/togglecompass'
+      - '&fдля лучшей ориентации в направлениях'
       - '&eИзменение на 0,01 или удержание'
       - '&eshift на изменение на 0,1'
       list: '&6[place]&e. [name]'
@@ -2379,7 +2391,7 @@ command:
       limitedTimeUseError: '&eНельзя использовать больше чем &6[times] &eраз'
       limitedTimeUse: '&fМожно использовать &c[times] &fраз'
       limitedTimeAllUsed: '&cНельзя получить новый'
-      canUseIn: '&eМожно использовать снова в: [time]'
+      canUseIn: '&eДоступен через: [time]'
       cooldown: '&eПерезарядка: [time]'
       noKit: '&eНевозможно найти набор с таким именем'
       kitDoesntExist: '&eНе могу найти набор ([kitName])'
@@ -2432,7 +2444,7 @@ command:
       groupInfo: '&eВведите новое имя группы в чат и нажмите ENTER. Напишите ''&6none&e''
         чтобы удалить группу. Используйте ''&6cancel&e'' чтобы отменить это действие.'
       commandInfo: '&eНапишите новую команду в чат и нажмите ENTER. Напишите ''&6cancel&e''
-        чтобы отменить это действие. Доступные плейсхолдеры: &6{USERNAME} {DISPLAYNAME}
+        чтобы отменить это действие. Доступные заполнители: &6{USERNAME} {DISPLAYNAME}
         {WORLDNAME} {KITNAME} {RANDOMPLAYER}'
       conditionsInfo: '&eНапишите новое условие в чат и нажмите ENTER. Напишите ''&6cancel&e''
         чтобы отменить это действие'
@@ -2451,25 +2463,30 @@ command:
       - '&eЛКМ для увеличения, ПКМ для уменьшения'
       - '&eЗажми &6Shift &eЧтобы ускорить процесс в 10 раз'
       - '&eБыстрое нажатие приведёт к увеличению скорости'
-      - '&eОстанови нажатие в течении 1 секунды, чтобы вернуться к значению по умолчанию '
-      OffHand: '&eПомести здесь предмет второй руки. Он сразу же будет одет'
-      Helmet: '&eПомести здесь шлем. Он сразу же будет одет'
-      Chest: '&eПомести здесь нагрудник. Он сразу же будет одет'
-      Legs: '&eПомести здесь штаны. Они сразу же будут одеты'
-      Boots: '&eПомести здесь ботинки. Они сразу же будут одеты'
+      - '&eОстанови нажатие в течении 1 секунды,'
+      - '&eчтобы вернуться к значению по умолчанию '
+      OffHand: '&eПоместите предмет второй руки. Он сразу же будет в руке'
+      Helmet: '&eПоместите шлем. Он сразу же будет одет'
+      Chest: '&eПоместите нагрудник. Он сразу же будет одет'
+      Legs: '&eПоместите штаны. Они сразу же будут одеты'
+      Boots: '&eПоместите ботинки. Они сразу же будут одеты'
       Weight: '&eПриоритет: &6[Weight]'
       WeightExtra:
-      - '&eБолее высокое значение приоритета влияет на отображение'
+      - '&eБолее высокое значение'
+      - '&eприоритета влияет на отображение'
       - '&eНаборы должны быть в одной группе'
-      despiteWeight: '&eПоказать несмотря на вес: &6[Weight]'
+      despiteWeight: '&eПоказать несмотря на приоритет: &6[Weight]'
       despiteWeightExtra:
-      - '&eИгрок не получает доступ к набору, но может его просмотреть'
+      - '&eИгрок не получает доступ к'
+      - '&eнабору, но может его просмотреть'
       Slot: '&eСлот: &6[slot]'
       SlotAuto: '&6Авто'
       Clone: '&eКлонировать предметы из инвентаря'
       CloneExtra:
-      - '&eИспользуйте ПКМ чтобы клонировать и доспехи'
-      - '&eНажмите повторно, чтобы отменить изменения'
+      - '&eИспользуйте ПКМ чтобы'
+      - '&eклонировать и доспехи'
+      - '&eНажмите повторно,'
+      - '&eчтобы отменить изменения'
       timeDelay: '&eОжидание: &6[time]'
       usages: '&eМожет быть использовано &6[times] &eвремени'
       usagesUnlimited: '&6Бесконечно'
@@ -2483,20 +2500,23 @@ command:
       clickToSwitch: '&eНажми, чтобы переключить'
       clickToEdit: '&eНажми, чтобы начать редактирование'
       editConfigName:
-      - '&eНажми, чтобы переименовать имя конфига'
-      - '&eЭто влияет только на право получения. Осторожно с этим.'
+      - '&eНажми, чтобы переименовать'
+      - '&eимя в конфиге'
+      - '&eЭто влияет только на право'
+      - '&eполучения. Осторожно с этим.'
       editCommandName:
       - '&eНажми, чтобы переименовать команду'
-      - '&eЭто установит команду, которую нужно ввести, чтобы получить набор'
+      - '&eЭто установит команду, которую'
+      - '&eнужно ввести, чтобы получить набор'
       kitGroup: '&eГруппа Наборов: &6[group]'
-      dropItems: '&eУдалить предмет, если он заполнен: &6[state]'
+      dropItems: '&eУдалять предметы, если инвентарь заполнен: &6[state]'
       commands: '&eКоманды:'
       conditions: '&eУсловия:'
       desc: '&eОписание:'
       mainMenu: '&eГлавное меню'
       settings: '&eНастройки'
-      icon: '&eИконка используеися, когда кит &2доступен'
-      iconCd: '&eИконка используеися, когда кит &cнедоступен'
+      icon: '&eИконка используеися, когда набор &2доступен'
+      iconCd: '&eИконка используеися, когда набор &cнедоступен'
   kitusagereset:
     help:
       info: '&eСброс счетчика использования комплекта'
@@ -2569,17 +2589,17 @@ command:
       groupL: '&6[groupName]: &f[list]'
       player: '%cmi_user_afk_symbol%&f[playerDisplayName]'
       groups:
-        group1: '&fИгрок: &f[list]'
-        group2: '&bФлай: &f[list]'
-        group3: '&3Вип: &f[list]'
-        group4: '&aКреатив: &f[list]'
-        group5: '&2Модератор: &f[list]'
-        group6: '&eАдмин: &f[list]'
-        group7: '&6Лорд: &f[list]'
-        group8: '&1Гл.Админ: &f[list]'
-        group9: '&9Создатель: &f[list]'
-        group10: '&cОснователь: &f[list]'
-        group11: '&4Овнер: &f[list]'
+        group1: '&fГруппа 1: &f[list]'
+        group2: '&bГруппа 2: &f[list]'
+        group3: '&3Группа 3: &f[list]'
+        group4: '&aГруппа 4: &f[list]'
+        group5: '&2Группа 5: &f[list]'
+        group6: '&eГруппа 6: &f[list]'
+        group7: '&6Группа 7: &f[list]'
+        group8: '&1Группа 8: &f[list]'
+        group9: '&9Группа 9: &f[list]'
+        group10: '&cГруппа 10: &f[list]'
+        group11: '&4Группа 11: &f[list]'
       noGroupLine: '&eСписок'
   lockip:
     help:
@@ -2623,7 +2643,7 @@ command:
       explanation:
       - cmi.command.maintenance.bypass - обход обслуживания
     info:
-      feedback: '&eСервер находится в режиме обслуживания. Приходите позже.'
+      feedback: '&eСервер работает по адресу &aplay.spigotmc.ru:26394.'
       set: '&eРежим обслуживания сервера установлен на &6[state] &eс сообщением: [message]'
   maxhp:
     help:
@@ -2651,7 +2671,7 @@ command:
       format: '&5* [senderDisplayName] &5[message]'
   merchant:
     help:
-      info: '&eОткрыть торговое окно'
+      info: '&eОткрыть торговое окно с жителем'
       args: '[type] [playerName]'
     info:
       incorrect: '&cНеверная профессия.'
@@ -2880,7 +2900,7 @@ command:
       customMessage: '[message]'
   placeholders:
     help:
-      info: '&eСписок всех placeholders'
+      info: '&eСписок всех заполнителей'
       args: ''
     info:
       list: '&e[place]. &6[placeholder]'
@@ -2968,8 +2988,8 @@ command:
       info: '&eПрогружает чанки в данном радиусе'
       args: '[range] (innerrange)'
     info:
-      NoMore: '&eРадиус не может быть больше 32. Правда, можно поменять максимальное
-        значение радиуса.'
+      NoMore: '&eРадиус не может быть больше 32. Но можно поменять максимальное значение
+        радиуса в конфиге.'
       startSending: '&eНайдено &6[amount] &eчанков. Начинаем!'
       InfoShow: '&6TPS: &3[tps] &6Осталось &e[left] &6(&e[min]м:[sec]с&6) &6Скорость:
         &e[speed]'
@@ -3248,7 +3268,7 @@ command:
         &eи попробуй снова'
       IncorrectLocation: '&6Не могу найти корректное место для телепорта, пожалуйста,
         подожди &e[time] &6и попробуй снова.'
-      teleported: '!actionbar!&6&lВжииик!!!'
+      teleported: '!actionbar!&6&lИщем место приземления!!!'
   sameip:
     help:
       info: '&eСписок игроков, зарегистрированных на одном ip'
@@ -3266,7 +3286,7 @@ command:
       targetfeedback: '&eВаше насыщение установлено на &3[amount]&e, это сделал &3[senderDisplayName]&e.'
   saveall:
     help:
-      info: '&eСохраняет инвентарь каждого игрока'
+      info: '&eСохраняет инвентарь всех игроков'
       args: '&3(дни)'
       explanation:
       - -онлайн-переменная может использоваться для сохранения только онлайн-инвентарей
@@ -3277,7 +3297,7 @@ command:
       saved: '&eСохранение завершено. Сохранено: &6[saved] &eПропущено: &6[skipped]'
   saveditems:
     help:
-      info: '&eСохранение элементов или управление ими'
+      info: '&eСохранение предметов или управление ими'
       args: '[save/get/remove/list] (savedItemName) (-t:playerName) (-s)'
     info:
       info:
@@ -3362,11 +3382,11 @@ command:
       - '&e************************************************************'
   scavenge:
     help:
-      info: '&eУтилизировать предмет и его чары'
+      info: '&eСнятие чар с предметов'
       args: (Ник игрока)
     info:
       enchantWorth: '&eЦена зачарование: &f[price]'
-      enchantFailChance: '&4Неудачный шанс: &f[chance]%'
+      enchantFailChance: '&4Шанс неудачи: &f[chance]%'
       enchantFailed: '&cНеудача. &f[enchant]&c уровень &f[level] &cС &f[chance]% &cшансом
         уничтожения'
       enchantLevelChance: '&cУровень низкого шанса: &f[chance]%'
@@ -3455,7 +3475,7 @@ command:
       sellInfo: '&fПродать за: &2[price]'
   sendall:
     help:
-      info: '&eОтправить всех игроков онлайн на сервер'
+      info: '&eОтправить всех игроков онлайн на другой сервер bungeecord'
       args: '[Название сервера]'
   server:
     help:
@@ -3513,7 +3533,7 @@ command:
       changed: '&eИзменено motd на:'
   setrt:
     help:
-      info: '&eУстановить случайные границы телепорта'
+      info: '&eУстановить границы рандомного телепорта'
       args: (Название мира) (center:[x]:[z]) (min:[range]) (max:[range]) (square/circle)
         (enabled/disabled)
     info:
@@ -3572,11 +3592,11 @@ command:
       args: '[Ник игрока] (время) (-s) (причина)'
   shakeitoff:
     help:
-      info: '&eСпешить объект на тебе'
+      info: '&eСнять с себя наездника'
       args: ''
     info:
-      shaked: '&eВы сбросили: &6[entity]'
-      nothing: '&eНекого сбрасывать'
+      shaked: '&eВы сбросили с себя: &6[entity]'
+      nothing: '&eНекого сбрасывать с себя'
   shoot:
     help:
       info: '&eВыпустить снаряд'
@@ -3625,7 +3645,7 @@ command:
       info: '&eИзменяет скин игрока'
       args: '[Название скина/off/update] (Ник игрока)'
     info:
-      changed: '&eВаш скин - теперь скин игрока &6[skinOwner]'
+      changed: '&eВаш скин изменен на скин игрока &6[skinOwner]'
       failed: '&eНе получилось установить скин'
       resetSteve: '&eСкин удалён'
       reset: '&eУстановлен скин по умолчанию'
@@ -3657,10 +3677,10 @@ command:
       args: '[звук] (-p:[Скорость]) (-v:[громкость]) (Ник игрока/-all) (мир) (x) (y)
         (z)'
     info:
-      playing: "&eПроигрывние &6[sound] &eв мире [world] [x]:[y]:[z] \n&eСкорость\
-        : &6[pitch] &eГромкость: &6[volume]"
-      playingMultiple: "&eПроигрывние &6[sound] &eв мире [world] [x]:[y]:[z] \n&eС\
-        корость: &6[pitch] &eГромкость: &6[volume]"
+      playing: "&eИграет &6[sound] &eв мире [world] [x]:[y]:[z] \n&eСкорость: &6[pitch]\
+        \ &eГромкость: &6[volume]"
+      playingMultiple: "&eИграет &6[sound] &eв мире [world] [x]:[y]:[z] \n&eСкорос\
+        ть: &6[pitch] &eГромкость: &6[volume]"
   spawn:
     help:
       info: '&eТелепортация на точку спавна'
@@ -3920,6 +3940,7 @@ command:
     info:
       same: '&eЦель и источник совпадают'
       transferred: '&6[sourceName] &eданные переключены &6[Name]'
+      failed: '&cFailed to switch player data'
   tablistupdate:
     help:
       info: '&eОбновление таб-листа для всех или конкретного игрока'
@@ -4360,8 +4381,8 @@ command:
     info:
       changed: '&eРадиус обзора установлен на &6[range]'
       NoProtocolLib: '&cЭта функция требует наличие ProtocolLib!'
-      NoMore: '&eРадиус обзора не может быть больше 32. Вы можете увеличить
-        это значение в конфиге'
+      NoMore: '&eРадиус обзора не может быть больше 32. Вы можете увеличить это значение
+        в конфиге'
   voteedit:
     help:
       info: '&eУправление голосами игроков'
@@ -4386,8 +4407,8 @@ command:
       currentVoteSelf: '&eВы сделали &6[votes] &eголосов'
       currentVotes: '&e[playerDisplayName] &eимеет &6[votes] &eголосов'
       voteCooldown: '&eВам нужно подождать &6[time]&eи снова проголосовать'
-      voteLimit: '&eВы достигли лимита голосов на сегодня. Вам нужно будет
-        подождать &6[time]&e, чтобы проголосовать еще раз'
+      voteLimit: '&eВы достигли лимита голосов на сегодня. Вам нужно будет подождать
+        &6[time]&e, чтобы проголосовать еще раз'
   votetop:
     help:
       info: '&eТоп-голосований'
