@@ -320,10 +320,12 @@ info:
     BADLANDS_PLATEAU: Плато бесплодных земель
     BAMBOO_JUNGLE: Бамбуковые джунгли
     BAMBOO_JUNGLE_HILLS: Бамбуковые холмы джунглей
+    BASALT_DELTAS: Basalt deltas
     BEACH: Пляж
     BIRCH_FOREST: Березовый лес
     BIRCH_FOREST_HILLS: Березовые лесные холмы
     COLD_OCEAN: Холодный океан
+    CRIMSON_FOREST: Crimson forest
     DARK_FOREST: Темный лес
     DARK_FOREST_HILLS: Темные лесные холмы
     DEEP_COLD_OCEAN: Глубокий холодный океан
@@ -361,7 +363,7 @@ info:
     MOUNTAIN_EDGE: Горный край
     MUSHROOM_FIELDS: Грибные поля
     MUSHROOM_FIELD_SHORE: Грибной полевой берег
-    NETHER: Ад
+    NETHER_WASTES: Nether wastes
     OCEAN: Океан
     PLAINS: Равнины
     RIVER: Река
@@ -376,6 +378,7 @@ info:
     SNOWY_TAIGA_HILLS: Снежно-таежные холмы
     SNOWY_TAIGA_MOUNTAINS: Снежные таежные горы
     SNOWY_TUNDRA: Снежная тундра
+    SOUL_SAND_VALLEY: Soul sand valley
     STONE_SHORE: Каменный берег
     SUNFLOWER_PLAINS: Подсолнухи равнины
     SWAMP: Болото
@@ -388,6 +391,7 @@ info:
     THE_END: Край
     THE_VOID: Пустота
     WARM_OCEAN: Теплый океан
+    WARPED_FOREST: Warped forest
     WOODED_BADLANDS_PLATEAU: Лесистое плоскогорье
     WOODED_HILLS: Лесистые холмы
     WOODED_MOUNTAINS: Лесистые горы
@@ -429,6 +433,7 @@ info:
     ghast: Гаст
     giant: Гигант
     guardian: Страж
+    hoglin: Hoglin
     horse: Лошадь
     husk: Кадавр
     illusioner: Иллюзионист
@@ -454,7 +459,7 @@ info:
     parrot: Попугай
     phantom: Фантом
     pig: Свинья
-    pig_zombie: Свинозомби
+    piglin: Piglin
     pillager: Разбойник
     player: Игрок
     polar_bear: Белый медведь
@@ -478,6 +483,7 @@ info:
     splash_potion: Взрывное зелье
     squid: Спрут
     stray: Зимогор
+    strider: Strider
     thrown_exp_bottle: Брошенная бутылка с опытом
     trader_llama: Лама торговца
     trident: Трезубец
@@ -493,9 +499,11 @@ info:
     wither_skeleton: Скелет-иссушитель
     wither_skull: Голова иссушителя
     wolf: Волк
+    zoglin: Zoglin
     zombie: Зомби
     zombie_horse: Лошадь-зомби
     zombie_villager: Зомби-житель
+    zombified_piglin: Zombified piglin
   EnchantAliases:
     protection_fire:
     - Огнеупорность
@@ -503,6 +511,8 @@ info:
     - Острота
     arrow_fire:
     - Горящая_стрела
+    soul_speed:
+    - SOULSPEED
     water_worker:
     - Подводник
     arrow_knockback:
@@ -1814,6 +1824,8 @@ command:
       feedback: '&6Вы успешно изменили шляпу!'
       targetfeedback: '&6Вашу шляпу изменил &3[senderDisplayName]&6!'
       fullinv: '&3[playerDisplayName] &6инвентарь полон, невозможно сменить шляпу!'
+      incorrect: '&3Incorrect item in head slot, cant replace with new one. Remove
+        it manually'
   head:
     help:
       info: '&eПолучить голову игрока'
@@ -2242,6 +2254,13 @@ command:
       - /give diamond_sword unbreakable
       - /give mob_spawner:creeper
       - /give minecraft:diamond_helmet 1 0 {ench:[{id:0,lvl:100},{id:2,lvl:100},{id:34,lvl:100}]}
+  itemframe:
+    help:
+      info: '&eManage item frames'
+      args: (invisible/fixed/invulnerable)
+    info:
+      enabled: Enabled
+      disabled: Disabled
   iteminfo:
     help:
       info: '&eПосмотреть информацию предмета'
