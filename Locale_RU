@@ -100,6 +100,7 @@ info:
     DontMove: '!title!!subtitle!&6Не двигайся!'
     Boss:
       DontMove: '&4Не двигайтесь &f[autoTimeLeft] &4сек.!'
+      WaitFor: '&4Wait for &7[autoTimeLeft] &4seconds!'
   Spawner: '&r[type] Спавнер'
   Elevator:
     created: '&eСоздана табличка лифта'
@@ -265,7 +266,7 @@ info:
   pageCount: '&2[current]&f/&2[total]'
   pageCountHover: '&2[totalEntries]'
   skullOwner: '!actionbar!&f&lВладелец:&r [playerName]'
-  beehive: '!actionbar!&f&lУровень меда: &e&l[level]&f&l/&e&l5 &f&lПчел внутри: &e&l[count]&f&l/&e&l3'
+  beeinfo: '!actionbar!&7Honey level: &e[level]&7/&e[maxlevel] &7Bees inside: &e[count]&7/&e[maxcount]'
   circle: '&3Круг'
   square: '&5Квадрат'
   protectedArea: '&cЗащищенный район. Не могу сделать это в нем.'
@@ -747,6 +748,7 @@ Information:
 econ:
   disabled: '&cНевозможно использовать эту команду, если поддержка экономики отключена'
   noMoney: '&cНедостаточно денег'
+  charged: '!actionbar!&fCharged: &6[amount]'
   notEnoughMoney: '&cВы не имеете достаточно денег. Необходимо (&6[amount]&c)'
   tooMuchMoney: '&cУ вас слишком много денег'
 Elytra:
@@ -1661,11 +1663,12 @@ command:
       buttonExp: '&6Пополнение с помощью exp'
       buttonMoney: '&6Пополнение с помощью денег'
       max: '&6Уже полностью заряжен'
-      guiLore:
-      - '&eЛКМ - +1'
-      - '&6Шифт+ЛКМ - +10'
-      - '&eПКМ - +100'
-      - '&6Шифт+ПКМ - +1000'
+      lore:
+      - '&eLeft click +1. Cost: &7[amount1]'
+      - '&6Shift left click +10. Cost: &7[amount10]'
+      - '&eRight click +100. Cost: &7[amount100]'
+      - '&6Shift right click +1000. Cost: &7[amount1000]'
+      - ''
       changeAmount: '&e([amount]&e)'
   fly:
     help:
@@ -2607,6 +2610,8 @@ command:
       hiddenCount: '&e&f([amount])'
       groupL: '&6[groupName]: &f[list]'
       player: '%cmi_user_afk_symbol%&f[playerDisplayName]'
+      # Add as many groups as you wish, by default there is only 10, to create new one, just copy paste one line and add increment into lines name, like group11 or group12 and so on.
+      # Player need to have appropriate permission node to be placed in group cmi.command.list.group.[groupnumber], bigger number have bigger priority
       groups:
         group1: '&fГруппа 1: &f[list]'
         group2: '&bГруппа 2: &f[list]'
