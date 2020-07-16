@@ -100,8 +100,8 @@ info:
     DontMove: '!title!!subtitle!&6Не двигайся!'
     Boss:
       DontMove: '&4Не двигайтесь &f[autoTimeLeft] &4сек.!'
-      WaitFor: '&4Wait for &7[autoTimeLeft] &4seconds!'
-  Spawner: '&r[type] Спавнер'
+      WaitFor: '&4Подождите &7[autoTimeLeft] &4секунд!'
+  Spawner: '&rСпавнер [type]'
   Elevator:
     created: '&eСоздана табличка лифта'
   CantPlaceSpawner: '&eНевозможно разместить спавнер так близко к другому спавнеру.
@@ -226,7 +226,7 @@ info:
     KillerSymbol: '&c ☠'
     Click: '&eНажми, чтобы проверить ([id]) сохраненных ресурсов'
     IdDontExist: '&4Сохраненный идентификатор не существует!'
-    Deleted: '&eСохраненный инвентарь успешно удален!'
+    Deleted: '&eСохраненный инвентарь удален!'
     Restored: '&eВы восстановили ресурс &e[sourcename] &eдля игрока &e[targetname]
       &e.'
     GotRestored: '&eВаш инвентарь восстановлен из &e[sourcename] &eсохранения инвентаря
@@ -266,7 +266,7 @@ info:
   pageCount: '&2[current]&f/&2[total]'
   pageCountHover: '&2[totalEntries]'
   skullOwner: '!actionbar!&f&lВладелец:&r [playerName]'
-  beeinfo: '!actionbar!&7Honey level: &e[level]&7/&e[maxlevel] &7Bees inside: &e[count]&7/&e[maxcount]'
+  beeinfo: '!actionbar!&7Уровень меда: &e[level]&7/&e[maxlevel] &7Пчелы внутри: &e[count]&7/&e[maxcount]'
   circle: '&3Круг'
   square: '&5Квадрат'
   protectedArea: '&cЗащищенный район. Не могу сделать это в нем.'
@@ -748,7 +748,7 @@ Information:
 econ:
   disabled: '&cНевозможно использовать эту команду, если поддержка экономики отключена'
   noMoney: '&cНедостаточно денег'
-  charged: '!actionbar!&fCharged: &6[amount]'
+  charged: '!actionbar!&fОплата: &6[amount]'
   notEnoughMoney: '&cВы не имеете достаточно денег. Необходимо (&6[amount]&c)'
   tooMuchMoney: '&cУ вас слишком много денег'
 Elytra:
@@ -1664,10 +1664,10 @@ command:
       buttonMoney: '&6Пополнение с помощью денег'
       max: '&6Уже полностью заряжен'
       lore:
-      - '&eLeft click +1. Cost: &7[amount1]'
-      - '&6Shift left click +10. Cost: &7[amount10]'
-      - '&eRight click +100. Cost: &7[amount100]'
-      - '&6Shift right click +1000. Cost: &7[amount1000]'
+      - '&eЛевый клик - +1 &a         Стоимость: &7[amount1]'
+      - '&6Шифт+Левый клик - +10 &a   Стоимость: &7[amount10]'
+      - '&eПравый клик - +100 &a      Стоимость: &7[amount100]'
+      - '&6Шифт+Правый клик - +1000 &aСтоимость: &7[amount1000]'
       - ''
       changeAmount: '&e([amount]&e)'
   fly:
@@ -1824,7 +1824,7 @@ command:
       info: '&eРазмещает предмет у вас на голове в качестве шляпы.'
       args: (Ник игрока)
     info:
-      feedback: '&6Вы успешно изменили шляпу!'
+      feedback: '&6Вы изменили шляпу!'
       targetfeedback: '&6Вашу шляпу изменил &3[senderDisplayName]&6!'
       fullinv: '&3[playerDisplayName] &6инвентарь полон, невозможно сменить шляпу!'
       incorrect: '&3Неправильный предмет в слоте головы, не можем заменить на новый.
@@ -2271,8 +2271,8 @@ command:
     info:
       id: ' &eId: &6[id][data]'
       realName: ' &eНастоящее название: &6[name]'
-      bukkitName: ' &eНазвание Bukkit: &6[name]'
-      mojangName: ' &eНазвание Mojang: &6[name]'
+      bukkitName: ' &eНазвание в Bukkit: &6[name]'
+      mojangName: ' &eНазвание в Mojang: &6[name]'
       entityType: ' &eТип сущности: &6[type]'
       durability: ' &eПрочность: &6[current]&e/&6[max]'
   itemlore:
@@ -2282,11 +2282,11 @@ command:
     info:
       feedback: '&eВы изменили описание на ''&r&5[loreLine]&e'' для &3[playerDisplayName]&e
         (&3[offon]&e).'
-      noitem: '&cНужно чтобы предмет которому вы хотите изменить описание был в руке.'
+      noitem: '&cНеобходимо держать предмет в руке которому вы хотите изменить описание.'
       removed: '&eСточка описания &6[line] &eудалена для &3[playerDisplayName]&e (&3[offon]&e).'
       inserted: '&eСтрочка описания &6[line] &eвставлена для &3[playerDisplayName]&e
         (&3[offon]&e).'
-      maxLines: '&eЕсть всего &6[lines] &eстрочек описания.'
+      maxLines: '&eВсего &6[lines] &eстрочек описания.'
       blocked: '&eЭтот предмет заблокирован от изменения описания.'
   itemname:
     help:
@@ -2333,7 +2333,7 @@ command:
       noCell: '&cНет камеры по этому ID'
       exist: '&cТюрьма с таким именем уже существует'
       createdJail: '&eНовая тюрьма удачно создана (&6[jail]&e)'
-      createdCell: '&eУспешно создана новая тюремная камера (&6[jail]&e:&6[cellId]&e)'
+      createdCell: '&eСоздана новая тюремная камера (&6[jail]&e:&6[cellId]&e)'
       collides: '&cСталкивается с &eтюрьмой &6[jailName]'
       jailList: '&e[place]. &6[jail] &eКамеры:&6[cells] &eКоличество заключенных:
         &6[amount]    '
