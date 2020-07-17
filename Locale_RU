@@ -766,6 +766,7 @@ Selection:
 NetherPortal:
   ToHigh: '&cПортал большой, максимальная высота &6[max]&c!'
   ToWide: '&cПортал широкий, максимальная ширина &6[max]&c!'
+  Creation: '!actionbar!&7Created [height]x[width] nether portal!'
   Disabled: '&cСоздание портала отключено!'
 Location:
   Title: '&fРасположение игроков'
@@ -1223,6 +1224,18 @@ command:
       books: ' &eКниги: '
       me: ' &e/me: '
       None: '&e-'
+  colorpicker:
+    help:
+      info: '&ePick hex color'
+      args: ''
+    info:
+      hover:
+      - '[color]⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛'
+      - '&f#[hex]'
+      - '&7Closest match by color name: '
+      - '[colorName]'
+      - '[closeColor]⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛'
+      - Shift+Click
   colors:
     help:
       info: '&eПоказать все доступные цвета'
