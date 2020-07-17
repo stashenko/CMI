@@ -766,7 +766,7 @@ Selection:
 NetherPortal:
   ToHigh: '&cПортал большой, максимальная высота &6[max]&c!'
   ToWide: '&cПортал широкий, максимальная ширина &6[max]&c!'
-  Creation: '!actionbar!&7Created [height]x[width] nether portal!'
+  Creation: '!actionbar!&7Создан портал в ад [height]x[width]!'
   Disabled: '&cСоздание портала отключено!'
 Location:
   Title: '&fРасположение игроков'
@@ -1226,16 +1226,16 @@ command:
       None: '&e-'
   colorpicker:
     help:
-      info: '&ePick hex color'
+      info: '&eВыбор шестнадцатеричного цвета'
       args: ''
     info:
       hover:
       - '[color]⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛'
       - '&f#[hex]'
-      - '&7Closest match by color name: '
+      - '&7Ближайшее совпадение по названию цвета: '
       - '[colorName]'
       - '[closeColor]⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛'
-      - Shift+Click
+      - Шифт+Клик
   colors:
     help:
       info: '&eПоказать все доступные цвета'
