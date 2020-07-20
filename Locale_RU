@@ -916,6 +916,25 @@ command:
         любому блоку, чтобы отменить процесс клонирования'
       canceled: '&eПроцесс клонирования стойки для брони отменен'
       updated: '&eСтойка для брони обновлена'
+      action:
+        head: '&7Head'
+        body: '&7Body'
+        torso: '&7Torso'
+        leftArm: '&7Leftarm'
+        rightArm: '&7Rightarm'
+        leftLeg: '&7Leftleg'
+        rightLeg: '&7Rightleg'
+        pos: '&7Pos'
+        updateitems: '&7Updateitems'
+        plate: '&7Plate'
+        size: '&7Size'
+        visible: '&7Visible'
+        arms: '&7Arms'
+        gravity: '&7Gravity'
+        glow: '&7Glow'
+        invulnerable: '&7Invulnerable'
+        name: '&7Name'
+        interactable: '&7Interactable'
   attachcommand:
     help:
       info: '&eПрикрепляет команду к предмету'
@@ -1092,6 +1111,7 @@ command:
     info:
       joined: '&eРегистрация в комнате чата: &f[chatRoomName]'
       joinedInfo: '&e[playerDisplayName] &fприсоеденился к комнате чата'
+      alreadyIn: '&eYou are already in &7[chatRoomName]'
       left: '&eLeft &f[chatRoomName] &eкомната чата'
       leftInfo: '&e[playerDisplayName] &fвышел из комнаты чата'
       invite: '&6[playerDisplayName] &eприглашает вас присоединиться к комнате чата:
@@ -1229,13 +1249,13 @@ command:
       info: '&eВыбор шестнадцатеричного цвета'
       args: ''
     info:
-      hover:
+      hovers:
       - '[color]⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛'
       - '&f#[hex]'
-      - '&7Ближайшее совпадение по названию цвета: '
-      - '[colorName]'
+      - '&7Closest match: '
+      - '[colorHex] - [colorName]'
       - '[closeColor]⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛'
-      - Шифт+Клик
+      - Shift+Click
   colors:
     help:
       info: '&eПоказать все доступные цвета'
@@ -2010,7 +2030,6 @@ command:
       - '&eМир: &6[world]'
       - '&eX:[x] &6Y:[y] &eZ:[z]'
       notPublicIc: '&cВы не можете использовать это, он не является общедоступным'
-      noCommandBlocks: '&eИнтерактивных команд нет.'
       commandList: ' &e[command]  '
       block: (Блок)
       entity: (Сущность)
@@ -4520,7 +4539,7 @@ command:
       - /storm
       - /sun lock
       - /sun 120
-      - /sun STM-Vanilla
+      - /sun Survival
     info:
       setTo: '&eУстановлена погода в мире &6[world] &eна &6[weather] &eпродолжительностью
         &6[time]'
