@@ -321,12 +321,10 @@ info:
     BADLANDS_PLATEAU: Плато бесплодных земель
     BAMBOO_JUNGLE: Бамбуковые джунгли
     BAMBOO_JUNGLE_HILLS: Бамбуковые холмы джунглей
-    BASALT_DELTAS: Базальтовые дельты
     BEACH: Пляж
     BIRCH_FOREST: Березовый лес
     BIRCH_FOREST_HILLS: Березовые лесные холмы
     COLD_OCEAN: Холодный океан
-    CRIMSON_FOREST: Малиновый лес
     DARK_FOREST: Темный лес
     DARK_FOREST_HILLS: Темные лесные холмы
     DEEP_COLD_OCEAN: Глубокий холодный океан
@@ -364,7 +362,7 @@ info:
     MOUNTAIN_EDGE: Горный край
     MUSHROOM_FIELDS: Грибные поля
     MUSHROOM_FIELD_SHORE: Грибной полевой берег
-    NETHER_WASTES: Пустоты Ада
+    NETHER: Nether
     OCEAN: Океан
     PLAINS: Равнины
     RIVER: Река
@@ -379,7 +377,6 @@ info:
     SNOWY_TAIGA_HILLS: Снежно-таежные холмы
     SNOWY_TAIGA_MOUNTAINS: Снежные таежные горы
     SNOWY_TUNDRA: Снежная тундра
-    SOUL_SAND_VALLEY: Долина песка Душ
     STONE_SHORE: Каменный берег
     SUNFLOWER_PLAINS: Подсолнухи равнины
     SWAMP: Болото
@@ -392,7 +389,6 @@ info:
     THE_END: Край
     THE_VOID: Пустота
     WARM_OCEAN: Теплый океан
-    WARPED_FOREST: Искаженный лес
     WOODED_BADLANDS_PLATEAU: Лесистое плоскогорье
     WOODED_HILLS: Лесистые холмы
     WOODED_MOUNTAINS: Лесистые горы
@@ -434,7 +430,6 @@ info:
     ghast: Гаст
     giant: Гигант
     guardian: Страж
-    hoglin: Хоглин
     horse: Лошадь
     husk: Кадавр
     illusioner: Иллюзионист
@@ -460,7 +455,7 @@ info:
     parrot: Попугай
     phantom: Фантом
     pig: Свинья
-    piglin: Пиглин
+    pig_zombie: Pig zombie
     pillager: Разбойник
     player: Игрок
     polar_bear: Белый медведь
@@ -484,7 +479,6 @@ info:
     splash_potion: Взрывное зелье
     squid: Спрут
     stray: Зимогор
-    strider: Страйдер
     thrown_exp_bottle: Брошенная бутылка с опытом
     trader_llama: Лама торговца
     trident: Трезубец
@@ -500,11 +494,9 @@ info:
     wither_skeleton: Скелет-иссушитель
     wither_skull: Голова иссушителя
     wolf: Волк
-    zoglin: Зоглин
     zombie: Зомби
     zombie_horse: Лошадь-зомби
     zombie_villager: Зомби-житель
-    zombified_piglin: Зомби-Пиглин
   EnchantAliases:
     protection_fire:
     - Огнеупорность
@@ -512,8 +504,6 @@ info:
     - Острота
     arrow_fire:
     - Горящая_стрела
-    soul_speed:
-    - SOULSPEED
     water_worker:
     - Подводник
     arrow_knockback:
@@ -751,6 +741,7 @@ econ:
   charged: '!actionbar!&fОплата: &6[amount]'
   notEnoughMoney: '&cВы не имеете достаточно денег. Необходимо (&6[amount]&c)'
   tooMuchMoney: '&cУ вас слишком много денег'
+  commandCost: '&7This command cost is &6[cost] &7repeat it or click here to confirm'
 Elytra:
   Speed: '&eСкорость: &6[speed]&ekm/h'
   SpeedBoost: ' &2+ '
@@ -990,8 +981,8 @@ command:
       # Make sure that OverrideLoginMessage is enabled in config file
       message: '&c&lВы забанены!'
       reason: '&e&lПричина - [reason]'
-      defaultReason: '&f&lЧитайте правила сервера'
-      messageToAll: '&f&l[playerDisplayName] &c&l забанен игроком &f&l[senderDisplayName]&c&l.
+      defaultReason: Читайте правила сервера
+      messageToAll: '&f&l[playerDisplayName] &c&lзабанен игроком &f&l[senderDisplayName]&c&l.
         &e&lПричина: [reason]'
       banedSilent: '&f&l[playerDisplayName] &c&lзабанил &f&l[senderDisplayName]&c&l.
         &e&lПричина: [reason]'
@@ -3325,6 +3316,7 @@ command:
       IncorrectLocation: '&6Не могу найти корректное место для телепорта, пожалуйста,
         подожди &e[time] &6и попробуй снова.'
       teleported: '!actionbar!&6&lИщем место приземления!!!'
+      waiting: '!actionbar!&6Looking for suitable location. Please wait'
   sameip:
     help:
       info: '&eСписок игроков, зарегистрированных на одном ip'
