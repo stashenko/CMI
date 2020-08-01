@@ -123,6 +123,7 @@ info:
   Save: '&eСохранить'
   Delete: '&cУдалить'
   Click: '&eКлик'
+  Preview: '&ePreview'
   PasteOld: '&eВставить старый'
   ClickToPaste: '&eНажми, чтобы вставить в чат'
   CantTeleportWorld: '&eВы не можете телепортироваться в этот мир'
@@ -198,6 +199,8 @@ info:
   variables:
     Online: '&6Онлайн'
     Offline: '&cНе в сети'
+    TrueColor: '&2'
+    FalseColor: '&4'
     'True': '&6Да'
     'False': '&cНет'
     Enabled: '&6Включено'
@@ -321,10 +324,12 @@ info:
     BADLANDS_PLATEAU: Плато бесплодных земель
     BAMBOO_JUNGLE: Бамбуковые джунгли
     BAMBOO_JUNGLE_HILLS: Бамбуковые холмы джунглей
+    BASALT_DELTAS: Basalt deltas
     BEACH: Пляж
     BIRCH_FOREST: Березовый лес
     BIRCH_FOREST_HILLS: Березовые лесные холмы
     COLD_OCEAN: Холодный океан
+    CRIMSON_FOREST: Crimson forest
     DARK_FOREST: Темный лес
     DARK_FOREST_HILLS: Темные лесные холмы
     DEEP_COLD_OCEAN: Глубокий холодный океан
@@ -362,7 +367,7 @@ info:
     MOUNTAIN_EDGE: Горный край
     MUSHROOM_FIELDS: Грибные поля
     MUSHROOM_FIELD_SHORE: Грибной полевой берег
-    NETHER: Nether
+    NETHER_WASTES: Nether wastes
     OCEAN: Океан
     PLAINS: Равнины
     RIVER: Река
@@ -377,6 +382,7 @@ info:
     SNOWY_TAIGA_HILLS: Снежно-таежные холмы
     SNOWY_TAIGA_MOUNTAINS: Снежные таежные горы
     SNOWY_TUNDRA: Снежная тундра
+    SOUL_SAND_VALLEY: Soul sand valley
     STONE_SHORE: Каменный берег
     SUNFLOWER_PLAINS: Подсолнухи равнины
     SWAMP: Болото
@@ -389,6 +395,7 @@ info:
     THE_END: Край
     THE_VOID: Пустота
     WARM_OCEAN: Теплый океан
+    WARPED_FOREST: Warped forest
     WOODED_BADLANDS_PLATEAU: Лесистое плоскогорье
     WOODED_HILLS: Лесистые холмы
     WOODED_MOUNTAINS: Лесистые горы
@@ -430,6 +437,7 @@ info:
     ghast: Гаст
     giant: Гигант
     guardian: Страж
+    hoglin: Hoglin
     horse: Лошадь
     husk: Кадавр
     illusioner: Иллюзионист
@@ -455,7 +463,7 @@ info:
     parrot: Попугай
     phantom: Фантом
     pig: Свинья
-    pig_zombie: Pig zombie
+    piglin: Piglin
     pillager: Разбойник
     player: Игрок
     polar_bear: Белый медведь
@@ -479,6 +487,7 @@ info:
     splash_potion: Взрывное зелье
     squid: Спрут
     stray: Зимогор
+    strider: Strider
     thrown_exp_bottle: Брошенная бутылка с опытом
     trader_llama: Лама торговца
     trident: Трезубец
@@ -494,9 +503,11 @@ info:
     wither_skeleton: Скелет-иссушитель
     wither_skull: Голова иссушителя
     wolf: Волк
+    zoglin: Zoglin
     zombie: Зомби
     zombie_horse: Лошадь-зомби
     zombie_villager: Зомби-житель
+    zombified_piglin: Zombified piglin
   EnchantAliases:
     protection_fire:
     - Огнеупорность
@@ -504,6 +515,8 @@ info:
     - Острота
     arrow_fire:
     - Горящая_стрела
+    soul_speed:
+    - SOULSPEED
     water_worker:
     - Подводник
     arrow_knockback:
@@ -1157,6 +1170,7 @@ command:
       list: '&e[place]. &f[command] &f[args]'
       hover: '&e[desc]'
       variableColor: '&f'
+      noCommandFound: '&7No commands found by this keyword'
   checkexp:
     help:
       info: '&eПроверить опыт игрока'
@@ -1508,6 +1522,8 @@ command:
       placeItem: '&2Поместите элемент для установки пользовательского значка'
       placeOffItem: '&2Поместите элемент, чтобы установить пользовательский значок'
       autoLore: '&2Автоматическое знание: [state]'
+      group: '&2Group: &7[group]'
+      newGroup: '&eEnter new group name'
       randomizeYaw: '&2Рандомизировать направление: [state]'
       permission: '&2Требуется право на использование: [state]'
       reqPermission: '&2Показать без права: [state]'
@@ -1582,6 +1598,7 @@ command:
       lastDamage: '&eПоследняя причина повреждения: &6[cause]'
       tamed: '&eПрирученный: &6[state]'
       owner: '&eВладелец: &6[playerDisplayName]'
+      horse: '&eHorse: &6[jump]&eblocks &6[speed]&eblocks/sec'
   entitynbt:
     help:
       info: '&eПроверьте информацию об объекте nbt'
@@ -1616,6 +1633,7 @@ command:
       args: '[Ник игрока]'
     info:
       feedback: '&eВы накормили игрока &3[playerDisplayName]&e (&3[offon]&e).'
+      feedbackMulti: '&eYou have fed &3[count] &eplayers.'
       targetfeedback: '&eВы накормлены игроком &3[senderDisplayName]&e.'
   findbiome:
     help:
@@ -2450,6 +2468,10 @@ command:
       left: '&6Левое &eнажатие для использования'
       right: '&6Правое &eнажатие для предпросмотра'
       take: '&6Возьмите этот комплект!'
+      eye: ' &e☬'
+      use: '&2'
+      cantuse: '&7'
+      list: '&7[number]. &e[kitName] &6- [description]'
   kitcdreset:
     help:
       info: '&eСброс таймера набора'
@@ -2553,6 +2575,10 @@ command:
       - '&eНажми, чтобы переименовать команду'
       - '&eЭто установит команду, которую'
       - '&eнужно ввести, чтобы получить набор'
+      displayName: '&7DisplayName: &r&f[name]'
+      editDisplayName:
+      - '&eClick to change display name'
+      - '&eThis only used for visual purposes'
       kitGroup: '&eГруппа Наборов: &6[group]'
       dropItems: '&eУдалять предметы, если инвентарь заполнен: &6[state]'
       commands: '&eКоманды:'
@@ -2634,6 +2660,7 @@ command:
       groupL: '&6[groupName]: &f[list]'
       player: '%cmi_user_afk_symbol%&f[playerDisplayName]'
       # Add as many groups as you wish, by default there is only 10, to create new one, just copy paste one line and add increment into lines name, like group11 or group12 and so on.
+      # ATTENTION! group names should be in 'group[number]' format, where you have word 'group' followed by number. This is required and you cant have custom names as they are not required, but we are using number provided to determine which group goes after which
       # Player need to have appropriate permission node to be placed in group cmi.command.list.group.[groupnumber], bigger number have bigger priority
       groups:
         group1: '&fГруппа 1: &f[list]'
@@ -2780,6 +2807,7 @@ command:
       personal: '&fШанс выпадения для вас: &f[chance]%'
       headSpecific: '&fШанс выпадения конкретной головы: &f[chance]%'
       criteria: '&fКритерии: &f[criteria]%'
+      title: '&7[current]&8/&7[total]'
   money:
     help:
       info: '&eПроверить денежный баланс'
@@ -3631,9 +3659,11 @@ command:
       ingridient: '&2Ингридиенты'
       ingridients: '&f[ingridient]&f(&f[amount]&f) = &e[price]'
       notSet: '&eцена не установлена'
+      notSetBuy: '&7Buy price not set'
       result: '&2Крафтится в &f[result]&f(&f[amount]&f)'
       ingridientsPrice: '&cЦена ингридиентов: &f[price]'
       resultPrice: '&cМожет быть продан за: &f[price]'
+      explanation: '&2Buy price is only used in detecting posible exploits'
   shadowmute:
     help:
       info: '&eВыдать Мут игроку, не сказав ему, что он его получил'
@@ -4520,6 +4550,12 @@ command:
       - '&2Варпы 1'
       - '&fВарпы 2'
       - '&0Варпы 3'
+  warpgroups:
+    help:
+      info: '&eLists warp groups'
+      args: ''
+    info:
+      list: '&e[number]. &7[group] &6(&e[amount]&6)'
   weather:
     help:
       info: '&eКонтроль погоды на сервере'
