@@ -123,7 +123,7 @@ info:
   Save: '&eСохранить'
   Delete: '&cУдалить'
   Click: '&eКлик'
-  Preview: '&ePreview'
+  Preview: '&eОбзор'
   PasteOld: '&eВставить старый'
   ClickToPaste: '&eНажми, чтобы вставить в чат'
   CantTeleportWorld: '&eВы не можете телепортироваться в этот мир'
@@ -324,12 +324,12 @@ info:
     BADLANDS_PLATEAU: Плато бесплодных земель
     BAMBOO_JUNGLE: Бамбуковые джунгли
     BAMBOO_JUNGLE_HILLS: Бамбуковые холмы джунглей
-    BASALT_DELTAS: Basalt deltas
+    BASALT_DELTAS: Базальтовые дельты
     BEACH: Пляж
     BIRCH_FOREST: Березовый лес
     BIRCH_FOREST_HILLS: Березовые лесные холмы
     COLD_OCEAN: Холодный океан
-    CRIMSON_FOREST: Crimson forest
+    CRIMSON_FOREST: Малиновый лес
     DARK_FOREST: Темный лес
     DARK_FOREST_HILLS: Темные лесные холмы
     DEEP_COLD_OCEAN: Глубокий холодный океан
@@ -367,7 +367,7 @@ info:
     MOUNTAIN_EDGE: Горный край
     MUSHROOM_FIELDS: Грибные поля
     MUSHROOM_FIELD_SHORE: Грибной полевой берег
-    NETHER_WASTES: Nether wastes
+    NETHER_WASTES: Пустоши ада
     OCEAN: Океан
     PLAINS: Равнины
     RIVER: Река
@@ -382,7 +382,7 @@ info:
     SNOWY_TAIGA_HILLS: Снежно-таежные холмы
     SNOWY_TAIGA_MOUNTAINS: Снежные таежные горы
     SNOWY_TUNDRA: Снежная тундра
-    SOUL_SAND_VALLEY: Soul sand valley
+    SOUL_SAND_VALLEY: Песчаная долина душ
     STONE_SHORE: Каменный берег
     SUNFLOWER_PLAINS: Подсолнухи равнины
     SWAMP: Болото
@@ -395,7 +395,7 @@ info:
     THE_END: Край
     THE_VOID: Пустота
     WARM_OCEAN: Теплый океан
-    WARPED_FOREST: Warped forest
+    WARPED_FOREST: Искаженный лес
     WOODED_BADLANDS_PLATEAU: Лесистое плоскогорье
     WOODED_HILLS: Лесистые холмы
     WOODED_MOUNTAINS: Лесистые горы
@@ -437,7 +437,7 @@ info:
     ghast: Гаст
     giant: Гигант
     guardian: Страж
-    hoglin: Hoglin
+    hoglin: Хоглин
     horse: Лошадь
     husk: Кадавр
     illusioner: Иллюзионист
@@ -463,7 +463,7 @@ info:
     parrot: Попугай
     phantom: Фантом
     pig: Свинья
-    piglin: Piglin
+    piglin: Пиглин
     pillager: Разбойник
     player: Игрок
     polar_bear: Белый медведь
@@ -487,7 +487,7 @@ info:
     splash_potion: Взрывное зелье
     squid: Спрут
     stray: Зимогор
-    strider: Strider
+    strider: Страйдер
     thrown_exp_bottle: Брошенная бутылка с опытом
     trader_llama: Лама торговца
     trident: Трезубец
@@ -503,11 +503,11 @@ info:
     wither_skeleton: Скелет-иссушитель
     wither_skull: Голова иссушителя
     wolf: Волк
-    zoglin: Zoglin
+    zoglin: Зоглин
     zombie: Зомби
     zombie_horse: Лошадь-зомби
     zombie_villager: Зомби-житель
-    zombified_piglin: Zombified piglin
+    zombified_piglin: Зомби-пиглин
   EnchantAliases:
     protection_fire:
     - Огнеупорность
@@ -1170,7 +1170,7 @@ command:
       list: '&e[place]. &f[command] &f[args]'
       hover: '&e[desc]'
       variableColor: '&f'
-      noCommandFound: '&7No commands found by this keyword'
+      noCommandFound: '&7По этому ключевому слову команды не найдены'
   checkexp:
     help:
       info: '&eПроверить опыт игрока'
@@ -1517,13 +1517,14 @@ command:
       info: '&eИзменение варпов'
       args: (Название варпа)
     info:
-      exists: '&cВарпс этим именем (&f [newName] &c) уже существует. Выберите другой'
+      exists: '&cВарпс этим именем (&f [newName] &c) уже существует. Выберите другое
+        название'
       updated: '&eВарп с названием &f[oldName]&e изменен на &f[newName]'
       placeItem: '&2Поместите элемент для установки пользовательского значка'
       placeOffItem: '&2Поместите элемент, чтобы установить пользовательский значок'
-      autoLore: '&2Автоматическое знание: [state]'
-      group: '&2Group: &7[group]'
-      newGroup: '&eEnter new group name'
+      autoLore: '&2Автоматическое описание: [state]'
+      group: '&2Группа: &7[group]'
+      newGroup: '&eВведите имя новой группы'
       randomizeYaw: '&2Рандомизировать направление: [state]'
       permission: '&2Требуется право на использование: [state]'
       reqPermission: '&2Показать без права: [state]'
@@ -1598,7 +1599,7 @@ command:
       lastDamage: '&eПоследняя причина повреждения: &6[cause]'
       tamed: '&eПрирученный: &6[state]'
       owner: '&eВладелец: &6[playerDisplayName]'
-      horse: '&eHorse: &6[jump]&eblocks &6[speed]&eblocks/sec'
+      horse: '&eЛошадь: &6[jump]&eблоков &6[speed]&eблоков/сек.'
   entitynbt:
     help:
       info: '&eПроверьте информацию об объекте nbt'
@@ -1633,7 +1634,7 @@ command:
       args: '[Ник игрока]'
     info:
       feedback: '&eВы накормили игрока &3[playerDisplayName]&e (&3[offon]&e).'
-      feedbackMulti: '&eYou have fed &3[count] &eplayers.'
+      feedbackMulti: '&eВы накормили &3[count] &eигроков.'
       targetfeedback: '&eВы накормлены игроком &3[senderDisplayName]&e.'
   findbiome:
     help:
@@ -2575,10 +2576,10 @@ command:
       - '&eНажми, чтобы переименовать команду'
       - '&eЭто установит команду, которую'
       - '&eнужно ввести, чтобы получить набор'
-      displayName: '&7DisplayName: &r&f[name]'
+      displayName: '&7Отображаемое имя: &r&f[name]'
       editDisplayName:
-      - '&eClick to change display name'
-      - '&eThis only used for visual purposes'
+      - '&eНажмите, чтобы изменить отображаемое имя'
+      - '&eЭто используется только в визуальных целях'
       kitGroup: '&eГруппа Наборов: &6[group]'
       dropItems: '&eУдалять предметы, если инвентарь заполнен: &6[state]'
       commands: '&eКоманды:'
@@ -3659,11 +3660,11 @@ command:
       ingridient: '&2Ингридиенты'
       ingridients: '&f[ingridient]&f(&f[amount]&f) = &e[price]'
       notSet: '&eцена не установлена'
-      notSetBuy: '&7Buy price not set'
+      notSetBuy: '&7Цена покупки не установлена'
       result: '&2Крафтится в &f[result]&f(&f[amount]&f)'
       ingridientsPrice: '&cЦена ингридиентов: &f[price]'
       resultPrice: '&cМожет быть продан за: &f[price]'
-      explanation: '&2Buy price is only used in detecting posible exploits'
+      explanation: '&2Цена покупки используется только при обнаружении возможных эксплойтов'
   shadowmute:
     help:
       info: '&eВыдать Мут игроку, не сказав ему, что он его получил'
@@ -4552,7 +4553,7 @@ command:
       - '&0Варпы 3'
   warpgroups:
     help:
-      info: '&eLists warp groups'
+      info: '&eСписок групп варпов'
       args: ''
     info:
       list: '&e[number]. &7[group] &6(&e[amount]&6)'
