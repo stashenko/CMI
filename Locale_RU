@@ -1528,7 +1528,7 @@ command:
       randomizeYaw: '&2Рандомизировать направление: [state]'
       permission: '&2Требуется право на использование: [state]'
       reqPermission: '&2Показать без права: [state]'
-      hidden: '&2Hidden: [state]'
+      hidden: '&2Скрыт: [state]'
       location: '&2Установить новое местоположение'
       slot: '&2Слот: &6[slot]'
       page: '&2Страница: &6[page]'
@@ -1600,9 +1600,9 @@ command:
       lastDamage: '&eПоследняя причина повреждения: &6[cause]'
       tamed: '&eПрирученный: &6[state]'
       owner: '&eВладелец: &6[playerDisplayName]'
-      grows: '&eGrows up in: &6[time]'
+      grows: '&eВыростет через: &6[time]'
       horse: '&eЛошадь: &6[jump]&eблоков &6[speed]&eблоков/сек.'
-      villager: '&eProfession: &7[profession] &eLvl: &7[lvl] &eType: &7[type]'
+      villager: '&eПрофессия: &7[profession] &eУровень: &7[lvl] &eТип: &7[type]'
   entitynbt:
     help:
       info: '&eПроверьте информацию об объекте nbt'
@@ -1816,7 +1816,7 @@ command:
       targetfeedback: '&eВаше [color] свечение &eустановлено на &3[boolean]&e, это
         сделал &3[senderDisplayName]&e.'
       title: Выберите цвет свечения
-      incorrect: '&4Incorrect color name'
+      incorrect: '&4Неправильное название цвета'
   gm:
     help:
       info: '&eУстанавливает игроку режим игры'
@@ -2310,7 +2310,7 @@ command:
     info:
       enabled: Включено
       disabled: Выключено
-      feedback: '&e[count] &6item frames are invisible around you'
+      feedback: '&e[count] &6раммок не видно вокруг вас'
   iteminfo:
     help:
       info: '&eПосмотреть информацию предмета'
@@ -3039,10 +3039,10 @@ command:
       particleAmount: '&eКоличество частиц: &6[amount]'
       particlePercent: '&eПроцент сторон частиц: &6[amount]%'
       activationRange: '&eДиапазон активации: &6[amount]'
-      particlePermission: '&eShow particles without permission: &6[state]'
+      particlePermission: '&eПоказывать частицы без разрешения: &6[state]'
       bungeeTeleport: '&eТелепорт в точное место банджи: [state]'
       requiresPermission: '&eТребуется &f[perm] &eразрешение на использование: [state]'
-      kickBack: '&ePrevent enter without permission: [state]'
+      kickBack: '&eЗапретить вход без разрешения: [state]'
       informPermission: '&eСообщить о пропущенном разрешении: [state]'
       teleportToLocation: '&eТелепорт в местоположение портала'
       teleportToTarget: '&eТелепорт в целевое местоположение портала'
