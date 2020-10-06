@@ -102,8 +102,8 @@ info:
       DontMove: '&4Не двигайтесь &f[autoTimeLeft] &4сек.!'
       WaitFor: '&4Подождите &7[autoTimeLeft] &4секунд!'
   Spawner: '&rСпавнер [type]'
-  FailedSpawnerMine: '!actionbar!&cFailed to mine spawner. &7[percent]% &cdrop chance'
-  ClickSpawner: '!actionbar!&7[percent]% &eDrop chance'
+  FailedSpawnerMine: '!actionbar!&cНе удалось добыть спаунер. &cШанс выпадения &7[percent]%'
+  ClickSpawner: '!actionbar!&eШанс выпадения &7[percent]%'
   Elevator:
     created: '&eСоздана табличка лифта'
   CantPlaceSpawner: '&eНевозможно разместить спавнер так близко к другому спавнеру.
@@ -146,13 +146,13 @@ info:
   noItem: '&cНе могу найти предмет'
   dontHaveItem: '&cУ вас нет &6[itemName] x[amount] &cв инвентаре'
   wrongWorld: '&cНе могу сделать это в текущем мире'
-  wrongPortal: '&cYou are in incorrect area of effect'
+  wrongPortal: '&cВы находитесь в некорректной области эффекта'
   differentWorld: '&cРазличные миры'
   HaveItem: '&cУ вас &6[amount]x [itemName] &cв вашем инвентаре'
   ItemWillBreak: '!actionbar!&e&lВаш предмет (&6&l[itemName]&e&l) скоро сломается!
     &e&l[current]&6&l/&e&l[max]'
   ArmorWillBreak: '!actionbar!&e&lВаш предмет [itemName] скоро сломается! &e&l[current]&6&l/&e&l[max]'
-  cantDoInGamemode: '&eYou can''t do this in this game mode'
+  cantDoInGamemode: '&eВы не можете этого выполнить в текущем игровом режиме'
   cantDoForPlayer: '&4Вы не можете сделать это с этим игроком'
   cantDoForYourSelf: '&eВы не можете сделать это для себя'
   cantDetermineMobType: '&cНевозможно определить тип моба из слова &e[type]'
@@ -294,7 +294,7 @@ info:
       &eпустых слотов!'
     subinv: '&eВаш суб инвентарь должен быть пустым!'
     subinvslots: '&eВаш субинвентарь должен иметь не менее &6[count] &eпустых слотов!'
-  pickIcon: '&8Pick icon'
+  pickIcon: '&8Выбрать значок'
   DamageCause:
     block_explosion: Взрыв
     contact: Блокирование повреждений
@@ -469,7 +469,7 @@ info:
     phantom: Фантом
     pig: Свинья
     piglin: Пиглин
-    piglin_brute: Piglin brute
+    piglin_brute: Жестокий пиглин
     pillager: Разбойник
     player: Игрок
     polar_bear: Белый медведь
@@ -916,7 +916,7 @@ command:
       glow: '&fСвечение'
       invulnerable: '&fНеуязвимость'
       name: '&fИмя'
-      nameEdit: '&7Middle mouse click to edit name'
+      nameEdit: '&7Щелкните средней кнопкой мыши, чтобы изменить имя'
       interactable: '&fДоступен к взаимодействию'
       explanation: '&fЛевый или правый клик регулирует значение'
       explanation2: '&fУдерживай shift, чтобы сделать его в 10 раз быстрее'
@@ -968,12 +968,14 @@ command:
       cooldown: '&fПредмет находится на перезарядке. Подождите [time]'
   autorecharge:
     help:
-      info: '&eToggle auto flight recharge'
+      info: '&eПереключить автоматическое пополнение заряда полета'
       args: (playerName) [exp/money/off] (-s)
     info:
-      disabled: '&eAuto recharge disabled'
-      moneyEnabled: '&eEnabled automatic flight charge recharging by using &6money'
-      expEnabled: '&eEnabled automatic flight charge recharging by using &2exp'
+      disabled: '&eАвтоматическое пополнение отключено'
+      moneyEnabled: '&eВключено автоматическое пополнение заряда полета с помощью
+        &6денег'
+      expEnabled: '&eВключено автоматическое пополнение заряда полета с помощью &2очков
+        опыта'
   back:
     help:
       info: '&eТелепортация на последнюю сохранённую точку'
@@ -1731,7 +1733,7 @@ command:
       - '&6Шифт+Правый клик - +1000 &aСтоимость: &7[amount1000]'
       - ''
       changeAmount: '&e([amount]&e)'
-      cost: '&eCharged &6[amount] &efor &6[charge] &eflight charges'
+      cost: '&eСнимается &6[amount] &eза &6[charge] &eЗаряд энергией для элитр'
   fly:
     help:
       info: '&eУстанавливает игроку полёт true или false'
@@ -2331,12 +2333,12 @@ command:
       info: '&eПосмотреть информацию предмета'
       args: (Ник игрока)
     info:
-      nameMat: ' &eName: &7[name] &eMaterial: &7[material]'
-      mojangHover: '&eMojang Name: &7[name]'
-      display: ' &eDisplay Name: &7[display]'
-      lore: ' &eLore:'
+      nameMat: ' &eНазвание: &7[name] &eМатериал: &7[material]'
+      mojangHover: '&eНазвание от Mojang: &7[name]'
+      display: ' &eОтображаемое имя: &7[display]'
+      lore: ' &eОписание:'
       loreLine: '   &5[loreLine]'
-      enchants: ' &eEnchants: &7[enchants]'
+      enchants: ' &eЗачарование: &7[enchants]'
       entityType: ' &eТип сущности: &6[type]'
       durability: ' &eПрочность: &6[current]&e/&6[max]'
   itemlore:
@@ -3050,11 +3052,11 @@ command:
         вашем месте'
       bungeeSet: '&eПереместись в нужное место и нажмите на это сообщение, чтобы установить
         местоположение телепорта'
-      bungeeSetConfirmed: '&eBungee portal (&6[portal]&e) location set from &6[sourceServer]
-        &eserver to &e[location]'
-      bungeeSetEmpty: '&eInitiated portal location set at &6[serverName] &eserver,
-        but no one is online in this server. This action will not complete until some
-        one joins it'
+      bungeeSetConfirmed: '&eПортал Банжи (&6[portal]&e) Установлен для сервера &6[sourceServer]
+        &eпо координатам &e[location]'
+      bungeeSetEmpty: '&eМестоположение инициированного портала установлено на сервере
+        &6[serverName] &e, но на этом сервере нет никого в сети. Это действие не будет
+        завершено, пока кто-нибудь не присоединится к нему.'
       list: '&e[number]. &6[portalName]'
       redefine: '&eПереопределение области от текущего выбора'
       particles: '&eЭффект: &6[state]'
@@ -3631,7 +3633,7 @@ command:
         или выберите другое название дома.'
       slotTaken: '!actionbar!&c&lСлот дома уже используется &f[homeName]&c&l, рассмотрите
         другой'
-      setIcon: '!actionbar:3!&7Set home icon as &6[material] &7material'
+      setIcon: '!actionbar:3!&7Установлен значок дома с материалом &6[material]'
   setmotd:
     help:
       info: Установка motd
@@ -4473,8 +4475,9 @@ command:
       PrivateMessages: '&eЛичные сообщения'
       relogDisable: '&eСкрытие при перезаходе'
       noMessages: '&eПубличных сообщений'
-      fakeJoinLeave: '&eShow fake join/leave messages on vanish state change'
-      mobSpawning: '&eMobs will spawn nearby'
+      fakeJoinLeave: '&eПоказывать поддельные сообщения о присоединении или выходе
+        при изменении ваниша'
+      mobSpawning: '&eПоявление мобов поблизости'
       bossbarTitle: '&fВ режиме улучшенной невидимости'
   version:
     help:
@@ -4648,8 +4651,8 @@ command:
       total: '&eИтоговая цена: &f[total]'
   worthlist:
     help:
-      info: '&eCheck list of items with set sell prices'
+      info: '&eПроверить список товаров с ценой установленной для продажи'
       args: (playerName)
     info:
       type: '&7[type]'
-      worth: '&7Worth: &e[price]'
+      worth: '&7Стоимость: &e[price]'
