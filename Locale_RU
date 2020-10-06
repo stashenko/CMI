@@ -102,6 +102,8 @@ info:
       DontMove: '&4Не двигайтесь &f[autoTimeLeft] &4сек.!'
       WaitFor: '&4Подождите &7[autoTimeLeft] &4секунд!'
   Spawner: '&rСпавнер [type]'
+  FailedSpawnerMine: '!actionbar!&cFailed to mine spawner. &7[percent]% &cdrop chance'
+  ClickSpawner: '!actionbar!&7[percent]% &eDrop chance'
   Elevator:
     created: '&eСоздана табличка лифта'
   CantPlaceSpawner: '&eНевозможно разместить спавнер так близко к другому спавнеру.
@@ -144,11 +146,13 @@ info:
   noItem: '&cНе могу найти предмет'
   dontHaveItem: '&cУ вас нет &6[itemName] x[amount] &cв инвентаре'
   wrongWorld: '&cНе могу сделать это в текущем мире'
+  wrongPortal: '&cYou are in incorrect area of effect'
   differentWorld: '&cРазличные миры'
   HaveItem: '&cУ вас &6[amount]x [itemName] &cв вашем инвентаре'
   ItemWillBreak: '!actionbar!&e&lВаш предмет (&6&l[itemName]&e&l) скоро сломается!
     &e&l[current]&6&l/&e&l[max]'
   ArmorWillBreak: '!actionbar!&e&lВаш предмет [itemName] скоро сломается! &e&l[current]&6&l/&e&l[max]'
+  cantDoInGamemode: '&eYou can''t do this in this game mode'
   cantDoForPlayer: '&4Вы не можете сделать это с этим игроком'
   cantDoForYourSelf: '&eВы не можете сделать это для себя'
   cantDetermineMobType: '&cНевозможно определить тип моба из слова &e[type]'
@@ -290,6 +294,7 @@ info:
       &eпустых слотов!'
     subinv: '&eВаш суб инвентарь должен быть пустым!'
     subinvslots: '&eВаш субинвентарь должен иметь не менее &6[count] &eпустых слотов!'
+  pickIcon: '&8Pick icon'
   DamageCause:
     block_explosion: Взрыв
     contact: Блокирование повреждений
@@ -464,6 +469,7 @@ info:
     phantom: Фантом
     pig: Свинья
     piglin: Пиглин
+    piglin_brute: Piglin brute
     pillager: Разбойник
     player: Игрок
     polar_bear: Белый медведь
@@ -910,6 +916,7 @@ command:
       glow: '&fСвечение'
       invulnerable: '&fНеуязвимость'
       name: '&fИмя'
+      nameEdit: '&7Middle mouse click to edit name'
       interactable: '&fДоступен к взаимодействию'
       explanation: '&fЛевый или правый клик регулирует значение'
       explanation2: '&fУдерживай shift, чтобы сделать его в 10 раз быстрее'
@@ -959,6 +966,14 @@ command:
       uses: '&eИспользование предмета: &6[amount]'
       usesLeft: '!actionbar!&e&lОсталось использовать предмет: &6&l[itemUses] &e&lраз'
       cooldown: '&fПредмет находится на перезарядке. Подождите [time]'
+  autorecharge:
+    help:
+      info: '&eToggle auto flight recharge'
+      args: (playerName) [exp/money/off] (-s)
+    info:
+      disabled: '&eAuto recharge disabled'
+      moneyEnabled: '&eEnabled automatic flight charge recharging by using &6money'
+      expEnabled: '&eEnabled automatic flight charge recharging by using &2exp'
   back:
     help:
       info: '&eТелепортация на последнюю сохранённую точку'
@@ -1716,6 +1731,7 @@ command:
       - '&6Шифт+Правый клик - +1000 &aСтоимость: &7[amount1000]'
       - ''
       changeAmount: '&e([amount]&e)'
+      cost: '&eCharged &6[amount] &efor &6[charge] &eflight charges'
   fly:
     help:
       info: '&eУстанавливает игроку полёт true или false'
@@ -2044,7 +2060,6 @@ command:
       - '&eМир: &6[world]'
       - '&eX:[x] &6Y:[y] &eZ:[z]'
       notPublicIc: '&cВы не можете использовать это, он не является общедоступным'
-      commandList: ' &e[command]  '
       block: (Блок)
       entity: (Сущность)
       both: (Оба)
@@ -2316,10 +2331,12 @@ command:
       info: '&eПосмотреть информацию предмета'
       args: (Ник игрока)
     info:
-      id: ' &eId: &6[id][data]'
-      realName: ' &eНастоящее название: &6[name]'
-      bukkitName: ' &eНазвание в Bukkit: &6[name]'
-      mojangName: ' &eНазвание в Mojang: &6[name]'
+      nameMat: ' &eName: &7[name] &eMaterial: &7[material]'
+      mojangHover: '&eMojang Name: &7[name]'
+      display: ' &eDisplay Name: &7[display]'
+      lore: ' &eLore:'
+      loreLine: '   &5[loreLine]'
+      enchants: ' &eEnchants: &7[enchants]'
       entityType: ' &eТип сущности: &6[type]'
       durability: ' &eПрочность: &6[current]&e/&6[max]'
   itemlore:
@@ -3014,6 +3031,7 @@ command:
         получите после его завершения'
       list: '&e[number]. [playerDisplayName] &e- &6[time]'
       place: '&6[playerDisplayName] &eна &6[place] &eместе'
+      ownLine: '&2[number]. &2[playerDisplayName] &2- &2[time]'
   point:
     help:
       info: '&eУстановить точку на блоке'
@@ -3032,6 +3050,11 @@ command:
         вашем месте'
       bungeeSet: '&eПереместись в нужное место и нажмите на это сообщение, чтобы установить
         местоположение телепорта'
+      bungeeSetConfirmed: '&eBungee portal (&6[portal]&e) location set from &6[sourceServer]
+        &eserver to &e[location]'
+      bungeeSetEmpty: '&eInitiated portal location set at &6[serverName] &eserver,
+        but no one is online in this server. This action will not complete until some
+        one joins it'
       list: '&e[number]. &6[portalName]'
       redefine: '&eПереопределение области от текущего выбора'
       particles: '&eЭффект: &6[state]'
@@ -3232,6 +3255,7 @@ command:
     info:
       remove: '&cНажмите чтобы удалить'
       removed: '&eДом (&6[home]&e) удалён'
+      list: '&c[home]'
   removeuser:
     help:
       info: '&eУдаляет пользователя и его данные'
@@ -3607,6 +3631,7 @@ command:
         или выберите другое название дома.'
       slotTaken: '!actionbar!&c&lСлот дома уже используется &f[homeName]&c&l, рассмотрите
         другой'
+      setIcon: '!actionbar:3!&7Set home icon as &6[material] &7material'
   setmotd:
     help:
       info: Установка motd
@@ -4322,6 +4347,9 @@ command:
       tpsList: '&e[3] [10] [30] [60] [600]'
       explanation: '&fОдин блок в &e60 &fсекунд. Максимум &e600 &fсекунд'
       minMax: '&fMaкс: [max] &fМин: [min]'
+      hover:
+      - '[tpscolor][tps]'
+      - '&7[time]'
   tptoggle:
     help:
       info: '&eЗапрещает любые телепортации к игроку'
@@ -4445,6 +4473,8 @@ command:
       PrivateMessages: '&eЛичные сообщения'
       relogDisable: '&eСкрытие при перезаходе'
       noMessages: '&eПубличных сообщений'
+      fakeJoinLeave: '&eShow fake join/leave messages on vanish state change'
+      mobSpawning: '&eMobs will spawn nearby'
       bossbarTitle: '&fВ режиме улучшенной невидимости'
   version:
     help:
@@ -4457,6 +4487,7 @@ command:
       newServer: '&eСервер: &6[version]'
       Economy: '&eCMI Экономика: &6[state] '
       Chat: '&eCMI Чат: &6[state] '
+      CMIB: '&7CMIB '
       newVault: '&eVault: &6[version] '
       Modules: '&eМодули -> &a[enabled] включено &eи &f[disabled] выключено&e: &c[list]'
       Bungee: ' &cBungeeCord '
@@ -4615,3 +4646,10 @@ command:
       basePrice: '&6[itemName]&e(&f[amount]&e) -> &f[price]'
       fullPrice: '&f[price]'
       total: '&eИтоговая цена: &f[total]'
+  worthlist:
+    help:
+      info: '&eCheck list of items with set sell prices'
+      args: (playerName)
+    info:
+      type: '&7[type]'
+      worth: '&7Worth: &e[price]'
