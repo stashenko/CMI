@@ -93,7 +93,7 @@ info:
   NameChange: '&6[playerDisplayName] &eвошел в систему, также известный как: &6[namelist]'
   Cooldowns: '&eПережде, чем повторить &6[cmd] &eподождите &6[time]'
   specializedCooldowns: '&eДля этой команды действует задержка, подожди &6[time]'
-  specializedRunning: '&eCommand still running, please wait &6[time]'
+  specializedRunning: '&eКоманда все еще выполняется, подождите &6[time]'
   CooldownOneTime: '&eЭта команда используется 1 раз'
   WarmUp:
     canceled: '&eКоманда отменена из-за вашего движения'
@@ -194,11 +194,12 @@ info:
   LoginCustom: ' &6[playerDisplayName] &eприсоединился'
   deathlocation: '&eВы умерли в мире &6[world] &ax:&6[x]&a, y:&6[y]&a, z:&6[z]'
   combat:
-    CantUseShulkerBox: '&cCan''t use shulker box while you are in combat with player.
-      Wait: [time]'
-    CantUseCommand: '!actionbar!&cCan''t use command while in combat mobe. Wait: [time]'
-    bossBarPvp: '&cCombat mode [autoTimeLeft]'
-    bossBarPve: '&2Combat mode [autoTimeLeft]'
+    CantUseShulkerBox: '&cНельзя использовать шалкер-сундук, пока вы сражаетесь с
+      игроком. Wait: [time]'
+    CantUseCommand: '!actionbar!&cНевозможно использовать команду в боевом режиме.
+      Подождите: [time]'
+    bossBarPvp: '&cБоевой режим [autoTimeLeft]'
+    bossBarPve: '&2Боевой режим [autoTimeLeft]'
   bungee:
     Online: '&6В сети'
     Offline: '&cНе всети'
