@@ -93,6 +93,7 @@ info:
   NameChange: '&6[playerDisplayName] &eвошел в систему, также известный как: &6[namelist]'
   Cooldowns: '&eПережде, чем повторить &6[cmd] &eподождите &6[time]'
   specializedCooldowns: '&eДля этой команды действует задержка, подожди &6[time]'
+  specializedRunning: '&eCommand still running, please wait &6[time]'
   CooldownOneTime: '&eЭта команда используется 1 раз'
   WarmUp:
     canceled: '&eКоманда отменена из-за вашего движения'
@@ -111,8 +112,6 @@ info:
   ChunksLoading: '&eДанные мира все еще загружаются. Подождите немного и повторите
     попытку.'
   ShulkerBox: Шалкер сундук
-  CantuseShulkerBox: '&cЯ не могу использовать Шалкер сундук, пока вы сражаетесь с
-    игроком. Подождите &6[time]'
   CantUseNonEncrypted: '!actionbar!&c&lКоманды для этого предмета не зашифрованы.
     Не могу их использовать!'
   CantDecode: '!actionbar!&c&lНе могу декодировать сообщение или команду. Файл содержит
@@ -194,6 +193,12 @@ info:
   LogoutCustom: ' &6[playerDisplayName] &eвышел'
   LoginCustom: ' &6[playerDisplayName] &eприсоединился'
   deathlocation: '&eВы умерли в мире &6[world] &ax:&6[x]&a, y:&6[y]&a, z:&6[z]'
+  combat:
+    CantUseShulkerBox: '&cCan''t use shulker box while you are in combat with player.
+      Wait: [time]'
+    CantUseCommand: '!actionbar!&cCan''t use command while in combat mobe. Wait: [time]'
+    bossBarPvp: '&cCombat mode [autoTimeLeft]'
+    bossBarPve: '&2Combat mode [autoTimeLeft]'
   bungee:
     Online: '&6В сети'
     Offline: '&cНе всети'
