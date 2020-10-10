@@ -195,7 +195,7 @@ info:
   deathlocation: '&eВы умерли в мире &6[world] &ax:&6[x]&a, y:&6[y]&a, z:&6[z]'
   combat:
     CantUseShulkerBox: '&cНельзя использовать шалкер-сундук, пока вы сражаетесь с
-      игроком. Wait: [time]'
+      игроком. Подождите: [time]'
     CantUseCommand: '!actionbar!&cНевозможно использовать команду в боевом режиме.
       Подождите: [time]'
     bossBarPvp: '&cБоевой режим [autoTimeLeft]'
