@@ -263,7 +263,7 @@ info:
   vanishSymbolOff: ''
   afkSymbolOn: '&f[&fAfk&f]&r'
   afkSymbolOff: ''
-  nextPageConsole: '&fДля следующей страницы выполните&5[command]'
+  nextPageConsole: '&fДля следующей страницы выполните &5[command]'
   prevPage: '&2----<< &6Предыдущая '
   prevPageGui: '&6Предыдущая страница '
   prevPageClean: '&6Предыдущая '
