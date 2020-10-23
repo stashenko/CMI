@@ -2857,8 +2857,8 @@ command:
       notAccepting: '&eЭтот пользователь не принимает платежи от игроков'
       giveAll: '&eВыдать &6[totalAmount] &eдля &6[playerCount] &eигроков'
       takeAll: '&eВзял &6[totalAmount] &eу &6[playerCount] &eигроков'
-      overLimit: '&e[playerDisplayName] &ecan''t receive your money due limitations
-        in how many he can hold at once'
+      overLimit: '&e[playerDisplayName] &eне может получить ваши деньги из-за ограничений
+        предельной суммы.'
   more:
     help:
       info: '&eЗаполняет стек предметов до максимального значения'
@@ -3825,14 +3825,14 @@ command:
       info: '&eРедактировать спавнер'
       args: ''
     info:
-      type: '&7Change type: &e[type]'
-      nextIn: '&7Next spawn in: &e[time]'
-      nearby: '&7MaxNearBy entities: &e[count]'
-      maxdelay: '&7Max Spawn Delay: &e[count]'
-      mindelay: '&7Min Spawn Delay: &e[count]'
-      prange: '&7Required player range: &e[range]'
-      spawncount: '&7Spawn Count: &e[count]'
-      spawnrange: '&7Spawn Range: &e[range]'
+      type: '&7Изменить тип: &e[type]'
+      nextIn: '&7Следующей спавн через: &e[time]'
+      nearby: '&7RКол- мобов: &e[count]'
+      maxdelay: '&7Макс. задержка спавна: &e[count]'
+      mindelay: '&7Мин. задержка спавна: &e[count]'
+      prange: '&7Требуемый диапазон игрока: &e[range]'
+      spawncount: '&7Счетчик спавна: &e[count]'
+      spawnrange: '&7Диапазон спавна: &e[range]'
   spawnmob:
     help:
       info: '&eСоздает моба в вашем местоположении'
