@@ -842,7 +842,7 @@ command:
     info:
       feedback: '&e[playerDisplayName]&e: &6[status]'
       feedbackInactive: '&eНеактивен в течении &6[time]'
-      feedbackList: '&e[place]. [feedbackInactive]'
+      feedbackAll: '&e[place]. &e[playerDisplayName]&e: &6[status]'
       feedbackReason: '&f[reason]'
   air:
     help:
