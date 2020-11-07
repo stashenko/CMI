@@ -1144,6 +1144,7 @@ command:
       leftInfo: '&e[playerDisplayName] &fвышел из комнаты чата'
       invite: '&6[playerDisplayName] &eприглашает вас присоединиться к комнате чата:
         &f[chatRoomName]'
+      sentInvite: '&eInvited &6[playerDisplayName] &eto join chat room: &7[chatRoomName]'
       format: '&3|&f[chatRoomName]&3| &6[playerDisplayName]: &r[message]'
       nobody: '&4В комнате чата никого нет'
       notOwner: '&4Только владелец комнаты чата может сделать это'
@@ -1152,6 +1153,7 @@ command:
       notIn: '&4Пользователь не в комнате чата'
       cantJoin: '&4Комната чата является приватной, и у вас нет приглашения'
       kicked: '&6[playerDisplayName] &eкикнут из комнаты чата'
+      cantleave: '&6Can''t leave locked room'
       gotKicked: '&4Вас кикннули из комнаты чата &f[chatRoomName]'
       list: '&e[chatRoomName]&e: &f[list]'
       globalList: '&7[number]. [joined]&e[chatRoomName][private]&e: &7[count][expires]'
