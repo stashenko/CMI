@@ -1144,7 +1144,8 @@ command:
       leftInfo: '&e[playerDisplayName] &fвышел из комнаты чата'
       invite: '&6[playerDisplayName] &eприглашает вас присоединиться к комнате чата:
         &f[chatRoomName]'
-      sentInvite: '&eПриглашенный игрок &6[playerDisplayName] &eприсоеденился к комнате чата: &7[chatRoomName]'
+      sentInvite: '&eПриглашенный игрок &6[playerDisplayName] &eприсоеденился к комнате
+        чата: &7[chatRoomName]'
       format: '&3|&f[chatRoomName]&3| &6[playerDisplayName]: &r[message]'
       nobody: '&4В комнате чата никого нет'
       notOwner: '&4Только владелец комнаты чата может сделать это'
@@ -4676,3 +4677,4 @@ command:
     info:
       type: '&7[type]'
       worth: '&7Стоимость: &e[price]'
+      title: '&8Worth List'
