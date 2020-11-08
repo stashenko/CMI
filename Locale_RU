@@ -4677,4 +4677,4 @@ command:
     info:
       type: '&7[type]'
       worth: '&7Стоимость: &e[price]'
-      title: '&8Worth List'
+      title: '&8Список стоимости'
