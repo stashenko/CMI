@@ -90,7 +90,7 @@ info:
   NoGameMode: '&4Пишите 0/1/2/3 или Survival/Creative/Adventure/Spectator'
   NoWorld: '&4Не могу найти мир с этим именем'
   IncorrectLocation: '&4Неверное определение местоположения'
-  NameChange: '&6[playerDisplayName] &eвошел в систему, также известный как: &6[namelist]'
+  NameChange: '&6[playerDisplayName] &eвошел на сервер, также известный как: &6[namelist]'
   Cooldowns: '&eПережде, чем повторить &6[cmd] &eподождите &6[time]'
   specializedCooldowns: '&eДля этой команды действует задержка, подожди &6[time]'
   specializedRunning: '&eКоманда все еще выполняется, подождите &6[time]'
@@ -103,8 +103,8 @@ info:
       DontMove: '&4Не двигайтесь &f[autoTimeLeft] &4сек.!'
       WaitFor: '&4Подождите &7[autoTimeLeft] &4секунд!'
   Spawner: '&rСпавнер [type]'
-  FailedSpawnerMine: '!actionbar!&cНе удалось добыть спаунер. &cШанс выпадения &7[percent]%'
-  ClickSpawner: '!actionbar!&eШанс выпадения &7[percent]%'
+  FailedSpawnerMine: '!actionbar!&cНе удалось добыть спаунер. &cШанс добычи &7[percent]%'
+  ClickSpawner: '!actionbar!&eШанс добычи &7[percent]%'
   Elevator:
     created: '&eСоздана табличка лифта'
   CantPlaceSpawner: '&eНевозможно разместить спавнер так близко к другому спавнеру.
@@ -115,7 +115,7 @@ info:
   CantUseNonEncrypted: '!actionbar!&c&lКоманды для этого предмета не зашифрованы.
     Не могу их использовать!'
   CantDecode: '!actionbar!&c&lНе могу декодировать сообщение или команду. Файл содержит
-    неверный ключ для этой задачи. Об этом сообщите администрации сервера'
+    неверный ключ для этой задачи. Об этом сообщите администрации сервера.'
   Show: '&eПоказать'
   Remove: '&cУбрать'
   Back: '&eНазад'
@@ -157,7 +157,7 @@ info:
   cantDetermineMobType: '&cНевозможно определить тип моба из слова &e[type]'
   cantRename: '!actionbar!&e&lВы не можете переименовать предмет этим именем'
   wrongName: '&cНеправильное имя'
-  unknown: unknown
+  unknown: Неизвестно
   invalidName: '&cНеверное имя'
   alreadyexist: '&4Это имя занято'
   dontexist: '&4Ничего не найдено по этому имени'
