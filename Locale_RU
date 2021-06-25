@@ -83,7 +83,7 @@ info:
   bungeeNoGo: '&cЭта функция не будет работать на серверах, связанных с bungee'
   clickToTeleport: '&eКликни, чтобы тепепортироватьяс'
   UseMaterial: '&4Пожалуйста, используйте названия материалов!'
-  IncorrectMaterial: '&4Incorrect material name!'
+  IncorrectMaterial: '&4Неправильное название материала!'
   UseInteger: '&4Пожалуйста, используйте цифры'
   UseBoolean: '&4Используйте &aTrue &4или &cFalse'
   NoLessThan: '&4Число не может быть меньше [amount]!'
@@ -161,7 +161,7 @@ info:
   cantDoForYourSelf: '&eВы не можете сделать это для себя'
   cantDetermineMobType: '&cНевозможно определить тип моба из слова &e[type]'
   cantRename: '!actionbar!&e&lВы не можете переименовать предмет этим именем'
-  confirmRedefine: '&eClick to confirm redefining'
+  confirmRedefine: '&eНажмите, чтобы подтвердить переопределение'
   cantEdit: '&eВы не можете это редактировать'
   wrongName: '&cНеправильное имя'
   unknown: Неизвестно
@@ -202,7 +202,7 @@ info:
   LoginCustom: ' &6[playerDisplayName] &eприсоединился'
   deathlocation: '&eВы умерли в мире &6[world] &ax:&6[x]&a, y:&6[y]&a, z:&6[z]'
   book:
-    exploit: '&cYou cant create book with more than [amount] pages'
+    exploit: '&cВы не можете создать книгу, содержащую более [amount] страниц.'
   combat:
     CantUseShulkerBox: '&cНельзя использовать шалкер-сундук, пока вы сражаетесь с
       игроком. Подождите: [time]'
@@ -352,7 +352,7 @@ info:
     BIRCH_FOREST_HILLS: Березовые лесные холмы
     COLD_OCEAN: Холодный океан
     CRIMSON_FOREST: Малиновый лес
-    CUSTOM: Custom
+    CUSTOM: Сделанный на заказ
     DARK_FOREST: Темный лес
     DARK_FOREST_HILLS: Темные лесные холмы
     DEEP_COLD_OCEAN: Глубокий холодный океан
@@ -719,7 +719,7 @@ modify:
   listNumbering: '&e[number]. '
   listAlign: '&80'
   ChangeHover: '&eНажмите, чтобы изменить'
-  ChangeCommands: '&eCommands'
+  ChangeCommands: '&eКоманды'
   enabledColor: '&6'
   disabledColor: '&7'
   commandTitle: ' &e--- &6[name] &e---'
@@ -733,7 +733,7 @@ modify:
     живаются специальные команды. Больше информации на \n&ehttp://www.zrips.net/cmi/commands/specialized/"
   commandEditInfo: '&eКликни, чтобы вставить старый текст. Введите &6cancel &eчтобы
     отменить. Введите &6remove &eчтобы удалить линию'
-  listLimit: '&eList can''t be bigger than &6[amount] &eentries'
+  listLimit: '&eСписок не может быть больше &6[amount] &eзаписей'
   commandEditInfoHover: '&eКликни, чтобы вставить старый текст'
 warp:
   list: '&e[pos]. &6[warpName] &f- &f[worldName] ([x]:[y]:[z])'
@@ -815,7 +815,7 @@ Location:
   Z: '&eZ: &6[z]'
   Pitch: '&eВысота: &6[pitch]'
   Yaw: '&eАзимут: &6[yaw]'
-Locations: '&7Locations: '
+Locations: '&7Локации: '
 Ender:
   Title: '&fОткрыть ендер сундук'
 Chat:
@@ -859,12 +859,12 @@ command:
       args: (Ник игрока)
     info:
       # This only determines message in title message and not message shown in chat. For chat message check config.yml file
-      afkTitle: '&eYou are now AFK'
+      afkTitle: '&eВы сейчас AFK'
       afkSubTitle:
-      - '&2Don''t eat to much cookies!'
-      - '&2Nice day for fishing'
-      - '&2Afk, again?'
-      - '&2Where are you?'
+      - '&2Не ешьте слишком много печенья!'
+      - '&2Хороший день для рыбалки'
+      - '&2Afk, снова?'
+      - '&2Где вы?'
   afkcheck:
     help:
       info: '&eПроверьте статус AFK игрока'
@@ -938,10 +938,10 @@ command:
       targetfeedback: '&eИгрок &3[senderDisplayName]&e открыл наковальню для вас.'
   anvilrepaircost:
     help:
-      info: '&eSet items repair cost'
-      args: (playerName) [amount]
+      info: '&eУстановить стоимость ремонта предметов'
+      args: (Ник игрока) [количество]
       explanation:
-      - 'Example:'
+      - 'Пример:'
       - /repaircost 10
       - /repaircost set 10
       - /repaircost add 10
@@ -949,12 +949,14 @@ command:
       - /repaircost Zrips clear
       - /repaircost Zrips add 10
     info:
-      current: '&eCurrent items base repair cost: &6[cost]&e.'
-      noitem: '&cNot holding any item in hand.'
-      cantDetermineCost: '&cCan''t determine base repair cost for this item.'
-      selffeedback: '&eBase repair cost was set to &3[amount] &efor &3[playerDisplayName]&e
-        item in hand (&3[offon]&e).'
-      targetfeedback: '&eYour item repair cost was set to &3[amount]&e by &3[senderDisplayName]&e.'
+      current: '&eБазовая стоимость ремонта текущих предметов: &6[cost]&e.'
+      noitem: '&cНе держит в руках никаких предметов.'
+      cantDetermineCost: '&cНевозможно определить базовую стоимость ремонта этого
+        предмета.'
+      selffeedback: '&eБазовая стоимость ремонта установлена на уровне &3[amount]
+        &eдля игрока &3[playerDisplayName]&e с предметом в руке (&3[offon]&e).'
+      targetfeedback: '&eСтоимость ремонта вашего предмета установлена на &3[amount]&e
+        игроком &3[senderDisplayName]&e.'
   armorstand:
     help:
       info: '&eОткрыть редактор стендов брони'
@@ -1305,9 +1307,9 @@ command:
       - cmi clear +armors - удалит элементы типа брони
       - cmi clear +armorslots - удалит предметы из слотов брони
     info:
-      clearFeedback: '&eYou have removed &6[amount] &eitems from &3[playerDisplayName]&e
-        inventory (&3[offon]&e).'
-      target: '&6[amount] &eitems got removed from your inventory by &3[senderDisplayName]&e.'
+      clearFeedback: '&eВы удалили &6[amount] &eпредметов из инвентаря &3[playerDisplayName]&e
+        (&3[offon]&e).'
+      target: '&6[amount] &eпредметов удалены из вашего инвентаря игроком &3[senderDisplayName]&e.'
       confirm: '&fНажмите, чтобы подтвердить очистку инвентаря. &cВсе предметы будут
         удалены!'
   clearchat:
@@ -1619,9 +1621,9 @@ command:
       permission: '&2Требуется право на использование: [state]'
       reqPermission: '&2Показать без права: [state]'
       hidden: '&2Скрыт: [state]'
-      primaryLocation: '&2Primary location'
-      secondaryLocation: '&2Extra locations'
-      uniqueLocation: '&2Repeating locations: [state]'
+      primaryLocation: '&2Основное местоположение'
+      secondaryLocation: '&2Дополнительные местоположения'
+      uniqueLocation: '&2Повторяющиеся местоположения: [state]'
       slot: '&2Слот: &6[slot]'
       page: '&2Страница: &6[page]'
       overllaps: '&2Пересекается с:'
@@ -2947,7 +2949,7 @@ command:
       gotMoney: '&eВы получили &6[amount] &eот &6[senderDisplayName]&e. Новый баланс:
         &6[money]'
       gotMoneyGive: '&eВы получили &6[amount]&e. Баланс: &6[money]'
-      lostMoney: '&6[amount]&e has been removed from your balance. Remaining: &6[money]'
+      lostMoney: '&6[amount]&e удалено с вашего баланса. Осталось: &6[money]'
       noMoney: '&cУ вас недостаточно денег'
       worldGroups: '&cВы не можете отправлять деньги между различными мировыми группами'
       self: '&cВы не можете отправлять деньги себе'
@@ -3409,8 +3411,8 @@ command:
       info: '&eУстанавливает цену ремонта'
       args: (Ник игрока) [количество]
     info:
-      feedback: '&eRepair cost: &6[amount]'
-      noNeed: '&eNo need to repair'
+      feedback: '&eСтоимость ремонта: &6[amount]'
+      noNeed: '&eНет необходимости в ремонте'
   replaceblock:
     help:
       info: '&eЗаменяет блоки в текущем мире вокруг вас'
@@ -3449,10 +3451,10 @@ command:
       noOneToReplay: '&eВ последнее время вы никому не писали сообщение'
   resetback:
     help:
-      info: '&eResets players back location'
-      args: (playerName) (reason) (-death) (-s)
+      info: '&eСбрасывает местоположение возврата игроков'
+      args: (Ник игрока) (причина) (-death) (-s)
     info:
-      feedback: '&eBack location got a reset!'
+      feedback: '&eСброс местоположение возврата!'
   resetdbfields:
     help:
       info: '&eСбрасывает отдельные столбцы базы данных по умолчанию'
@@ -4160,7 +4162,7 @@ command:
     info:
       feedback: '&eПрощай, жестокий мир!...'
       message: '&6[playerDisplayName] &eпокончил с собой.'
-      totem: '&6Can''t use while holding totem'
+      totem: '&6Невозможно использовать, удерживая тотем в руке'
   switchplayerdata:
     help:
       info: '&eПереключает все данные от одного игрока к другому'
@@ -4192,7 +4194,7 @@ command:
       - Диапазон бана зависит от cmi.command.tempban.max.[amount]
       - Если игрок не имеет право, 60 секунд будет максимальным значением
     info:
-      message: '&cTemporarily Banned!'
+      message: '&cВременно забанен!'
       messageToAll: '&6[playerDisplayName] &eполучил временный бан от игрока &6[senderDisplayName]
         &eна: &6[time] &eпричина: &6[reason]'
       banedSilent: '&f[&fSilent&f]&6[playerDisplayName] &eполучил временный бан от
