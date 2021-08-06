@@ -335,7 +335,7 @@ command:
       args: ''
     info:
       Id: ' &eId: &6[id][data]'
-      Material: ' &eМатериал: &6[name][ndata]'
+      Material: ' &eMaterial: &6[name][ndata]'
       RealName: ' &eРеальное название: &6[name]'
       TempLight: ' &eТемпература: &6[temp]&e, Свечение блока: &6[blevel]&e, sky: &6[slevel]&e,
         в общем: &6[level]'
@@ -1079,7 +1079,7 @@ command:
       args: ''
   generateworth:
     help:
-      info: '&eАвтоматически генерировать возможные ценности предметов'
+      info: '&eAuto generate posible item worth values'
       args: ''
   getbook:
     help:
@@ -1490,6 +1490,7 @@ command:
       newFlyCharge: '&fЗаряд полёта: &6[charge]'
       newElytraFlyHover: '&fЛетает на элитрах'
       newGodHover: '&fTempGod на: &e[time]'
+      newNoDamageHover: '&7No Damage Ticks for: &e[time]'
       newSneaking: Крадется
       newSprint: Бежит
       newWalkSpeed: '&fСкорость ходьбы: &6[walkspeed]'
@@ -3104,7 +3105,7 @@ command:
       args: (Ник игрока)
     info:
       gotSmited: '&eАй! Вас ударили молнией!'
-      targetSmited: '&eПоражающая цель!'
+      targetSmited: '&eSmiting target!'
   socialspy:
     help:
       info: '&eПереключить шпиона чата'
@@ -3345,6 +3346,24 @@ command:
         USE_ITEM: Использовал предметов
         PICKUP: Поднял предметов
         KILL_ENTITY: Убил мобов
+        STRIDER_ONE_CM: Strider travel
+        INTERACT_WITH_BLAST_FURNACE: Interaction with blast furnace
+        INTERACT_WITH_SMOKER: Interaction with smoker
+        INTERACT_WITH_LECTERN: Interaction with lectern
+        INTERACT_WITH_CAMPFIRE: Interaction with campfire
+        INTERACT_WITH_CARTOGRAPHY_TABLE: Interaction with cartography table
+        INTERACT_WITH_LOOM: Interaction with loom
+        INTERACT_WITH_STONECUTTER: Interaction with stonecutter
+        INTERACT_WITH_ANVIL: Interaction with anvil
+        INTERACT_WITH_GRINDSTONE: Interaction with grindstone
+        INTERACT_WITH_SMITHING_TABLE: Interaction with smithing table
+        BELL_RING: Bell rings
+        RAID_TRIGGER: Raid triggers
+        RAID_WIN: Raid wins
+        TARGET_HIT: Target hits
+        OPEN_BARREL: Opened barrels
+        DROP_COUNT: Drop count
+        TOTAL_WORLD_TIME: Time in world
   statsedit:
     help:
       info: '&eИзменить статистику игроков'
@@ -3994,9 +4013,9 @@ command:
       args: (all/blocks/hand)
     info:
       worthless: '&eНет цены'
-      damaged: ' &6(&2[percent]% &6повреждений)'
-      shulker: '&6Удалите предметы из шалкера-сундука перед продажей'
-      repair: '&eРемонт перед продажей'
+      damaged: ' &6(&2[percent]% &6damaged)'
+      shulker: '&6Remove items from shulker box before selling'
+      repair: '&eRepair before selling'
       basePrice: '&6[itemName]&e(&f[amount]&e) -> &f[price]'
       fullPrice: '&f[price]'
       total: '&eИтоговая цена: &f[total]'
