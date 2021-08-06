@@ -335,7 +335,7 @@ command:
       args: ''
     info:
       Id: ' &eId: &6[id][data]'
-      Material: ' &eMaterial: &6[name][ndata]'
+      Material: ' &eМатериал: &6[name][ndata]'
       RealName: ' &eРеальное название: &6[name]'
       TempLight: ' &eТемпература: &6[temp]&e, Свечение блока: &6[blevel]&e, sky: &6[slevel]&e,
         в общем: &6[level]'
@@ -1079,7 +1079,7 @@ command:
       args: ''
   generateworth:
     help:
-      info: '&eAuto generate posible item worth values'
+      info: '&eАвтоматически генерировать возможные цены предметов'
       args: ''
   getbook:
     help:
@@ -1486,11 +1486,11 @@ command:
       newFly: 'Может летать&6([flying]&6) '
       newFlying: Летает
       newFlyHover: '&fСкорость полета: &6[flyspeed]'
-      newFlyTemp: '&fTemporary fly: &6[time]'
+      newFlyTemp: '&fВременный полет: &6[time]'
       newFlyCharge: '&fЗаряд полёта: &6[charge]'
       newElytraFlyHover: '&fЛетает на элитрах'
-      newGodHover: '&fTempGod на: &e[time]'
-      newNoDamageHover: '&7No Damage Ticks for: &e[time]'
+      newGodHover: '&fВременный Бог: &e[time]'
+      newNoDamageHover: '&7Нет повреждений на: &e[time]'
       newSneaking: Крадется
       newSprint: Бежит
       newWalkSpeed: '&fСкорость ходьбы: &6[walkspeed]'
@@ -3105,7 +3105,7 @@ command:
       args: (Ник игрока)
     info:
       gotSmited: '&eАй! Вас ударили молнией!'
-      targetSmited: '&eSmiting target!'
+      targetSmited: '&eУдар молнии!'
   socialspy:
     help:
       info: '&eПереключить шпиона чата'
@@ -4013,9 +4013,9 @@ command:
       args: (all/blocks/hand)
     info:
       worthless: '&eНет цены'
-      damaged: ' &6(&2[percent]% &6damaged)'
-      shulker: '&6Remove items from shulker box before selling'
-      repair: '&eRepair before selling'
+      damaged: ' &6(&2[percent]% &6износа)'
+      shulker: '&6Удалите предметы из шалкера-сундука перед продажей'
+      repair: '&eРемонт перед продажей'
       basePrice: '&6[itemName]&e(&f[amount]&e) -> &f[price]'
       fullPrice: '&f[price]'
       total: '&eИтоговая цена: &f[total]'
