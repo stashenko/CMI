@@ -136,16 +136,16 @@ command:
       alias: '&6[alias]'
       commandList: ' &e/[command]  '
       commandListDelay: ' &6[command]  '
-      permRequirements: Permission
+      permRequirements: Разрешение
       permReqExplanation: '&fПотребуется &6cmi.customalias.[alias] &fдля использования'
       tab: ' TabComplete'
       tabCompleteExplanation: '&7При отключении tabcomplete работать не будет'
       tabCompletes: '&2TabCompletes: '
-      cTab: ' CustomTab'
-      file: ' &2FileName'
-      fileExplanation: '&7Current destination file: &e[file]'
-      addTabComplete: ' AddTab'
-      addTabExplanation: '&6When enabled we will add defined tabs to existing ones'
+      cTab: ' Пользовательская вкладка'
+      file: ' &2Имя файла'
+      fileExplanation: '&7Текущий целевой файл: &e[file]'
+      addTabComplete: ' Добавить вкладку'
+      addTabExplanation: '&6Когда включено, мы добавим определенные вкладки к существующим.'
       newAliasInfo: '&eВведите новое имя команды псевдонима и нажмите Enter'
       addInfo: '&eВведите новую команду. Пишите &6cancel &eдля завершения'
       addInformationHover: "&eГлобальные переменные поддерживаются в категории отп\
@@ -407,11 +407,12 @@ command:
       targetfeedback: '&eВас поджег &3[senderDisplayName]&e на &6[time]&e.'
   cartographytable:
     help:
-      info: '&eOpen cartography table'
-      args: (playerName)
+      info: '&eОткрыть картографическую таблицу'
+      args: (Ник игрока)
     info:
-      feedback: '&eYou have opened cartography table for &3[playerDisplayName]&e (&3[offon]&e).'
-      targetfeedback: '&3[senderDisplayName]&e opened cartography table for you.'
+      feedback: '&eВы открыли картографическую таблицу для &3[playerDisplayName]&e
+        (&3[offon]&e).'
+      targetfeedback: '&3[senderDisplayName]&e открыл для вас таблицу картографии.'
   charges:
     help:
       info: '&eПоказывает раздачи спавнеров'
@@ -1180,11 +1181,11 @@ command:
       targetfeedback: '&eВам установили режим бога на &3[boolean]&e, это сделал &3[senderDisplayName]&e.'
   grindstone:
     help:
-      info: '&eOpen grindstone'
-      args: (playerName)
+      info: '&eОткрыть точильный камень'
+      args: (Ник игрока)
     info:
-      feedback: '&eYou have opened grindstone for &3[playerDisplayName]&e (&3[offon]&e).'
-      targetfeedback: '&3[senderDisplayName]&e opened grindstone for you.'
+      feedback: '&eВы открыли точильный камень для &3[playerDisplayName]&e (&3[offon]&e).'
+      targetfeedback: '&3[senderDisplayName]&e открыл точильный камень для вас.'
   groundclean:
     help:
       info: '&eОчищает сервер от ненужных элементов'
@@ -2066,11 +2067,11 @@ command:
       list: '&6[place]&e. &6[ip]'
   loom:
     help:
-      info: '&eOpen loom'
-      args: (playerName)
+      info: '&eОткрыть ткацкий станок'
+      args: (Ник игрока)
     info:
-      feedback: '&eYou have opened loom for &3[playerDisplayName]&e (&3[offon]&e).'
-      targetfeedback: '&3[senderDisplayName]&e opened loom for you.'
+      feedback: '&eВы открыли ткацкий станок для &3[playerDisplayName]&e (&3[offon]&e).'
+      targetfeedback: '&3[senderDisplayName]&e открыл для вас ткацкий станок.'
   mail:
     help:
       info: '&eПроверить или отправить почту'
@@ -2083,7 +2084,7 @@ command:
       noMailsById: '&eНет сообщений от этого id для игрока'
       noMails: '&eНет писем'
       mailHover: '&e[senderName] /n &e[time]'
-      mailHoverExpires: '/n &eExpires in: &6[time]'
+      mailHoverExpires: '/n &eИстекает: &6[time]'
       mailList: ' &7[senderDisplayName]&e: [mail] '
       waitingMail: '&eУ вас накопилось &6[amount] &eписем. Нажми, чтобы проверить
         их.'
@@ -2575,8 +2576,8 @@ command:
     info:
       list: '&e[place]. [currentRankMarker]&6[rankName][currentRankMarker]'
       currentRankMarker: '&6+'
-      hoverNext: "&6Next: \n[rankList]"
-      hoverLast: '&2Last rank'
+      hoverNext: "&6Следующий: \n[rankList]"
+      hoverLast: '&2Последний ранг'
   rankset:
     help:
       info: '&eУстановка ранга игроку'
@@ -2704,7 +2705,7 @@ command:
       info: '&eОтправляет сообщение последнему адресату'
       args: '[сообщение]'
     info:
-      noOneToReply: '&eThere is no one to reply'
+      noOneToReply: '&eНекому ответить'
   resetback:
     help:
       info: '&eСбрасывает местоположение возврата игроков'
@@ -2992,8 +2993,8 @@ command:
       setBed: '&eМесто возрождения для кровати'
       private: ' &2(private)'
       noMore: '&cВы достигли максимально допустимого предела точек дома'
-      exist: "&cHome location with this name (&6[name]&c) already exists! \n&eClick\
-        \ to confirm overwrite."
+      exist: "&cДом с таким названием (&6[name]&c) уже существует! \n&eНажмите для\
+        \ подтверждения перезаписи."
       noOverwrite: '&cУ вас нет права на перенос точки этого дома. Удалите старый
         или выберите другое название дома.'
       slotTaken: '!actionbar!&c&lСлот дома уже используется &f[homeName]&c&l, рассмотрите
@@ -3137,11 +3138,11 @@ command:
       targetSmited: '&eУдар молнии!'
   smithingtable:
     help:
-      info: '&eOpen smithing table'
-      args: (playerName)
+      info: '&eОткрыть кузнечный стол'
+      args: (Ник игрока)
     info:
-      feedback: '&eYou have opened smithing table for &3[playerDisplayName]&e (&3[offon]&e).'
-      targetfeedback: '&3[senderDisplayName]&e opened smithing table for you.'
+      feedback: '&eВы открыли кузнечный стол для &3[playerDisplayName]&e (&3[offon]&e).'
+      targetfeedback: '&3[senderDisplayName]&e открыл для вас кузнечный стол.'
   socialspy:
     help:
       info: '&eПереключить шпиона чата'
@@ -3432,11 +3433,11 @@ command:
         плитки &6[players] игроки'
   stonecutter:
     help:
-      info: '&eOpen stonecutter'
-      args: (playerName)
+      info: '&eОткрыть камнерез'
+      args: (Ник игрока)
     info:
-      feedback: '&eYou have opened stonecutter for &3[playerDisplayName]&e (&3[offon]&e).'
-      targetfeedback: '&3[senderDisplayName]&e opened stonecutter for you.'
+      feedback: '&eВы открыли камнерез для &3[playerDisplayName]&e (&3[offon]&e).'
+      targetfeedback: '&3[senderDisplayName]&e открыл для вас камнерез.'
   sudo:
     help:
       info: '&eЗаставить другого игрока выполнить команду'
@@ -3886,7 +3887,7 @@ command:
         при изменении ваниша'
       mobSpawning: '&eПоявление мобов поблизости'
       stopPlaytime: '&eНаигранное время перестанет увеличиваться'
-      sleepIgnore: '&eIgnore for sleeping count'
+      sleepIgnore: '&eИгнорировать счетчик спящих'
       bossbarTitle: '&fВ режиме улучшенной невидимости'
   version:
     help:
