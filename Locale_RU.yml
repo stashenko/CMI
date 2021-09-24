@@ -58,8 +58,8 @@
 # ATTENTION! As of 9.0.0.0 CMI version some of the locale lines got moved to CMILib file. This is to centralize some of most used ones across multiple plugins.
 # After you update locale in CMILib file perform /CMIL RELOAD command for changes to take effect
 info:
-  ServerSwitchOut: ' &6[playerDisplayName] &eswitched server to &6[serverName]'
-  ServerSwitchIn: ' &6[playerDisplayName] &ecame from &6[serverName] &eserver'
+  ServerSwitchOut: ' &6[playerDisplayName] &eперешел на сервер &6[serverName]'
+  ServerSwitchIn: ' &6[playerDisplayName] &eпришел с сервера &6[serverName]'
 command:
   help:
     output:
