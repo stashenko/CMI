@@ -63,7 +63,7 @@ info:
     Текущий: &c[currentName]'
   Searching: '&7Поиск данных игрока, пожалуйста, подождите, это может занять некоторое
     время!'
-  NoCommandWhileSleeping: '&cCan''t perform commands while sleeping!'
+  NoCommandWhileSleeping: '&cНельзя выполнять команды во сне!'
   PurgeNotEnabled: '&cФункция очистки не включена в конфигурации!'
   TeamManagementDisabled: '&7Эта функция будет иметь ограниченный функционал, в то
     время как DisableTeamManagement установлена на true!'
@@ -74,18 +74,18 @@ info:
   Cooldowns: '&7Эта команда перезаряжается, подождите &c[time]'
   specializedCooldowns: '&7Для этой команды действуют ограничения на использование,
     пожалуйста, подождите &c[time]'
-  specializedRunning: '&eCommand still running, please wait &6[time]'
+  specializedRunning: '&eКоманда все еще выполняется, пожалуйста, подождите &6[time]'
   CooldownOneTime: '&cЭту команду можно использовать только один раз!'
   WarmUp:
     canceled: '&cКоманда была отменена из-за вашего движения'
     counter: '!actionbar!&7--> &c[time] &7<--'
     DontMove: '!title!!subtitle!&cНе двигайся!'
     Boss:
-      DontMove: '&4Don''t move for &7[autoTimeLeft] &4seconds!'
-      WaitFor: '&4Wait for &7[autoTimeLeft] &4seconds!'
+      DontMove: '&4Не двигайтесь &7[autoTimeLeft] &4секунд!'
+      WaitFor: '&4Подождите &7[autoTimeLeft] &4секунд!'
   Spawner: '&rСпавнер [type]'
-  FailedSpawnerMine: '!actionbar!&cFailed to mine spawner. &7[percent]% &cdrop chance'
-  ClickSpawner: '!actionbar!&7[percent]% &eDrop chance'
+  FailedSpawnerMine: '!actionbar!&cНе удалось добыть спаунер. &cШанс добычи &7[percent]%'
+  ClickSpawner: '!actionbar!&eШанс добычи &7[percent]%'
   Elevator:
     created: '&aТабличка-лифт успешно создана!'
   CantPlaceSpawner: '&7Не удалось разместить спавнер так близко к другому спавнеру.
@@ -110,7 +110,7 @@ info:
   sleepersRequired: '!toast! -t:goal -icon:clock &6&lВНИМАНИЕ: &f[sleeping] &7из &f[required]&7
     игроков требуется для ускорения ночного времени!'
   sunSpeedingTitle: '&7[hour]'
-  skippingNight: '!title!&7Skipping entire night'
+  skippingNight: '!title!&7Пропуск ночи'
   sunSpeedingSubTitle: '&f[count]&7/&f[total] &7(&f[speed]X&7)'
   repairConfirm: '&7Нажмите, чтобы подтвердить починку предмета &c[items] &7за &c[cost]'
   bookDate: '&7Написано в &f[date]'
@@ -131,13 +131,14 @@ info:
   deathlocation: '&7Вы умерли на координатах x:&c[x]&7, y:&c[y]&7, z:&c[z]&7 в мире
     &c[world]'
   book:
-    exploit: '&cYou cant create book with more than [amount] pages'
+    exploit: '&cВы не можете создать книгу, содержащую более [amount] страниц.'
   combat:
-    CantUseShulkerBox: '&cCan''t use shulker box while you are in combat with player.
-      Wait: [time]'
-    CantUseCommand: '!actionbar!&cCan''t use command while in combat mobe. Wait: [time]'
-    bossBarPvp: '&cCombat mode [autoTimeLeft]'
-    bossBarPve: '&2Combat mode [autoTimeLeft]'
+    CantUseShulkerBox: '&cНельзя использовать шалкер бокс, пока вы сражаетесь с игроком.
+      Подождите: [time]'
+    CantUseCommand: '!actionbar!&cНельзя использовать команду в боевом режиме. Подождите:
+      [time]'
+    bossBarPvp: '&cБоевой режим [autoTimeLeft]'
+    bossBarPve: '&2Боевой режим [autoTimeLeft]'
   noSchedule: '&cРасписание по этому имени не найдено'
   totem:
     cooldown: '&7Задержка тотема: [time]'
@@ -167,11 +168,11 @@ info:
   vanishSymbolOff: ''
   afkSymbolOn: '&8[&7AFK&8]&r'
   afkSymbolOff: ''
-  beeinfo: '!actionbar!&7Honey level: &e[level]&7/&e[maxlevel] &7Bees inside: &e[count]&7/&e[maxcount]'
+  beeinfo: '!actionbar!&7Уровень мёда: &e[level]&7/&e[maxlevel] &7Пчелы внутри: &e[count]&7/&e[maxcount]'
   pvp:
-    noGodDamage: '!actionbar!&cYou can''t damage players while being immortal'
+    noGodDamage: '!actionbar!&cВы не можете нанести урон игрокам, в режиме бессмертия'
   pve:
-    noGodDamage: '!actionbar!&cYou can''t damage mobs while being immortal'
+    noGodDamage: '!actionbar!&cВы не можете нанести урон мобам, в режиме бессмертия'
   InvEmpty:
     armor: '&cВаши слоты брони должны быть пустыми!'
     hand: '&cВаша рука должна быть пустой!'
@@ -185,7 +186,7 @@ info:
     subinv: '&cВаш суб инвентарь должен быть пустым!'
     subinvslots: '&7Ваш суб инвентарь должен иметь как минимум &c[count] &7пустых
       слотов!'
-  CommandFormat: '&cIncorrect command format'
+  CommandFormat: '&cНеправильный формат команды'
   ServerSwitchOut: ' &6[playerDisplayName] &eперешел на сервер &6[serverName]'
   ServerSwitchIn: ' &6[playerDisplayName] &eпришел с сервера &6[serverName]'
 warp:
@@ -223,26 +224,28 @@ Information:
   Money: '&7Баланс: &c[money]'
   Group: '&7Ранг: &c[group]'
 econ:
-  commandCost: '&7This command cost is &6[cost] &7repeat it or click here to confirm'
+  commandCost: '&7Стоимость этой команды составляет &6[cost] &7, повторите ее или
+    нажмите здесь, чтобы подтвердить'
   disabled: '&cНевозможно использовать эту команду, ибо поддержка экономики отключена'
 Elytra:
   Speed: '&7Скорость: &c[speed]&7км/ч'
   SpeedBoost: ' &a+ '
   SpeedSuperBoost: ' &a+ '
   CanUse: '&cУ вас нет разрешения, чтобы одеть элитры!'
-  CantGlide: '&cCan''t use elytra here!'
+  CantGlide: '&cЗдесь нельзя использовать надкрылья!'
   Charging: '&7Заряд: &c[percentage]%'
 NetherPortal:
   ToHigh: '&7Портал слишком большой, максимальная высота &c[max]&7!'
   ToWide: '&7Портал слишком широкий, максимальная ширина &c[max]&7!'
-  Creation: '!actionbar!&7Created [height]x[width] nether portal!'
+  Creation: '!actionbar!&7Создан портал в ад с размерами [height]x[width] !'
   Disabled: '&cСоздание портала отключено!'
 Ender:
   Title: '&7Открыть сундук эндера'
 Chat:
   localPrefix: '&c[ʟ] &r'
   shoutPrefix: '&e[ɢ] &r'
-  LocalNoOne: '!actionbar!&cNobody hear you, write ! before message for global chat'
+  LocalNoOne: '!actionbar!&cНикто вас не слышит, пишите знак &e! &cперед сообщением
+    для глобального чата'
   shoutDeduction: '!actionbar!&c[amount] &7снято за сообщение, отправленное в глобальный
     чат'
   # Use \n to add new line
@@ -633,8 +636,8 @@ command:
       args: '[Ник игрока/off]'
     info:
       joined: '&eРегистрация в комнате чата: &f[chatRoomName]'
-      joinedWatcher: '&eObserving chat room: &7[chatRoomName]'
-      stopeedWatching: '&eStopped observing chat room: &7[chatRoomName]'
+      joinedWatcher: '&eНаблюдение за чат-комнатой: &7[chatRoomName]'
+      stopeedWatching: '&eПерестал наблюдать за чат-комнатой: &7[chatRoomName]'
       watcherSymbol: ◕‿◕
       watcherSymbolActive: '&2'
       watcherSymbolInactive: '&7'
@@ -653,8 +656,8 @@ command:
       takenName: '&4Это имя комнаты чата занято, используйте другое'
       notIn: '&4Пользователь не в комнате чата'
       cantJoin: '&4Комната чата является приватной, и у вас нет приглашения'
-      cantSee: '&4Chat room is private, you don''t have permission to see messages
-        in it'
+      cantSee: '&4Комната чата является частной, у вас нет разрешения на просмотр
+        сообщений в ней'
       kicked: '&6[playerDisplayName] &eкикнут из комнаты чата'
       cantleave: '&6Невозможно выйти из заблокированной комнаты'
       gotKicked: '&4Вас кикннули из комнаты чата &f[chatRoomName]'
@@ -1566,15 +1569,15 @@ command:
     info:
       nearList: '&f[number]. &e[playerDisplayName] &6[homeName] &f[distance] блоков
         в направлении &e[direction]'
-      closeButton: '&7Close'
-      infoButton: '&7Information'
-      bedButton: '&7Bed location'
-      homeButton: '&7Home location'
-      deathButton: '&7Death location'
+      closeButton: '&7Закрыть'
+      infoButton: '&7Информация'
+      bedButton: '&7Расположение кровати'
+      homeButton: '&7Расположение дома'
+      deathButton: '&7Место смерти'
       lore: |-
         &7[world]
         &f[x]&7:&f[y]&7:&f[z]
-      pickerLore: '&7Middle mouse click to change icon'
+      pickerLore: '&7Клик средней кнопкой мыши, чтобы изменить значок'
   hunger:
     help:
       info: '&eУстанавливает голод игроку'
@@ -2058,7 +2061,7 @@ command:
       left: '&6Левое &eнажатие для использования'
       right: '&6Правое &eнажатие для предпросмотра'
       take: '&6Возьмите этот комплект!'
-      open: '&7Items from &8[kitName] &7kit!'
+      open: '&7Предмет из набора &8[kitName] &7!'
       eye: ' &e☬'
       use: '&2'
       cantuse: '&7'
@@ -2493,7 +2496,7 @@ command:
     info:
       feedback: '&eВы обновили паспортную табличку для &3[playerDisplayName]&e (&3[offon]&e).'
       targetfeedback: '&eВаша табличка с именем обновлена'
-      namePlate: '&e[playerDisplayName] name plate: &f[namePlate]'
+      namePlate: '&e[playerDisplayName] табличка с именем: &f[namePlate]'
   near:
     help:
       info: '&eПереключить режим afk'
@@ -3215,8 +3218,8 @@ command:
       slotTaken: '!actionbar!&c&lСлот дома уже используется &f[homeName]&c&l, рассмотрите
         другой'
       setIcon: '!actionbar:3!&7Установлен значок дома с материалом &6[material]'
-      tooManyInWorld: '&cYou cant have any more homes in this world. Max &6[max]&c
-        allowed, you have &6[current]'
+      tooManyInWorld: '&cУ вас закончились дома в этом мире. Разрешено &6[max]&c,
+        у вас &6[current]'
   setmotd:
     help:
       info: Установка motd
@@ -4105,7 +4108,7 @@ command:
       mobSpawning: '&eПоявление мобов поблизости'
       stopPlaytime: '&eНаигранное время перестанет увеличиваться'
       sleepIgnore: '&eИгнорировать счетчик спящих'
-      joinVanished: '&eAlways join in vanish mode'
+      joinVanished: '&eВсегда присоединяйтесь в режиме ваниш'
       bossbarTitle: '&fВ режиме улучшенной невидимости'
   version:
     help:
