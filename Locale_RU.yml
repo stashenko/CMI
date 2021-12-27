@@ -1757,6 +1757,8 @@ command:
       newSee: '◕‿◕ '
       newSeeHover: '&6Видет вас'
       newSeeHoverNot: '&2Не видет вас'
+      vanished: '(V) '
+      vanishedHover: '&6Vanished'
       newBanned: 'Забанен '
       newBannedHover:
       - '&fЗабанил: &e[name]'
