@@ -172,7 +172,7 @@ info:
   pvp:
     noGodDamage: '!actionbar!&cВы не можете нанести урон игрокам, будучи бессмертным'
   pve:
-    noGodDamage: '!actionbar!&cYou can''t damage mobs while being immortal'
+    noGodDamage: '!actionbar!&cВы не можете нанести урон мобам в режиме бога'
   InvEmpty:
     armor: '&eВаши слоты брони должны быть пустыми!'
     hand: '&eВаша рука должна быть пустой!'
@@ -625,7 +625,7 @@ command:
   cartographytable:
     help:
       info: '&eOpen cartography table'
-      args: (playerName)
+      args: (playerName) (-s)
     info:
       feedback: '&eYou have opened cartography table for &3[playerDisplayName]&e (&3[offon]&e).'
       targetfeedback: '&3[senderDisplayName]&e opened cartography table for you.'
@@ -1419,7 +1419,7 @@ command:
   grindstone:
     help:
       info: '&eOpen grindstone'
-      args: (playerName)
+      args: (playerName) (-s)
     info:
       feedback: '&eYou have opened grindstone for &3[playerDisplayName]&e (&3[offon]&e).'
       targetfeedback: '&3[senderDisplayName]&e opened grindstone for you.'
@@ -3701,7 +3701,7 @@ command:
   stonecutter:
     help:
       info: '&eOpen stonecutter'
-      args: (playerName)
+      args: (playerName) (-s)
     info:
       feedback: '&eYou have opened stonecutter for &3[playerDisplayName]&e (&3[offon]&e).'
       targetfeedback: '&3[senderDisplayName]&e opened stonecutter for you.'
