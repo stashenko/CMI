@@ -78,7 +78,7 @@ info:
   specializedRunning: '&eКоманда в процессе выполнения, подождите &6[time]'
   CooldownOneTime: '&eЭту команду можно использовать только один раз!'
   WarmUp:
-    canceled: '&cКоманда была отменена из-за вашего движения'
+    canceled: '&cКоманда отменена из-за вашего движения'
     counter: '!actionbar!&6--> Подожди &e[time] &6сек. <--'
     DontMove: '!title!&6Не двигайся!!subtitle!&7Подожди &c[time] &7сек.'
     Boss:
@@ -155,9 +155,9 @@ info:
     KillerSymbol: '&c ☠'
     Click: '&eНажмите, чтобы проверить сохраненный инвентарь ([id])'
     IdDontExist: '&4Этот ID сохранения не существует!'
-    Deleted: '&eСохраненный инвентарь был успешно удален!'
+    Deleted: '&eСохраненный инвентарь успешно удален!'
     Restored: '&eВы восстановили инвентарь игрока &e[sourcename] &eдля игрока &e[targetname]&e.'
-    GotRestored: '&eВаш инвентарь был восстановлен из инвентаря &e[sourcename] &e[time]'
+    GotRestored: '&eВаш инвентарь восстановлен из инвентаря &e[sourcename] &e[time]'
     LoadForSelf: '&eЗагрузить этот инвентарь для себя'
     LoadForOwner: '&eЗагрузить этот инвентарь для владельца'
     NextInventory: '&eСледующий инвентарь'
@@ -304,7 +304,7 @@ command:
     info:
       feedback: '&eВы установили &3[amount]&e воздуха для игрока &3[playerName]&e
         (&3[offon]&e).'
-      targetFeedback: '&eВаш воздух был установлен на &3[amount]&e игроком &3[senderDisplayName]&e.'
+      targetFeedback: '&eВаш воздух установлен на &3[amount]&e игроком &3[senderDisplayName]&e.'
       current: '&eТекущий воздух игрока &3[playerDisplayName]&e: &3[amount]'
   alert:
     help:
@@ -382,9 +382,9 @@ command:
       noitem: '&cВы не держите в руке какой-либо предмет.'
       cantDetermineCost: '&cНевозможно определить базовую стоимость починки этого
         предмета..'
-      selffeedback: '&eБазовая стоимость починки была установлена на &3[amount] &eдля
-        предмета в руке&3[playerDisplayName]&e item in hand (&3[offon]&e).'
-      targetfeedback: '&eСтоимость ремонта вашего предмета была установлена на &3[amount]&e
+      selffeedback: '&eБазовая стоимость починки установлена на &3[amount] &eдля предмета
+        в руке&3[playerDisplayName]&e item in hand (&3[offon]&e).'
+      targetfeedback: '&eСтоимость ремонта вашего предмета установлена на &3[amount]&e
         игроком &3[senderDisplayName]&e.'
   armorstand:
     help:
@@ -523,9 +523,9 @@ command:
       message: '&cВы забанены на этом сервере!'
       reason: '&6Причина: &e[reason]'
       defaultReason: '&eНарушение правил сервера'
-      messageToAll: '&eИгрок &6[playerDisplayName] &eбыл забанен игроком &6[senderDisplayName]
+      messageToAll: '&eИгрок &6[playerDisplayName] &eзабанен игроком &6[senderDisplayName]
         &eпо причине: &6[reason]'
-      banedSilent: '&7[&8Безшумно&7] &eИгрок &6[playerDisplayName] &eбыл забанен игроком
+      banedSilent: '&7[&8Безшумно&7] &eИгрок &6[playerDisplayName] &eзабанен игроком
         &6[senderDisplayName] &eпо причине: &6[reason]'
       noSelfBan: '&cВы не можете забанить себя'
       cantBan: '&cВы не можете забанить этого игрока'
@@ -577,7 +577,7 @@ command:
       inccorectAction: '&eНеверное название действия.'
       authorChanged: '&eАвтор изменен на: [author]'
       titleChanged: '&eНазвание изменено на: [title]'
-      unlocked: '&eКнига была разблокирована'
+      unlocked: '&eКнига разблокирована'
   bossbarmsg:
     help:
       info: '&eОтправить сообщение в босс бар игроку'
@@ -624,8 +624,7 @@ command:
       args: (Ник_игрока) (time) (-s)
     info:
       feedback: '&eВы подожгли игрока &3[playerDisplayName]&e на время &6[time] &e(&3[offon]&e).'
-      targetfeedback: '&eВы были подожжены игроком &3[senderDisplayName]&e на время
-        &6[time]&e.'
+      targetfeedback: '&eВы подожжены игроком &3[senderDisplayName]&e на время &6[time]&e.'
   cartographytable:
     help:
       info: '&eОткрыть картографический стол'
@@ -783,14 +782,14 @@ command:
       - 'Разрешения:'
       - ' &6cmi.command.clearchat.bypass &e- игнорирование очистки чата'
     info:
-      information: '&eЧат был очищен игроком &6[senderDisplayName]'
+      information: '&eЧат очищен игроком &6[senderDisplayName]'
   clearender:
     help:
       info: '&eОчистить сундук эндера игрока'
       args: '[Ник_игрока] (-s)'
     info:
       feedback: '&eВы очистили сундук эндера игрока &3[playerDisplayName]&e (&3[offon]&e).'
-      targetfeedback: '&eВаша сундук эндера был очищен игроком &3[senderDisplayName]&e.'
+      targetfeedback: '&eВаша сундук эндера очищен игроком &3[senderDisplayName]&e.'
   colorlimits:
     help:
       info: '&eПоказать все возможные цвета'
@@ -856,14 +855,14 @@ command:
         &e, установленное игроком &3[senderName]&e.'
       targetFeedbackCustom: '&eВаш компас теперь показывает на &3[x] [z] [world] &e,
         установленное игроком &3[sourceDisplayName]&e.'
-      reset: '&eЦель компаса была сброшена'
+      reset: '&eЦель компаса сброшена'
   condense:
     help:
       info: '&eКонвертировать предметы в блоки'
       args: (itemName) (playerName) (-s)
     info:
       converted: '&eКонвертировано &7[items] &eпредметов в &7[blocks] &eблоков'
-      nothing: '&cВ вашем инвентаре нет ничего, что можно было бы конвертировать.'
+      nothing: '&cВ вашем инвентаре нет ничего, что можно бы конвертировать.'
   counter:
     help:
       info: '&eЗапустить отсчет для окружающих игроков'
@@ -923,13 +922,13 @@ command:
       info: '&eПриостановка действия игроков'
       args: '[Ник_игрока] (true/false) (-s)'
     info:
-      noChat: '&cВсе ваши действия были приостановлены. Вы не можете писать в чат.'
+      noChat: '&cВсе ваши действия приостановлены. Вы не можете писать в чат.'
       noCommand: '&cВы не можете использовать команды в этом состоянии. &eРазрешенные
         команды: &6/msg, /r, /tell'
-      cuffed: '&eДействия игрока &6[playerDisplayName] &eбыли приостановлены'
+      cuffed: '&eДействия игрока &6[playerDisplayName] &eприостановлены'
       unCuffed: '&eДействия игрока &6[playerDisplayName] &eбольше не приостановлены'
       free: '&eТеперь вы свободны'
-      gotCuffed: '&cВы были закованы в наручники'
+      gotCuffed: '&cВы закованы в наручники'
       cuffedInfo: '&eВы в наручниках'
       cantCuff: '&cВы не можете приостановить этого игрока!'
   customrecipe:
@@ -959,7 +958,7 @@ command:
       args: (enchant/id) (disable/enable)
     info:
       title: Отключенные зачарования
-      feedback: '&6[enchantName] &eбыл [state]'
+      feedback: '&6[enchantName] &e[state]'
   dispose:
     help:
       info: '&eУтилизация ненужных предметов'
@@ -977,11 +976,11 @@ command:
       info: '&eПожертвовать предмет, который вы держите в руке'
       args: '[Ник_игрока] (amount)'
     info:
-      donated: '&eПредмет &6[type]&eX&6[amount] &eбыл пожертвован игроку &6[playerDisplayName]'
-      got: '&eПожертвование &6[type]&eX&6[amount] &eбыло получено от игрока &6[playerDisplayName]'
-      sentOffer: '&eПожертвование было отправлено игроку &6[playerDisplayName]&e.
-        Подождите, пока игрок примет его'
-      gotOffer: '&eПожертвование &6[type]&eX&6[amount] &eбыло получено от игрока &6[sourceDisplayName]&e.
+      donated: '&eПредмет &6[type]&eX&6[amount] &eпожертвован игроку &6[playerDisplayName]'
+      got: '&eПожертвование &6[type]&eX&6[amount] &eполучено от игрока &6[playerDisplayName]'
+      sentOffer: '&eПожертвование отправлено игроку &6[playerDisplayName]&e. Подождите,
+        пока игрок примет его'
+      gotOffer: '&eПожертвование &6[type]&eX&6[amount] &eполучено от игрока &6[sourceDisplayName]&e.
         Нажмите, чтобы принять его.'
       doesnthave: '&eУ игрока больше нет этого предмета'
       'no': '&eНет ожидающих пожертвований'
@@ -1042,8 +1041,8 @@ command:
         чтобы отменить'
       deleteInfo: '&eВведите &6confirm&e, чтобы подтвердить удаление или введите &ccancel&e,
         чтобы отменить это действие'
-      deleted: '&eПользовательский текст (&6[ctext]&e) был удален'
-      createdNew: '&eПользовательский текст (&6[ctext]&e) был создан'
+      deleted: '&eПользовательский текст (&6[ctext]&e) удален'
+      createdNew: '&eПользовательский текст (&6[ctext]&e) создан'
       hidden: '&eHidden: &6[state]'
       autoPage: '&eАвто страница: &6[state]'
       autoAlias: '&eАвто алиас: &6[state]'
@@ -1070,8 +1069,8 @@ command:
     info:
       list: '&7[place]. &e[time] &6игроком [warnedBy] &cпо причине: &7[warnedFor]'
       hover: '&7Истекает через: [time]'
-      cleared: '&eВсе предупреждения игрока были удалены'
-      allCleared: '&eВсе предупреждения ВСЕХ игроков были удалены'
+      cleared: '&eВсе предупреждения игрока удалены'
+      allCleared: '&eВсе предупреждения ВСЕХ игроков удалены'
   editwarp:
     help:
       info: '&eРедактирование варпов'
@@ -1079,7 +1078,7 @@ command:
     info:
       exists: '&cВарп с этим именем (&7[newName]&c) уже существует. Выберите другое
         название'
-      updated: '&eВарп с названием &7[oldName]&e был изменен на &7[newName]'
+      updated: '&eВарп с названием &7[oldName]&e изменен на &7[newName]'
       placeItem: '&2Разместите предмет, чтобы установить пользовательскую иконку'
       placeOffItem: '&2Разместите предмет, чтобы установить пользовательскую иконку
         выключения'
@@ -1116,7 +1115,7 @@ command:
     info:
       feedback: '&eЭффект зелья &6[effect] &eдобавлен для игрока &3[playerDisplayName]&e
         на &6[sec]сек&e с силой &6[power] &e(&3[offon]&e).'
-      cleared: '&eЭффекты зелья были очищены для игрока &3[playerDisplayName]&e (&3[offon]&e).'
+      cleared: '&eЭффекты зелья очищены для игрока &3[playerDisplayName]&e (&3[offon]&e).'
   enchant:
     help:
       info: '&eЗачаровать предметы'
@@ -1156,8 +1155,8 @@ command:
       info: '&eПереключить луч ворот в энд'
       args: ''
     info:
-      'off': '&7Луч был &cвыключен'
-      'on': '&7Луч был &6включен'
+      'off': '&7Луч &cвыключен'
+      'on': '&7Луч &6включен'
   entityinfo:
     help:
       info: '&eПроверка информации об сущности'
@@ -1192,16 +1191,15 @@ command:
     info:
       current: '&eИгрок &c[playerDisplayName] &eимеет &6[lvl]&eуровень с &6[currentExp]&eопыта
         или &6[exp]&eвсего опыта.'
-      selfFeedback: '&3[exp] &eопыта было установлено игроку &3[playerDisplayName]&e
-        (&3[offon]&e).'
-      targetFeedback: '&eВаш опыт был установлен на &3[exp]&e игроком &3[senderDisplayName]&e.'
+      selfFeedback: '&3[exp] &eопыта установлено игроку &3[playerDisplayName]&e (&3[offon]&e).'
+      targetFeedback: '&eВаш опыт установлен на &3[exp]&e игроком &3[senderDisplayName]&e.'
   ext:
     help:
       info: '&eПотушить игрока'
       args: (Ник_игрока) (-s)
     info:
       feedback: '&eВы потушили игрока &3[playerDisplayName]&e (&3[offon]&e).'
-      targetfeedback: '&eВы были потушены игроком &3[senderDisplayName]&e.'
+      targetfeedback: '&eВы потушены игроком &3[senderDisplayName]&e.'
   falldistance:
     help:
       info: '&eУстановить расстояние падения игроков'
@@ -1216,7 +1214,7 @@ command:
     info:
       feedback: '&eВы покормили игрока &3[playerDisplayName]&e (&3[offon]&e).'
       feedbackMulti: '&eВы накормили &3[count] &eигроков.'
-      targetfeedback: '&eВы были накормлены игроком &3[senderDisplayName]&e.'
+      targetfeedback: '&eВы накормлены игроком &3[senderDisplayName]&e.'
   findbiome:
     help:
       info: '&eНайти ближайший биом по названию'
@@ -1225,7 +1223,7 @@ command:
       infoShow: '&6TPS: &3[tps] &6Осталось &e[left] &6(&e[time]&6) &6Скорость: &e[speed]'
       stopped: '&eПоиск биома остановлен!'
       cantFindBiome: '&cНе удалось найти нужный биом. &eПроверено &6[amount] &eчанков'
-      teleportedTo: '&eВы были телепортированы к биому &6[biome]'
+      teleportedTo: '&eВы телепортированы к биому &6[biome]'
   fixchunk:
     help:
       info: '&eСканирование поврежденных чанков'
@@ -1412,8 +1410,7 @@ command:
     info:
       feedback: '&eВы установили режим игры на &3[gameMode] &eигроку &3[playerDisplayName]&e
         (&3[offon]&e).'
-      targetfeedback: '&eВаш игровой режим был установлен на &3[gameMode]&e игроком
-        &3[senderDisplayName]&e.'
+      targetfeedback: '&eВаш игровой режим установлен на &3[gameMode]&e игроком &3[senderDisplayName]&e.'
   god:
     help:
       info: '&eУстановить режим бога игроку на true или false'
@@ -1421,7 +1418,7 @@ command:
     info:
       feedback: '&eВы установили режим бога на &3[boolean]&e для игрока &3[playerDisplayName]&e
         (&3[offon]&e).'
-      targetfeedback: '&eВаш режим бога был установлен на &3[boolean]&e игроком &3[senderDisplayName]&e.'
+      targetfeedback: '&eВаш режим бога установлен на &3[boolean]&e игроком &3[senderDisplayName]&e.'
   grindstone:
     help:
       info: '&eОткрыть точильный камень'
@@ -1470,7 +1467,7 @@ command:
       args: (Ник_игрока)
     info:
       feedback: '!actionbar!&6Вы успешно одели предмет на голову!'
-      targetfeedback: '&6Ваша шляпа была изменена игроком &3[senderDisplayName]&6!'
+      targetfeedback: '&6Ваша шляпа изменена игроком &3[senderDisplayName]&6!'
       fullinv: '&6Инвентарь игрока &3[playerDisplayName] &6заполнен, не удалось сменить
         шляпу!'
       incorrect: '&3Неправильный элемент в слоте для головы, не могу заменить на новый.
@@ -1490,7 +1487,7 @@ command:
     info:
       feedback: '&eВы исцелили игрока &3[playerDisplayName]&e (&3[offon]&e).'
       feedbackMulti: '&eВы исцелили &3[count] &eигроков.'
-      targetfeedback: '&eВы были исцелены игроком &3[senderDisplayName]&e.'
+      targetfeedback: '&eВы исцелены игроком &3[senderDisplayName]&e.'
   helpop:
     help:
       info: '&eОтправить сообщение о помощи персоналу сервера'
@@ -1618,7 +1615,7 @@ command:
     info:
       feedback: '&eВы установили голод на &3[hunger]&e для игрока &3[playerDisplayName]&e
         (&3[offon]&e).'
-      targetfeedback: '&eВаш голод был установлен на &3[hunger]&e игроком &3[senderDisplayName]&e.'
+      targetfeedback: '&eВаш голод установлен на &3[hunger]&e игроком &3[senderDisplayName]&e.'
   ic:
     help:
       info: '&eСоздать интерактивную команду'
@@ -1693,7 +1690,7 @@ command:
     info:
       converted: '&eИмпортировано: &6[done]&e/&6[total] &eигроков'
       convertedWarps: '&eИмпортировано &6[amount] &eварпов'
-      noInfo: '&cВы забыли указать, что именно вы хотите импортировать'
+      noInfo: '&cВы зауказать, что именно вы хотите импортировать'
       savingInProgress: '&eДанные будут сохранены в базе данных в течение следующих
         нескольких минут в зависимости от того, сколько записей нам нужно сохранить'
       HDfile: '&cНе удалось найти файл базы данных плагина HolographicDisplays. Прерывание.'
@@ -1942,9 +1939,9 @@ command:
       feedback: '&eВы изменили строку описания на ''&r&5[loreLine]&e'' для игрока
         &3[playerDisplayName]&e (&3[offon]&e).'
       noitem: '&cВ руке ничего нет.'
-      removed: '&eСтрока описания &6[line] &eпредмета была удалена для игрока &3[playerDisplayName]&e
+      removed: '&eСтрока описания &6[line] &eпредмета удалена для игрока &3[playerDisplayName]&e
         (&3[offon]&e).'
-      inserted: '&eСтрока описания &6[line] &eпредмета была вставлена для игрока &3[playerDisplayName]&e
+      inserted: '&eСтрока описания &6[line] &eпредмета вставлена для игрока &3[playerDisplayName]&e
         (&3[offon]&e).'
       maxLines: '&eСуществует только &6[lines] &eстрок в описании.'
       blocked: '&eЭтот предмет заблокирован от повторного использования.'
@@ -1956,8 +1953,7 @@ command:
       feedback: '&eВы переименовали предмет в [itemname]&e для игрока &3[playerDisplayName]&e
         (&3[offon]&e).'
       noitem: '&cВы не держите предмет в руке.'
-      removed: '&eНазвание предмета было удалено для игрока &3[playerDisplayName]&e
-        (&3[offon]&e).'
+      removed: '&eНазвание предмета удалено для игрока &3[playerDisplayName]&e (&3[offon]&e).'
       blocked: '&eЭтот предмет нельзя переименовать'
   itemnbt:
     help:
@@ -2035,7 +2031,7 @@ command:
     info:
       defaultMessage: '&eВас кикнули с сервера'
       cantKick: '&eНе удалось кикнуть этого игрока'
-      messageToAll: '&eИгрок &6[playerDisplayName] &eбыл кикнут с сервера.'
+      messageToAll: '&eИгрок &6[playerDisplayName] &eкикнут с сервера.'
       kickReason: ' &eПричина: &6[reason]'
       all: '&eКикнуто &6[amount] &eигроков с сервера'
   kill:
@@ -2110,8 +2106,8 @@ command:
       args: (kitName) (playerName/all)
     info:
       notCd: '&eНабор не находится в стадии перезарядки'
-      reset: '&eЗадержка набора (&6[kit]&e) была сброшена для игрока &6[playerDisplayName]'
-      resetAll: '&eЗадержка для набора (&6[kit]&e) была сброшена для &6[count] &eигроков'
+      reset: '&eЗадержка набора (&6[kit]&e) сброшена для игрока &6[playerDisplayName]'
+      resetAll: '&eЗадержка для набора (&6[kit]&e) сброшена для &6[count] &eигроков'
       list: '&e[place]. &6[kit] &e[time]'
       listHover: '&eНажмите, чтобы сбросить'
       noCd: '&eНет наборов на перезарядке'
@@ -2127,7 +2123,7 @@ command:
       - '&6/cmi kiteditor &e- показать список китов'
     info:
       kits: '&eНаборы: '
-      iconSet: '&eНовая иконка была установлена для набора &6[kitname]'
+      iconSet: '&eНовая иконка установлена для набора &6[kitname]'
       kitExists: '&eНабор с таким названием уже существует!'
       deleteConfirm: '&eНажмите на меня, если вы действительно хотите удалить набор
         (&6[kitname]&e)!'
@@ -2220,8 +2216,7 @@ command:
       args: (kitName) (playerName)
     info:
       notLimited: '&eНабор не имеет ограниченного количества использования'
-      reset: '&eКоличество использования набора (&6[kit]&e) было сброшено для игрока
-        &6[playerDisplayName]'
+      reset: '&eКоличество использования набора (&6[kit]&e) сброшено для игрока &6[playerDisplayName]'
       list: '&e[place]. &6[kit] &e[used]/[usages]'
       listHover: '&eНажмите, чтобы сбросить'
       noCd: '&eНет наборов, допустимого использования которых больше 0'
@@ -2330,7 +2325,7 @@ command:
     info:
       sentMail: '&eПисьмо отправлено игроку &6[playerDisplayName]'
       gotMail: '!actionbar!&eВы получили письмо от &6[senderDisplayName]'
-      clearMail: '&eВсе письма были очищены!'
+      clearMail: '&eВсе письма очищены!'
       removedMail: '&eПисьмо удалено'
       noMailsById: '&eДля этого игрока нет писем с этим ID'
       noMails: '&eУ вас нет писем'
@@ -2345,7 +2340,7 @@ command:
       args: '[send/clear/remove] [message]'
     info:
       sentMail: '&eОтправлено &6[amount] &eписем'
-      clearMail: '&6[amount] &eписем было удалено'
+      clearMail: '&6[amount] &eписем удалено'
       removedMail: '&eУдалено &6[amount] &eписем'
   maintenance:
     help:
@@ -2363,8 +2358,8 @@ command:
     info:
       feedback: '&eВы установили &3[maxHp] &eмаксимального количества здоровья для
         игрока &3[playerDisplayName]&e (&3[offon]&e).'
-      targetfeedback: '&eВаш максимальное количества здоровья была установлено на
-        &3[maxHp] &eигроком &3[senderDisplayName]&e.'
+      targetfeedback: '&eВаш максимальное количества здоровья установлено на &3[maxHp]
+        &eигроком &3[senderDisplayName]&e.'
   maxplayers:
     help:
       info: '&eИзменить максимальное количество игроков, которые могут подключиться
@@ -2765,9 +2760,9 @@ command:
     info:
       check: '&eЛичное время: &6[24h] &eили &6[12h] &eили &6[ticks]тиков'
       frozen: ' &c(-)'
-      gotreseted: '&eВремя было сброшено для игрока &6[playerDisplayName]'
-      gotfrozen: '&6Время было заморожено для игрока &6[playerDisplayName]'
-      gotunfrozen: '&6Время было разморожено для игрока &6[playerDisplayName]'
+      gotreseted: '&eВремя сброшено для игрока &6[playerDisplayName]'
+      gotfrozen: '&6Время заморожено для игрока &6[playerDisplayName]'
+      gotunfrozen: '&6Время разморожено для игрока &6[playerDisplayName]'
       setto: '&eВремя установлено на &6[24h] &eили &6[12h] &eили &6[ticks]тиков &eдля
         игрока &6[playerDisplayName]'
   purge:
@@ -2782,7 +2777,7 @@ command:
       args: (Ник_игрока) [sun/rain/reset] (-s)
     info:
       check: '&eПерсональная погода: &6[weather]'
-      gotreseted: '&6Погода была сброшена для игрока &6[playerDisplayName]'
+      gotreseted: '&6Погода сброшена для игрока &6[playerDisplayName]'
       setto: '&eПерсональная погода установлена ​​на &6[weather] &eдля игрока &6[playerDisplayName]'
       gotset: '&eВаша персональная погода установлена на &6[weather]'
       reset: '&eПогода сброшена'
@@ -2892,14 +2887,14 @@ command:
       args: (homeName) (playerName)
     info:
       remove: '&cНажмите, чтобы удалить'
-      removed: '&eТочка дома (&6[home]&e) была удалена'
+      removed: '&eТочка дома (&6[home]&e) удалена'
       list: '&c[home]'
   removeuser:
     help:
       info: '&eУдаление пользователя и его данные'
       args: '[uuid/duplicates]'
     info:
-      removed: '&eПользователь (&6[uuid]&e) был удален'
+      removed: '&eПользователь (&6[uuid]&e) удален'
       removedDuplicate: '&6[amount]/[max] &eдубликатов удалено'
   removewarp:
     help:
@@ -2907,7 +2902,7 @@ command:
       args: (warpName)
     info:
       remove: '&cНажмите, чтобы удалить'
-      removed: '&eВарп (&6[warp]&e) был удален'
+      removed: '&eВарп (&6[warp]&e) удален'
       notYours: '&cЭтот варп не принадлежит вам!'
   repair:
     help:
@@ -3023,7 +3018,7 @@ command:
     info:
       feedback: '&eВы установили насыщение на &3[amount]&e для игрока &3[playerDisplayName]&e
         (&3[offon]&e).'
-      targetfeedback: '&eВаше насыщение было установлено на &3[amount]&e игроком &3[senderDisplayName]&e.'
+      targetfeedback: '&eВаше насыщение установлено на &3[amount]&e игроком &3[senderDisplayName]&e.'
   saveall:
     help:
       info: '&eСохранить каждый инвентарь игрока'
@@ -3522,9 +3517,9 @@ command:
       args: '[message/toggle/on/off]'
     info:
       message: '&2[Администрация]&4[&7[senderDisplayName]&4]&r&c [message]'
-      toggledOn: '&eПостоянный чат персонала сервера был включен. Теперь вы можете
-        писать сообщения в общем чате.'
-      toggledOff: '&eПостоянный чат персонала сервера был выключен'
+      toggledOn: '&eПостоянный чат персонала сервера включен. Теперь вы можете писать
+        сообщения в общем чате.'
+      toggledOff: '&eПостоянный чат персонала сервера выключен'
   stats:
     help:
       info: '&eПроверить статистику игроков'
@@ -3739,7 +3734,7 @@ command:
         совпадают
     info:
       same: '&eЦелевые и исходные пользователи совпадают'
-      transferred: '&6[sourceName] &eданные были переключены на &6[Name]'
+      transferred: '&6[sourceName] &eданные переключены на &6[Name]'
       failed: '&cНе удалось сменить данные'
   tablistupdate:
     help:
@@ -3767,10 +3762,10 @@ command:
       - /cmi tempban zrips 5m Не матерись
     info:
       message: '&cВременно заблокированы!'
-      messageToAll: '&eИгрок &6[playerDisplayName] &eбыл временно забанен игроком
-        &6[senderDisplayName] &eна: &6[time] &eпо причине: &6[reason]'
-      banedSilent: '&7[&8Безшумно&7] &eИгрок &6[playerDisplayName] &eбыл временно
-        забанен игроком &6[senderDisplayName] &eна: &6[time] &eпо причине: &6[reason]'
+      messageToAll: '&eИгрок &6[playerDisplayName] &eвременно забанен игроком &6[senderDisplayName]
+        &eна: &6[time] &eпо причине: &6[reason]'
+      banedSilent: '&7[&8Безшумно&7] &eИгрок &6[playerDisplayName] &eвременно забанен
+        игроком &6[senderDisplayName] &eна: &6[time] &eпо причине: &6[reason]'
       time: '&eВы будете разбанены через &6[time]'
       badTime: '&cВремя определено неправильно'
       badTimeRanges: '&cВы не можете забанить дольше, чем на [time] &6([seconds])'
@@ -3781,11 +3776,11 @@ command:
       explanation:
       - cmi.command.banip.bypass - для обхода бана
     info:
-      message: '&cВы были забанены!'
-      messageToAll: '&7Игрок &6[playerDisplayName] &7был забанен по IP на &7[time]&7игроком
+      message: '&cВы забанены!'
+      messageToAll: '&7Игрок &6[playerDisplayName] &7забанен по IP на &7[time]&7игроком
         &6[senderDisplayName]&7: &6[reason]'
-      banedSilent: '&7[&8Безшумно&7] &7Игрок &6[playerDisplayName] &7был забанен по
-        IP на &7[time]&7: &6[reason]'
+      banedSilent: '&7[&8Безшумно&7] &7Игрок &6[playerDisplayName] &7забанен по IP
+        на &7[time]&7: &6[reason]'
   tfly:
     help:
       info: '&eУстановить временный режим полета игроку до перезахода или до окончания
@@ -3804,10 +3799,10 @@ command:
       addTimedFly: '&eВы добавили дополнительно [addTime] ([time]) для игрока &6[playerDisplayName]&e'
       setUntilRelogFly: '&eВы установили временный режим полета до перезахода для
         игрока &6[playerDisplayName]&e.'
-      targetTimedEnabled: '&eВаш полет был включен игроком &3[senderDisplayName]&e
-        на следующие [time].'
-      targetTimedEnabledAdd: '&eВаше время полета было увеличено на [addTime] ([time]).'
-      targetUntilRelogEnabled: '&eВаш полет был включен игроком &3[senderDisplayName]&e
+      targetTimedEnabled: '&eВаш полет включен игроком &3[senderDisplayName]&e на
+        следующие [time].'
+      targetTimedEnabledAdd: '&eВаше время полета увеличено на [addTime] ([time]).'
+      targetUntilRelogEnabled: '&eВаш полет включен игроком &3[senderDisplayName]&e
         до перезахода.'
       setFor: '&eВременный режим полета включен до [time]'
       setForRelog: '&eВременный режим полета включен до перезахода'
@@ -3830,9 +3825,9 @@ command:
         на следующие [time]'
       setUntilRelogGod: '&eВы установили временный режим бога до перезахода для игрока
         &6[playerDisplayName]&e.'
-      targetTimedEnabled: '&eВаш режим бога был включен игроком &3[senderDisplayName]&e
+      targetTimedEnabled: '&eВаш режим бога включен игроком &3[senderDisplayName]&e
         на следующие [time].'
-      targetUntilRelogEnabled: '&eВаш режим бога был включен игроком &3[senderDisplayName]&e
+      targetUntilRelogEnabled: '&eВаш режим бога включен игроком &3[senderDisplayName]&e
         до перезахода.'
       setFor: '&eВременный режим бога включен до [time]'
       setForRelog: '&eВременный режим бога включен до перезапуска'
@@ -3867,8 +3862,8 @@ command:
       realTime: '&eАвтоматический режим реального времени'
       autorealstart: '&eАвтоматическая настройка времени для мира &6[world] &eзапущена'
       autorealstop: '&eАвтоматическая настройка времени для мира &6[world] &eостановлена'
-      gotfrozen: '&eВремя в мире &6[world] &eбыло заморожено'
-      gotunfrozen: '&eВремя в мире &6[world] &eбыло разморожено'
+      gotfrozen: '&eВремя в мире &6[world] &eзаморожено'
+      gotunfrozen: '&eВремя в мире &6[world] &eразморожено'
       cantset: '&cНе удалось установить время на это значение'
       setto: '&eВремя установлено на &6[24h] &eили &6[12h] &eили &6[ticks]тиков &eв
         мире &6[world]'
@@ -3903,7 +3898,7 @@ command:
       info: '&eПоказать или скрыть панель восстановления тотема'
       args: (Ник_игрока) (enable/disable) (-s)
     info:
-      toggle: '&eПерезарядка тотема была переключена на ([state]&e)'
+      toggle: '&eПерезарядка тотема переключена на ([state]&e)'
   top:
     help:
       info: '&eТелепортация на самую высокую точку в вашем местоположении'
@@ -3913,7 +3908,7 @@ command:
       info: '&eТелепортация к местоположению игрока'
       args: '[Ник_игрока] (playerName)'
     info:
-      feedback: '&eВы были телепортированы к местоположению игрока &3[sourceDisplayName]
+      feedback: '&eВы телепортированы к местоположению игрока &3[sourceDisplayName]
         &e(&3[offon]&e).'
       bad:
         msg: '&cМестоположение телепортации небезопасно. [reason]'
@@ -3924,7 +3919,7 @@ command:
         unknown: '&cНеизвестно'
         plugin: '&cСторонний плагин'
       notAllowed: '&cНе удалось телепортироваться к этому игроку'
-      prevented: '&cТелепортация была предотвращена другим плагином'
+      prevented: '&cТелепортация предотвращена другим плагином'
   tpa:
     help:
       info: '&eЗапрос на телепортацию к игроку'
@@ -3968,8 +3963,8 @@ command:
       info: '&eТелепортация всех онлайн игроков в местоположение'
       args: (Ник_игрока)
     info:
-      feedback: '&eВы были телепортированы в местоположение ([world],[x],[y],[z])
-        игрока &3[playerDisplayName]&e.'
+      feedback: '&eВы телепортированы в местоположение ([world],[x],[y],[z]) игрока
+        &3[playerDisplayName]&e.'
   tpallworld:
     help:
       info: '&eТелепортировать ВСЕХ игроков из определенного мира'
@@ -3996,7 +3991,7 @@ command:
       args: (Ник_игрока)
     info:
       noRequest: '&eУ вас нет активных запросов на телепортацию!'
-      youDenied: '&eЗапрос на телепортацию был отклонен!'
+      youDenied: '&eЗапрос на телепортацию отклонен!'
       denied: '&e[senderDisplayName] &eотклонил ваш запрос.'
   tphere:
     help:
@@ -4022,15 +4017,15 @@ command:
       info: '&eПринудительно телепортировать игрока к местоположению'
       args: (-p:playerName) [x] [y] [z] (world) (pitch) (yaw) (-rng:[range])
     info:
-      feedback: '&eВы были телепортированы ([world],[x],[y],[z]).'
-      feedbackOther: '&eИгрок &c[playerDisplayName] &eбыл телепортирован ([world],[x],[y],[z]).'
+      feedback: '&eВы телепортированы ([world],[x],[y],[z]).'
+      feedbackOther: '&eИгрок &c[playerDisplayName] &eтелепортирован ([world],[x],[y],[z]).'
   tppos:
     help:
       info: '&eТелепортация по координатам'
       args: (-p:playerName) [x] [y] [z] (world) (pitch) (yaw) (-rng:[range])
     info:
-      feedback: '&eВы были телепортированы ([world],[x],[y],[z]).'
-      feedbackOther: '&eИгрок &c[playerDisplayName] &eбыл телепортирован ([world],[x],[y],[z]).'
+      feedback: '&eВы телепортированы ([world],[x],[y],[z]).'
+      feedbackOther: '&eИгрок &c[playerDisplayName] &eтелепортирован ([world],[x],[y],[z]).'
   tps:
     help:
       info: '&eПроверить состояние TPS сервера'
@@ -4090,7 +4085,7 @@ command:
     info:
       notInJail: '&cУказанный игрок не находится в тюрьме'
       unjailed: '&eВы выпустили игрока &6[playerDisplayName] &eиз тюрьмы'
-      unjailedTarget: '&eВы были освобождены из тюрьмы!'
+      unjailedTarget: '&eВы освобождены из тюрьмы!'
   unloadchunks:
     help:
       info: '&eВыгрузить чанки из памяти сервера'
@@ -4216,9 +4211,9 @@ command:
       - /voteedit Zrips add 10
     info:
       currentVotes: '&eИгрок &c[playerDisplayName] &eимеет &6[votes] &eголосов'
-      selfFeedback: '&eБыло установлено &3[votes] &eголосов игроку &3[playerDisplayName]&e
+      selfFeedback: '&eУстановлено &3[votes] &eголосов игроку &3[playerDisplayName]&e
         (&3[offon]&e).'
-      targetFeedback: '&eВаше количество голосов было установлено на &3[votes]&e игроком
+      targetFeedback: '&eВаше количество голосов установлено на &3[votes]&e игроком
         &3[senderDisplayName]&e.'
   votes:
     help:
