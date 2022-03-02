@@ -1561,6 +1561,14 @@ command:
       commands: '&7Команды:'
       newMethod: '&7Use new method: &6[state]'
       hoverParticles: '&7Show hover particles: &6[state]'
+      stabilizedParticles: '&7Stabilized particles: &6[state]'
+      particleCount: '&7Particles: &6[count]'
+      particleType: '&7Particle type: &6[type]'
+      particleSpacing: '&7Particle spacing: &6[amount]'
+      particleHeight: '&7Particle extra height: &6[amount]'
+      particleWidth: '&7Particle extra width: &6[amount]'
+      particleOffsetX: '&7Particle offset X: &6[amount]'
+      particleOffsetY: '&7Particle offset Y: &6[amount]'
       autoButton: '&7Автоматически генерировать кнопки пагинации'
       autoButtonLore:
       - '&eГолограмма не имеет созданных страниц'
@@ -3125,7 +3133,7 @@ command:
       - '&e************************************************************'
   scavenge:
     help:
-      info: '&eПереработать предмет и его зачарования'
+      info: '&eСнять чары с предметов и получать чары в виде зачарованных книг'
       args: '&6(Ник_игрока)'
     info:
       enchantWorth: '&eСтоимость зачарования: &7[price]'
@@ -3152,7 +3160,7 @@ command:
       title: '&2Переработка зачарований'
   schedule:
     help:
-      info: '&eРасписание запуска'
+      info: '&eЗапуск команд по расписанию'
       args: '&6[название из schedules.yml]'
   se:
     help:
@@ -3162,8 +3170,7 @@ command:
       - Используйте / n для дополнительной строки
   search:
     help:
-      info: '&eПоиск items/enchants/fly/maxhp/gm/oversize режимы и прочее от всех
-        игроков'
+      info: '&eПоиск items/enchants/fly/maxhp/gm/oversize режимы и прочее у всех игроков'
       args: ''
       explanation:
       - '&eid &6[id:data] '
@@ -3182,8 +3189,7 @@ command:
       - /search lore Uber_lore
     info:
       started: '&eПоиск '
-      current: '&eВ настоящее время найдено &3[amount] &eиз &3[files] &eпроверенных
-        файлов'
+      current: '&eНайдено &3[amount] &eиз &3[files] &eпроверенных файлов'
       nothingfound: '&eНичего не найдено по вашим критериям'
       totalfound: '&eВсего найдено &3[amount] &eиз возможных &3[files] &eпроверенных
         файлов'
@@ -3256,7 +3262,7 @@ command:
   sethome:
     help:
       info: '&eУстановить точку дома'
-      args: '&6(Точка_дома) (Ник_игрока) (-p) (-l:название_мира;x;y;z) (влок/материал)
+      args: '&6(Точка_дома) (Ник_игрока) (-p) (-l:название_мира;x;y;z) (блок/материал)
         (номер_слота)'
       explanation:
       - cmi.command.sethome.unlimited
@@ -3489,11 +3495,14 @@ command:
         legs-[itemname], boots-[itemname], mhand-[itemname], ohand-[itemname], effect-levitation/10/1-speed/10/2.
         /n Например: horse:baby:tamed:n-Horsy, zombie:skull-Zrips:n-AngryZombie:mhand-Diamond_Sword'
       - ' &e- некоторые сущности имеют специальные переменные: '
-      - '    &6Sheep &e- white, brown, red, rainbow и т.д... &6primed_tnt &e- [ticks],
-        incendiary'
+      - '    &6Sheep &e- white, brown, red, rainbow и т.д...'
+      - '    &6primed_tnt &e- [ticks], incendiary'
       - '    &6Horse &e- white, chestnut, creamy, darkbrown, gray, black'
-      - '    &6Ocelot &e- red, siamese, wild, black &6experience_orb &e- [number]'
-      - '    &6Skeleton &e- wither, &6Creeper &e- charged &6Wolf &e- angry'
+      - '    &6Ocelot &e- red, siamese, wild, black'
+      - '    &6experience_orb &e- [number]'
+      - '    &6Skeleton &e- wither'
+      - '    &6Creeper &e- charged'
+      - '    &6Wolf &e- angry'
       - '    &6Zombie &e- villager, blacksmith, butcher, farmer, priest, librarian'
       - '    &6Villager &e- blacksmith, butcher, farmer, priest, librarian'
       - '    &6Slime, MagmaCube &e- размер, указав число от 1. slime:3'
@@ -3520,7 +3529,7 @@ command:
       cantSpawn: '&eНе удалось заспавнить этот тип сущности'
   staffmsg:
     help:
-      info: '&eОтправить сообщение в канал персонала сервера'
+      info: '&eОтправить сообщение в чат персонала сервера'
       args: '&6[сообщение/toggle/on/off]'
     info:
       message: '&2[Администрация]&4[&7[senderDisplayName]&4]&r&c [message]'
