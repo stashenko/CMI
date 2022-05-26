@@ -1,61 +1,120 @@
+
 # Full color code support and some variables
+
 # Keep in mind that variables wont work for some lines, when it will for anothers :)
+
 # Just keep them where there are now and everything will be ok :)
+
 # Some lines can have global variables set. For player who will be effected. In example /heal Zrips then Zrips data will be used
+
 # [serverName] to show server name
+
 # [playerName] to show target player name
+
 # [playerDisplayName] to show target player display name
+
 # [lvl] to show target player level
+
 # [exp] to show target player total exp
+
 # [hp] to show target player health
+
 # [maxHp] to show target player max health
+
 # [hunger] to show target player hunger level
+
 # [gameMode] to show target player gamemode
+
 # [prefix] to show target player prefix if possible
+
 # [suffix] to show target player suffix if possible
+
 # Sender is console or player who performs command. In example Zrips performs /heal Zhax then Zrips data will be used
+
 # [senderName] to show Sender player name
+
 # [senderDisplayName] to show Sender player display name
+
 # [senderLvl] to show Sender player level
+
 # [senderExp] to show Sender player total exp
+
 # [senderHp] to show Sender player health
+
 # [senderMaxHp] to show Sender player max health
+
 # [senderHunger] to show Sender player hunger level
+
 # [senderGameMode] to show Sender player gamemode
+
 # [senderPrefix] to show Sender player prefix if possible
+
 # [senderSuffix] to show Sender player suffix if possible
+
 # Source is player which is being used for extra info. In example Zrips performs /tp Zhax Zrips then Zhax data will be used as its location is being taken for new player location
+
 # [sourceName] to show source player name
+
 # [sourceDisplayName] to show source player display name
+
 # [sourceLvl] to show source player level
+
 # [sourceExp] to show source player total exp
+
 # [sourceHp] to show source player health
+
 # [sourceMaxHp] to show source player max health
+
 # [sourceHunger] to show source player hunger level
+
 # [sourceGameMode] to show source player gamemode
+
 # [sourcePrefix] to show source player prefix if possible
+
 # [sourceSuffix] to show source player suffix if possible
+
 # ***********************************************
+
 # Some lines supports option to send them to custom places, like action bar, title, sub title or even create JSON/clickable messages
+
 # If line starts with !toast! then player will get toast message (advancement popup, only 1.12 and up). Some extra variables can be used to define type and icon. example: !toast! -t:goal -icon:paper Hello world!
+
 # If line starts with !actionbar! then player will get action bar message defined after this variable
+
 # If line starts with !actionbar:[seconds]! then player will get action bar message for defined amount of time
+
 # If line starts with !broadcast! then everyone will receive message. You can add extra !toast! !actionbar! or !title! to send message for everyone to specific place, in example !broadcast!!title!
+
 # If line starts with !customtext:[cTextName]! then custom text will be taken by name provided and shown for player. In case its used after !broadcast! then everyone who is online will get this custom text message
+
 # If line starts with !title! then player will get title message defined after this variable, in addition it can contain !subtitle! which will add subtitle message
+
 # If line starts with !bosbar:[name]-[timer]! then player will get bossbar message defined after this variable, in addition you can define how long this message will be visible. You need to define bossbar name which can be anything you want, but lines with same name will override each other to prevent stacking
+
 # To include clickable messages: <T>Text</T><H>Hover text</H><C>command</C><SC>Suggested text</SC>
+
 # <T> and </T> required, other is optional
+
 # Use /n to break line
+
 # To have more than one JSON message use <Next>
+
 # <C> performs command as a player who clicked
+
 # <CC> performs command from console once
+
 # <CCI> performs command from console every time player clicks text
+
 # <URL> includes url
-#
-#
-#
+
+# 
+
+# 
+
+# 
+
 # ATTENTION! As of 9.0.0.0 CMI version some of the locale lines got moved to CMILib file. This is to centralize some of most used ones across multiple plugins.
+
 # After you update locale in CMILib file perform /CMIL RELOAD command for changes to take effect
 
 info:
@@ -257,6 +316,14 @@ Chat:
   item: '&7[%cmi_iteminhand_displayname%[amount]&7]'
   itemAmount: ' x[amount]'
   itemEmpty: '&7[Mighty fist]'
+Spy:
+  Chat:
+    msg: '&2Spy&7[&8[senderDisplayName] &7-> &8[playerDisplayName]&7]&f [message]'
+    custom: '&2Spy&8[senderDisplayName] &7-> &4|&8[place]&4|&f [message]'
+  Command:
+    msg: '&5C&2Spy&7[&8[senderDisplayName]&7]&7: &f[command]'
+  Sign:
+    msg: '&5Sign&2Spy&7[&8[senderDisplayName]&7]&7: &f[text]'
 command:
   help:
     output:
@@ -284,7 +351,7 @@ command:
       # This only determines message in title message and not message shown in chat. For chat message check config.yml file
       afkTitle: '&eВы теперь AFK'
       afkSubTitle:
-      - '&2Не ешьте много печенья!'
+      - '&2Не кушайте много печенья!'
       - '&2Хороший день для рыбалки'
       - '&2Afk, снова?'
       - '&2Где ты?'
@@ -383,7 +450,7 @@ command:
       cantDetermineCost: '&cНевозможно определить базовую стоимость починки этого
         предмета..'
       selffeedback: '&eБазовая стоимость починки установлена на &3[amount] &eдля предмета
-        в руке&3[playerDisplayName]&e item in hand (&3[offon]&e).'
+        в руке &3[playerDisplayName](&3[offon]&e).'
       targetfeedback: '&eСтоимость ремонта вашего предмета установлена на &3[amount]&e
         игроком &3[senderDisplayName]&e.'
   armorstand:
@@ -432,7 +499,7 @@ command:
       saveButton: '&7Сохранить'
       saveTitle: '&8Выберите, что вы хотите сохранить'
       receivedItem: '&eПолучить специальную стойку для брони в свой инвентарь'
-      armorStandItem: '&7Шаблон ArmorStand: &6[name]'
+      armorStandItem: '&7Шаблон стойки для брони: &6[name]'
       action:
         helmet: '&7Шлем'
         chest: '&7Нагрудник'
@@ -828,15 +895,6 @@ command:
       - '       &%m - &mЗачеркнутый&r     &%n - &nПодчеркнутый'
       - '       &%o - &oКурсивный&r      &%r - &rСброс'
       - '&e***************************************'
-  commandspy:
-    help:
-      info: '&eПереключить слежку за командами'
-      args: '&6(Ник_игрока) (-s)'
-      explanation:
-      - cmi.command.commandspy.hide - Скрывает выполненные команды от слежки за командами
-    info:
-      command: '&5C&2Слежка -> &7[&8[senderDisplayName]&7]&7: &f[command]'
-      toggled: '&eСлежка за командами переключен на состояние &6[state]'
   compass:
     help:
       info: '&eУстановить цель компаса игрока в ваше местоположение'
@@ -1603,6 +1661,7 @@ command:
       noHomes: '&cНет сохраненных точек дома'
       private: '&cЭто местоположение точки дома является приватным!'
       remove: '&cShift + Правый клик, чтобы удалить точку дома'
+      missingBed: '&cMissing bed for your home location'
       notAccessible: '&cМир (&7[worldName]&c) точки дома не существует!'
       guiTitle: '&8Точки дома игрока &0[playerDisplayName] &8[current]/[max]'
   homes:
@@ -1944,6 +2003,7 @@ command:
       entityType: ' &eТип сущности: &6[type]'
       customModel: ' &eПользовательские данные модели: &6[data]'
       durability: ' &eПрочность: &6[current]&e/&6[max]'
+      stackSize: ' &eMax stack size: &6[size]'
   itemlore:
     help:
       info: '&eИзменить описание предмета'
@@ -2185,6 +2245,7 @@ command:
       despiteWeightExtra:
       - '&eИгрок не получает доступ к набору, но может просмотреть его'
       Slot: '&eСлот: &6[slot]'
+      Page: '&ePage: &6[page]'
       SlotAuto: '&6Авто'
       Clone: '&eКлонировать предметы из инвентаря'
       CloneExtra:
@@ -2506,13 +2567,6 @@ command:
       consoleMsg: '[[senderDisplayName] -> [playerDisplayName]] [message]'
       noPM: '&cИгрок не принимает личные сообщения в данный момент'
       badGroup: '&cВы не можете отправлять личные сообщения в эту группу игроков'
-  msgtoggle:
-    help:
-      info: '&eПереключить личные сообщения'
-      args: '&6(Ник_игрока)'
-    info:
-      feedbackOn: '&7Личные сообщения теперь принимаются'
-      feedbackOff: '&7Личные сообщения больше не принимаются'
   mute:
     help:
       info: '&eВыдать мут игроку'
@@ -2605,6 +2659,26 @@ command:
       args: ''
     info:
       feedback: '&e* &6[number]. &e[playerName]'
+  options:
+    help:
+      info: '&eModify personal options'
+      args: (playerName) (option) (enable/disable/toggle/status) (-s)
+    info:
+      title: '&8Options'
+      state: '&2State: [state]'
+      feedback: '&2[description]: [state]'
+      option:
+        visibleHolograms: '&eVisible holograms'
+        shiftSignEdit: '&eSign shift edit'
+        totemBossBar: '&eTotem BossBar'
+        bassBarCompass: '&eCompass BossBar'
+        tagSound: '&eChat tagging sound'
+        chatSpy: '&eChat spy'
+        cmdSpy: '&eCommand spy'
+        signSpy: '&eSign spy'
+        acceptingPM: '&eAccepting private messages'
+        acceptingTPA: '&eAccepting teleportations to you'
+        acceptingMoney: '&eAccepting money payments'
   panimation:
     help:
       info: '&eВоспроизвести кастомную анимацию частиц'
@@ -2624,13 +2698,6 @@ command:
     help:
       info: '&eВыполнить денежную операцию'
       args: '&6[Ник_игрока] [количество] (-s)'
-  paytoggle:
-    help:
-      info: '&eПереключение платежей от других игроков'
-      args: '&6(Ник_игрока)'
-    info:
-      feedbackDisabled: '&eТеперь вы принимаете платежи от других игроков'
-      feedbackEnabled: '&eВы больше не принимаете платежи от других игроков'
   ping:
     help:
       info: '&eПоказать пинг игроков'
@@ -3367,15 +3434,6 @@ command:
     help:
       info: '&eВыстрелить снарядом'
       args: '&6(Ник_игрока) (-t:ник_цели) (тип) (скорость)'
-  signspy:
-    help:
-      info: '&eПереключить SignSpy'
-      args: '&6(Ник_игрока)'
-      explanation:
-      - cmi.command.signspy.hide - Скрывает созданные таблички от SignSpy
-    info:
-      text: '&5Sign&2Spy &5-> &7[&8[senderDisplayName]&7]&7: &f[text]'
-      toggled: '&eSignSpy переключен на состояние &6[state]'
   silence:
     help:
       info: '&eСкрытие публичных сообщений'
@@ -3428,14 +3486,6 @@ command:
     info:
       feedback: '&eВы открыли кузнечный стол для &3[playerDisplayName]&e (&3[offon]&e).'
       targetfeedback: '&3[senderDisplayName]&e открыл кузнечный стол для вас.'
-  socialspy:
-    help:
-      info: '&eПереключить наблюдение за чатом'
-      args: '&6(Ник_игрока)'
-    info:
-      msg: '&2Spy&7[&8[senderDisplayName] &7-> &8[playerDisplayName]&7]&f [message]'
-      custom: '&2Spy&8[senderDisplayName] &7-> &4|&8[place]&4|&f [message]'
-      toggled: '&eSocialSpy переключен на состояние &6[state]'
   solve:
     help:
       info: '&eРешить уравнение'
@@ -3758,13 +3808,6 @@ command:
       args: '&6(Ник_игрока)'
     info:
       updated: '&eТаблист обновлен'
-  tagtoggle:
-    help:
-      info: '&eПереключить звуки тегов'
-      args: '&6(Ник_игрока)'
-    info:
-      feedbackDisabled: '&eЗвук тегов отключен'
-      feedbackEnabled: '&eЗвук тегов включен'
   tempban:
     help:
       info: '&eВременно забанить игрока'
@@ -3895,26 +3938,6 @@ command:
       args: '&6[Ник_игрока/all] (-t:[тип]) (-icon:[материал]) [сообщение]'
     info:
       message: '&f[message]'
-  togglecompass:
-    help:
-      info: '&eПереключение показа босс бара компаса'
-      args: '&6(Ник_игрока) (enable/disable) (-s)'
-    info:
-      ToggleOff: '&eПоказ босс бара компаса выключено'
-      ToggleOn: '&6Показ босс бара компаса включено'
-  toggleshiftedit:
-    help:
-      info: '&eПереключение редактирования табличек клавишей SHIFT'
-      args: '&6(Ник_игрока) (enable/disable) (-s)'
-    info:
-      feedbackDisabled: '&eРедактирование табличек клавишей SHIFT выключено'
-      feedbackEnabled: '&eРедактирование табличек клавишей SHIFT включено'
-  toggletotem:
-    help:
-      info: '&eПоказать или скрыть панель восстановления тотема'
-      args: '&6(Ник_игрока) (enable/disable) (-s)'
-    info:
-      toggle: '&eПерезарядка тотема переключена на ([state]&e)'
   top:
     help:
       info: '&eТелепортация на самую высокую точку в вашем местоположении'
@@ -4055,14 +4078,6 @@ command:
       hover:
       - '[tpscolor][tps]'
       - '&7[time]'
-  tptoggle:
-    help:
-      info: '&eПереключить доступ к телепортации игрока'
-      args: '&6(Ник_игрока) (on/off/status) (-s)'
-    info:
-      feedback: '&eПредотвращение телепортации: &6[state]'
-      feedbackOther: '&eПредотвращение телепортации игроку &6[playerDisplayName]&e:
-        &6[state]'
   tree:
     help:
       info: '&eСоздать дерево там, куда вы смотрите'
