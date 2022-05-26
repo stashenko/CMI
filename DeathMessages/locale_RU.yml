@@ -1,0 +1,483 @@
+# Defines hover over infomation about player who died. Use basic placeholders like %cmi_user_name% to include any information you would want
+# Set this like to '' if you want to avoid including hover over message
+PlayerHover:
+- ''
+# Defines hover over infomation about player who killed. Use basic placeholders like %cmi_user_name% to include any information you would want
+# Set this like to '' if you want to avoid including hover over message
+KillerHover:
+- ''
+Escaping:
+- ' &7во время побега &2[sourceDisplayName]'
+- ' &7во время боя с &2[sourceDisplayName]'
+RunningAway:
+- ' &7убегая от &2[mobName]'
+- ' &7во время боя с &2[mobName]'
+Player:
+  General:
+  - '&2[playerDisplayName] &7убит &2[sourceDisplayName]'
+  - '&2[playerDisplayName] &7умер от могучей руки &2[sourceDisplayName]'
+  - '&2[playerDisplayName] &7забит до смерти игроком &2[sourceDisplayName]'
+  Item:
+  - '&2[playerDisplayName] &7умер от руки &2[sourceDisplayName]&7, который использовал
+    &2[item]'
+  Projectile:
+  - '&2[playerDisplayName] &7застрелен игроком &2[sourceDisplayName] &7из &2[type]'
+  Fireball:
+  - '&2[playerDisplayName] &7расстрелян игроком &2[sourceDisplayName]'
+  Firework:
+  - '&2[playerDisplayName] &7ушел с треском в мир иной из-за игрока &2[sourceDisplayName]'
+FallingBlocks:
+  Anvil:
+    General:
+    - '&2[playerDisplayName] &7раздавлен падающей наковальней'
+    - '&2[playerDisplayName] &7раздавлен наковальней'
+    - '&2[playerDisplayName] &7ударился о наковальню головой'
+Block:
+  Cactus:
+    General:
+    - '&2[playerDisplayName] &7заколот до смерти'
+    - '&2[playerDisplayName] &7пытался обнять кактус'
+  Dispenser:
+    Arrow:
+    - '&2[playerDisplayName] &7убит Раздатчиком со стрелами ...'
+    Splash_potion:
+    - '&2[playerDisplayName] &7залит Раздатчиком ...'
+  Magma_block:
+    General:
+    - '&2[playerDisplayName] &7решил пробежаться по лаве'
+  Sweet_berry_bush:
+    General:
+    - '&2[playerDisplayName] &7заколот сладким ягодным кустом'
+  Lava:
+    General:
+    - '&2[playerDisplayName] &7пытался плавать в лаве'
+Custom:
+  Block_explosion:
+    General:
+    - '&2[playerDisplayName] &7убит [Intentional Game Design]'
+  Fall:
+    Low:
+      General:
+      - '&2[playerDisplayName] &7слишком сильно ударился о землю'
+    High:
+      General:
+      - '&2[playerDisplayName] &7упал с высоты'
+  Fire:
+    General:
+    - '&2[playerDisplayName] &7загорелся'
+  Fire_tick:
+    General:
+    - '&2[playerDisplayName] &7сгорел заживо'
+  Lightning:
+    General:
+    - '&2[playerDisplayName] &7поражен молнией'
+  Suffocation:
+    General:
+    - '&2[playerDisplayName] &7задохнулся в стене'
+  Custom:
+    General:
+    - '&2[playerDisplayName] &умер'
+  Drowning:
+    General:
+    - '&2[playerDisplayName] &7утонул'
+  Freeze:
+    General:
+    - '&2[playerDisplayName] &7заморожен до смерти'
+  Suicide:
+    General:
+    - '&2[playerDisplayName] &7покончил с собой'
+  Void:
+    General:
+    - '&2[playerDisplayName] &7выпал из мира'
+  EndCrystal:
+    General:
+    - '&2[playerDisplayName] &7разбился как кристалл'
+  Fly_into_wall:
+    General:
+    - '&2[playerDisplayName] &7испытал кинетическую энергию'
+    - '&2[playerDisplayName] &7узнал что такое закон сохранения импульса'
+Projectile:
+  Arrow:
+  - '&2[playerDisplayName] &7застрелен стрелой'
+  Spectral_arrow:
+  - '&2[playerDisplayName] &7застрелен спектральной стрелой'
+  Tipped_arrow:
+  - '&2[playerDisplayName] &7застрелен направленной стрелой'
+  Fireball:
+  - '&2[playerDisplayName] &7словил огненный шар голыми руками'
+  Firework:
+  - '&2[playerDisplayName] &7ушел с треском в мир иной'
+Mob:
+  Primed_tnt:
+    General:
+    - '&2[playerDisplayName] &7взорван'
+  Elder_guardian:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Wither_skeleton:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Stray:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Husk:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Zombie_villager:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Skeleton_horse:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Zombie_horse:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Armor_stand:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Donkey:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Mule:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Evoker:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Vex:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Vindicator:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Illusioner:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Creeper:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Skeleton:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Spider:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Giant:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Zombie:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Slime:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Ghast:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Zombified_piglin:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Enderman:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Cave_spider:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Silverfish:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Blaze:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Magma_cube:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Ender_dragon:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Wither:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Bat:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Witch:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Endermite:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Guardian:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Shulker:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Pig:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Sheep:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Cow:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Chicken:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Squid:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Wolf:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Mushroom_cow:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Snowman:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Ocelot:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Iron_golem:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Horse:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Rabbit:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Polar_bear:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Llama:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Parrot:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Villager:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Turtle:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Phantom:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Cod:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Salmon:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Pufferfish:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Tropical_fish:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Drowned:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Dolphin:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Cat:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Panda:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Pillager:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Ravager:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Trader_llama:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Wandering_trader:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Fox:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Bee:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Hoglin:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Piglin:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Strider:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Zoglin:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Piglin_brute:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Axolotl:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Glow_squid:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Goat:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
