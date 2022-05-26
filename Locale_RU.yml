@@ -1661,7 +1661,7 @@ command:
       noHomes: '&cНет сохраненных точек дома'
       private: '&cЭто местоположение точки дома является приватным!'
       remove: '&cShift + Правый клик, чтобы удалить точку дома'
-      missingBed: '&cMissing bed for your home location'
+      missingBed: '&cОтсутствует кровать для вашей точки дома'
       notAccessible: '&cМир (&7[worldName]&c) точки дома не существует!'
       guiTitle: '&8Точки дома игрока &0[playerDisplayName] &8[current]/[max]'
   homes:
@@ -2003,7 +2003,7 @@ command:
       entityType: ' &eТип сущности: &6[type]'
       customModel: ' &eПользовательские данные модели: &6[data]'
       durability: ' &eПрочность: &6[current]&e/&6[max]'
-      stackSize: ' &eMax stack size: &6[size]'
+      stackSize: ' &eМаксимальный размер стака: &6[size]'
   itemlore:
     help:
       info: '&eИзменить описание предмета'
@@ -2245,7 +2245,7 @@ command:
       despiteWeightExtra:
       - '&eИгрок не получает доступ к набору, но может просмотреть его'
       Slot: '&eСлот: &6[slot]'
-      Page: '&ePage: &6[page]'
+      Page: '&eСтраница: &6[page]'
       SlotAuto: '&6Авто'
       Clone: '&eКлонировать предметы из инвентаря'
       CloneExtra:
@@ -2661,24 +2661,24 @@ command:
       feedback: '&e* &6[number]. &e[playerName]'
   options:
     help:
-      info: '&eModify personal options'
+      info: '&eИзменить личные параметры'
       args: (playerName) (option) (enable/disable/toggle/status) (-s)
     info:
-      title: '&8Options'
-      state: '&2State: [state]'
+      title: '&8Опции'
+      state: '&2Состояние: [state]'
       feedback: '&2[description]: [state]'
       option:
-        visibleHolograms: '&eVisible holograms'
-        shiftSignEdit: '&eSign shift edit'
-        totemBossBar: '&eTotem BossBar'
-        bassBarCompass: '&eCompass BossBar'
-        tagSound: '&eChat tagging sound'
-        chatSpy: '&eChat spy'
-        cmdSpy: '&eCommand spy'
-        signSpy: '&eSign spy'
-        acceptingPM: '&eAccepting private messages'
-        acceptingTPA: '&eAccepting teleportations to you'
-        acceptingMoney: '&eAccepting money payments'
+        visibleHolograms: '&eВидимые голограммы'
+        shiftSignEdit: '&eРедактирование табличек'
+        totemBossBar: '&eБоссБар Тотема'
+        bassBarCompass: '&eБоссБар Компаса'
+        tagSound: '&eЗвук пометки чата'
+        chatSpy: '&eЧат-шпион'
+        cmdSpy: '&eШпион за командами'
+        signSpy: '&eШпион за табличками'
+        acceptingPM: '&eПрием личных сообщений'
+        acceptingTPA: '&eПрием телепортации к вам'
+        acceptingMoney: '&eПрием денежных платежей'
   panimation:
     help:
       info: '&eВоспроизвести кастомную анимацию частиц'
