@@ -89,7 +89,7 @@
 
 # If line starts with !title! then player will get title message defined after this variable, in addition it can contain !subtitle! which will add subtitle message
 
-# If line starts with !bosbar:[name]-[timer]! then player will get bossbar message defined after this variable, in addition you can define how long this message will be visible. You need to define bossbar name which can be anything you want, but lines with same name will override each other to prevent stacking
+# If line starts with !bossbar:[name]-[timer]! then player will get bossbar message defined after this variable, in addition you can define how long this message will be visible. You need to define bossbar name which can be anything you want, but lines with same name will override each other to prevent stacking
 
 # To include clickable messages: <T>Text</T><H>Hover text</H><C>command</C><SC>Suggested text</SC>
 
@@ -245,6 +245,15 @@ info:
     subinv: '&eВаш суб инвентарь должен быть пустым!'
     subinvslots: '&eВаш суб инвентарь должен иметь как минимум &6[count] &eпустых
       слотов!'
+  Relog: '&eRelog might be needed for change to take effect'
+  time:
+    # Mainly for placeholder playtime output
+    # Use + sign at the start of line to force include it even if specific and previous time values are 0
+    # Use - sign at the start of line if you want to include it only if its value isn't 0. If entire output results into empty line, then we will output seconds value
+    days: '&2[d]&7d:'
+    hours: '&2[h]&7h '
+    minutes: '&2[m]&7m '
+    seconds: '&2[s]&7s'
   CommandFormat: '&cНеверный формат команды'
   ServerSwitchOut: ' &6[playerDisplayName] &eперешел на сервер &6[serverName]'
   ServerSwitchIn: ' &6[playerDisplayName] &eпришел с сервера &6[serverName]'
@@ -818,7 +827,7 @@ command:
       info: '&eКонвертировать деньги в чек'
       args: '&6(Ник_игрока) [количество]'
     info:
-      transfered: '&eКонвертировано &6[amount] &eна ваш аккаунт. Новый баланс: &6[balance]'
+      transferred: '&eTransferred &6[amount] &eto your account. New balance: &6[balance]'
       chequeName: '&eЧек на &6[amount]'
       chequeLore:
       - '&r&fВыдан игроком &7[senderDisplayName]'
@@ -1003,6 +1012,13 @@ command:
       shapelessRecipe: '&6Создать новый бесформенный рецепт'
       shapedRecipe: '&2Создать новый рецепт по форме'
       furnaceRecipe: '&2Сделать новый рецепт в печи'
+      campfireRecipe: '&2Make new campfire recipe'
+      smithingRecipe: '&2Make new smithing recipe'
+      stonecuttingRecipe: '&2Make new stonecutting recipe'
+      blastingRecipe: '&2Make new blasting recipe'
+      smokingRecipe: '&2Make new smoking recipe'
+      exact: '&2Require exact ingredients: [state]'
+      exists: '&4Looks like recipe like this already exists'
       mainTitle: '&8Кастомные рецепты (&7[current]&8/&7[total]&8)'
   dback:
     help:
@@ -1024,6 +1040,7 @@ command:
       args: '&6(Ник_игрока)'
     info:
       title: '&cМусорка'
+      cant: '&cYou can''t dispose this item'
   distance:
     help:
       info: '&eПроверить расстояние между двумя точками'
@@ -1044,6 +1061,12 @@ command:
       doesnthave: '&eУ игрока больше нет этого предмета'
       'no': '&eНет ожидающих пожертвований'
       list: '&7[number]. &e[playerDisplayName] &e- &7[material] &6x &e[amount]'
+  down:
+    help:
+      info: '&eTeleport one floor down'
+      args: '[playerName] (-s)'
+    info:
+      notFound: '&eNo suitable location'
   dsign:
     help:
       info: '&eУправление динамическими табличками'
@@ -1198,8 +1221,8 @@ command:
       wrongItem: '&eНеправильный предмет в вашей руке'
       enchantlimit: '&cУ вас нет доступа к этим зачарованиям'
       levellimit: '&cУровень слишком высокий, максимально допустимый &e[level].'
-      posible: '&eВозможные зачарования: '
-      posibleList: '&6[enchant]'
+      possible: '&ePossible enchants: '
+      possibleList: '&6[enchant]'
   ender:
     help:
       info: '&eОткрыть сундук эндера'
@@ -1847,6 +1870,7 @@ command:
       newPosHover: '&6[world] (&e[x]&6:&e[y]&6:&e[z]&6)'
       newAfk: 'AFK '
       newAfkHover: '&6Afk for last: [time]'
+      AfkInHover: '&6Afk in: [time]'
       newBed: '&fРасположение кровати '
       newBedHover: '&6[world] (&e[x]&6:&e[y]&6:&e[z]&6)'
       newDeath: '&fМесто смерти '
@@ -2066,18 +2090,18 @@ command:
       createdJail: '&eНовая тюрьма (&6[jail]&e) успешно создана'
       createdCell: '&eНовая тюремная камера (&6[jail]&e:&6[cellId]&e) успешно создана'
       collides: '&cСидит в тюрьме &6[jailName]'
-      jailList: '&e[place]. &6[jail]&e, Камеры: &6[cells]&e, Количество заключенных:
-        &6[amount]    '
       editCells: '&eИзменить список камер'
-      cellList: '&eID камеры: &6[id]&e, Количество заключенных: &6[amount]    '
-      jailListTp: ' &7[tp] '
+      cList: '&eId: &6[id] &eJailed: &6[amount]'
       jailListTpHover: '&eУстановить точку выхода'
-      jailListArea: ' &7[area] '
       jailListAreaHover: '&eПереопределить область'
       jailRemoved: '&eТюрьма (&6[jail]&e) удалена'
       jailOutside: '&eНовая точка выхода установлена'
       jailArea: '&eОбласть для тюрьмы &6[jail] &eпереопределена'
       cellRemoved: '&eКамера (&6[cellId]&e) удалена из тюрьмы &6[jail]'
+      list: '&eCells: &6[cells] &eJailed: &6[amount] &2[jail]'
+      listTp: '[tp] '
+      listArea: '&7[area] '
+      areaShow: '&7[S] '
   jaillist:
     help:
       info: '&eСписок тюрем'
@@ -2530,7 +2554,6 @@ command:
         &6[money]'
       gotMoneyGive: '&eВы получили &6[amount]&e. Баланс: &6[money]'
       lostMoney: '&6[amount]&e has been removed from your balance. Remaining: &6[money]'
-      noMoney: '&cУ вас не достаточно денег'
       worldGroups: '&cВы не можете отправлять деньги между разными мировыми группами'
       self: '&cВы не можете отправить деньги себе!'
       confirm: '&eНажмите, чтобы подтвердить передачу &6[money] &eигроку &6[playerDisplayName]
@@ -3079,7 +3102,7 @@ command:
       info: '&eТелепортация в случайное место'
       args: '&6(Ник_игрока) (мир) (-s)'
     info:
-      posible: '&eТелепортация доступна только в мирах: &6[worlds]'
+      possible: '&ePossible worlds: &6[worlds]'
       tpLimit: '&eВы не можете телепортироваться так быстро, пожалуйста, подождите
         &6[time] &eи попробуйте еще раз.'
       IncorrectLocation: '&6Не удалось найти правильное местоположение для телепорации,
@@ -3411,12 +3434,12 @@ command:
       sellPrice: '&fСтоимость продажи: &e[amount]'
       buyPrice: '&fСтоимость покупки: &2[amount]'
       exploit: '&4Возможный ЭКСПЛОИТ!'
-      ingridient: '&2Ингредиенты'
-      ingridients: '&7[ingridient]&f(&7[amount]&f) = &e[price]'
+      ingredient: '&2Ingredients'
+      ingredients: '&7[ingredient]&f(&7[amount]&f) = &e[price]'
       notSet: '&eцена не установлена'
       notSetBuy: '&7Цена покупки не установлена'
       result: '&2Крафтов из &7[result]&f(&7[amount]&f)'
-      ingridientsPrice: '&cЦена ингредиента: &7[price]'
+      ingredientsPrice: '&cIngredient price: &7[price]'
       resultPrice: '&cМожет быть продан за: &7[price]'
       explanation: '&2Цена покупки используется только для обнаружения возможных эксплойтов.'
   shadowmute:
@@ -3577,6 +3600,10 @@ command:
       spawnedPasangers: '&eи &6[passengers] &eнаездников'
       nothingSpawned: '&eНи одна сущность не заспавнена'
       cantSpawn: '&eНе удалось заспавнить этот тип сущности'
+  speed:
+    help:
+      info: '&eSet players walk or fly speed'
+      args: (playerName) [amount] (-s)
   staffmsg:
     help:
       info: '&eОтправить сообщение в чат персонала сервера'
