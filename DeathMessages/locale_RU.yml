@@ -53,7 +53,7 @@ Block:
     - '&2[playerDisplayName] &7пытался плавать в лаве'
   Pointed_dripstone:
     General:
-    - '&2[playerDisplayName] &7was impaled on stalagmite'
+    - '&2[playerDisplayName] &7насажен на сталагмит'
 Custom:
   Block_explosion:
     General:
@@ -97,7 +97,7 @@ Custom:
     - '&2[playerDisplayName] &7разбился как кристалл'
   Wither:
     General:
-    - '&2[playerDisplayName] &7withered away'
+    - '&2[playerDisplayName] &7засох'
   Fly_into_wall:
     General:
     - '&2[playerDisplayName] &7испытал кинетическую энергию'
@@ -489,21 +489,21 @@ Mob:
     - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
   Allay:
     General:
-    - '&2[playerDisplayName] &7killed by &2[mobName]'
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
     Item:
-    - '&2[playerDisplayName] &7killed by &2[mobName] &7with &2[item]'
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
   Frog:
     General:
-    - '&2[playerDisplayName] &7killed by &2[mobName]'
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
     Item:
-    - '&2[playerDisplayName] &7killed by &2[mobName] &7with &2[item]'
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
   Tadpole:
     General:
-    - '&2[playerDisplayName] &7killed by &2[mobName]'
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
     Item:
-    - '&2[playerDisplayName] &7killed by &2[mobName] &7with &2[item]'
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
   Warden:
     General:
-    - '&2[playerDisplayName] &7killed by &2[mobName]'
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
     Item:
-    - '&2[playerDisplayName] &7killed by &2[mobName] &7with &2[item]'
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
