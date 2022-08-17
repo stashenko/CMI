@@ -245,7 +245,7 @@ info:
     subinv: '&eВаш суб инвентарь должен быть пустым!'
     subinvslots: '&eВаш суб инвентарь должен иметь как минимум &6[count] &eпустых
       слотов!'
-  Relog: '&eRelog might be needed for change to take effect'
+  Relog: '&eЧтобы изменения вступили в силу, может потребоваться повторный вход'
   time:
     # Mainly for placeholder playtime output
     # Use + sign at the start of line to force include it even if specific and previous time values are 0
@@ -827,7 +827,7 @@ command:
       info: '&eКонвертировать деньги в чек'
       args: '&6(Ник_игрока) [количество]'
     info:
-      transferred: '&eTransferred &6[amount] &eto your account. New balance: &6[balance]'
+      transferred: '&eКонвертировано &6[amount] &eна ваш аккаунт. Новый баланс: &6[balance]'
       chequeName: '&eЧек на &6[amount]'
       chequeLore:
       - '&r&fВыдан игроком &7[senderDisplayName]'
@@ -1012,13 +1012,13 @@ command:
       shapelessRecipe: '&6Создать новый бесформенный рецепт'
       shapedRecipe: '&2Создать новый рецепт по форме'
       furnaceRecipe: '&2Сделать новый рецепт в печи'
-      campfireRecipe: '&2Make new campfire recipe'
-      smithingRecipe: '&2Make new smithing recipe'
-      stonecuttingRecipe: '&2Make new stonecutting recipe'
-      blastingRecipe: '&2Make new blasting recipe'
-      smokingRecipe: '&2Make new smoking recipe'
-      exact: '&2Require exact ingredients: [state]'
-      exists: '&4Looks like recipe like this already exists'
+      campfireRecipe: '&2Сделать новый рецепт костра'
+      smithingRecipe: '&2Сделать новый кузнечный рецепт'
+      stonecuttingRecipe: '&2Сделать новый рецепт камнерезки'
+      blastingRecipe: '&2Сделать новый рецепт взрывных работ'
+      smokingRecipe: '&2Сделать новый рецепт копчения'
+      exact: '&2Требуются точные ингредиенты: [state]'
+      exists: '&4Похоже, такой рецепт уже существует'
       mainTitle: '&8Кастомные рецепты (&7[current]&8/&7[total]&8)'
   dback:
     help:
@@ -1040,7 +1040,7 @@ command:
       args: '&6(Ник_игрока)'
     info:
       title: '&cМусорка'
-      cant: '&cYou can''t dispose this item'
+      cant: '&cВы не можете избавиться от этого предмета'
   distance:
     help:
       info: '&eПроверить расстояние между двумя точками'
@@ -1063,10 +1063,10 @@ command:
       list: '&7[number]. &e[playerDisplayName] &e- &7[material] &6x &e[amount]'
   down:
     help:
-      info: '&eTeleport one floor down'
+      info: '&eТелепортация на один этаж вниз'
       args: '[playerName] (-s)'
     info:
-      notFound: '&eNo suitable location'
+      notFound: '&eНет подходящего места'
   dsign:
     help:
       info: '&eУправление динамическими табличками'
@@ -1221,7 +1221,7 @@ command:
       wrongItem: '&eНеправильный предмет в вашей руке'
       enchantlimit: '&cУ вас нет доступа к этим зачарованиям'
       levellimit: '&cУровень слишком высокий, максимально допустимый &e[level].'
-      possible: '&ePossible enchants: '
+      possible: '&eВозможные зачарования: '
       possibleList: '&6[enchant]'
   ender:
     help:
@@ -1869,8 +1869,8 @@ command:
       newPos: '&fМестоположение '
       newPosHover: '&6[world] (&e[x]&6:&e[y]&6:&e[z]&6)'
       newAfk: 'AFK '
-      newAfkHover: '&6Afk for last: [time]'
-      AfkInHover: '&6Afk in: [time]'
+      newAfkHover: '&6Прошлое Afk: [time]'
+      AfkInHover: '&6Afk: [time]'
       newBed: '&fРасположение кровати '
       newBedHover: '&6[world] (&e[x]&6:&e[y]&6:&e[z]&6)'
       newDeath: '&fМесто смерти '
@@ -2091,14 +2091,14 @@ command:
       createdCell: '&eНовая тюремная камера (&6[jail]&e:&6[cellId]&e) успешно создана'
       collides: '&cСидит в тюрьме &6[jailName]'
       editCells: '&eИзменить список камер'
-      cList: '&eId: &6[id] &eJailed: &6[amount]'
+      cList: '&eID камеры: &6[id]&e, Количество заключенных: &6[amount]'
       jailListTpHover: '&eУстановить точку выхода'
       jailListAreaHover: '&eПереопределить область'
       jailRemoved: '&eТюрьма (&6[jail]&e) удалена'
       jailOutside: '&eНовая точка выхода установлена'
       jailArea: '&eОбласть для тюрьмы &6[jail] &eпереопределена'
       cellRemoved: '&eКамера (&6[cellId]&e) удалена из тюрьмы &6[jail]'
-      list: '&eCells: &6[cells] &eJailed: &6[amount] &2[jail]'
+      list: '&eКамеры: &6[cells]&e, Количество заключенных: &6[amount] &2[jail]'
       listTp: '[tp] '
       listArea: '&7[area] '
       areaShow: '&7[S] '
@@ -3102,7 +3102,7 @@ command:
       info: '&eТелепортация в случайное место'
       args: '&6(Ник_игрока) (мир) (-s)'
     info:
-      possible: '&ePossible worlds: &6[worlds]'
+      possible: '&eТелепортация доступна только в мирах: &6[worlds]'
       tpLimit: '&eВы не можете телепортироваться так быстро, пожалуйста, подождите
         &6[time] &eи попробуйте еще раз.'
       IncorrectLocation: '&6Не удалось найти правильное местоположение для телепорации,
@@ -3434,12 +3434,12 @@ command:
       sellPrice: '&fСтоимость продажи: &e[amount]'
       buyPrice: '&fСтоимость покупки: &2[amount]'
       exploit: '&4Возможный ЭКСПЛОИТ!'
-      ingredient: '&2Ingredients'
+      ingredient: '&2Ингредиенты'
       ingredients: '&7[ingredient]&f(&7[amount]&f) = &e[price]'
       notSet: '&eцена не установлена'
       notSetBuy: '&7Цена покупки не установлена'
       result: '&2Крафтов из &7[result]&f(&7[amount]&f)'
-      ingredientsPrice: '&cIngredient price: &7[price]'
+      ingredientsPrice: '&cЦена ингредиента: &7[price]'
       resultPrice: '&cМожет быть продан за: &7[price]'
       explanation: '&2Цена покупки используется только для обнаружения возможных эксплойтов.'
   shadowmute:
@@ -3602,7 +3602,7 @@ command:
       cantSpawn: '&eНе удалось заспавнить этот тип сущности'
   speed:
     help:
-      info: '&eSet players walk or fly speed'
+      info: '&eУстановите скорость ходьбы или полета игроков'
       args: (playerName) [amount] (-s)
   staffmsg:
     help:
