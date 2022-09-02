@@ -250,10 +250,10 @@ info:
     # Mainly for placeholder playtime output
     # Use + sign at the start of line to force include it even if specific and previous time values are 0
     # Use - sign at the start of line if you want to include it only if its value isn't 0. If entire output results into empty line, then we will output seconds value
-    days: '&2[d]&7d:'
-    hours: '&2[h]&7h '
-    minutes: '&2[m]&7m '
-    seconds: '&2[s]&7s'
+    days: '&2[d]&7д '
+    hours: '&2[h]&7ч '
+    minutes: '&2[m]&7м '
+    seconds: '&2[s]&7с '
   CommandFormat: '&cНеверный формат команды'
   ServerSwitchOut: ' &6[playerDisplayName] &eперешел на сервер &6[serverName]'
   ServerSwitchIn: ' &6[playerDisplayName] &eпришел с сервера &6[serverName]'
@@ -3595,7 +3595,6 @@ command:
         q:10 sp:10 hp:50 s:2'
     info:
       wrongEntityName: '&eНеверное имя сущности'
-      wrongPlayerName: '&eНеверное имя игрока'
       spawnedEntities: '&eЗаспавнено &6[entities] &eсущностей '
       spawnedPasangers: '&eи &6[passengers] &eнаездников'
       nothingSpawned: '&eНи одна сущность не заспавнена'
