@@ -3329,6 +3329,7 @@ command:
     info:
       listOnline: '&7[place]. &2[serverName] &6[count]&7/&6[max]'
       listOffline: '&7[place]. &c[serverName] &60&7/&60'
+      consoleInfo: ' &f(&2[ip]&f:&2[port]&f)'
   servertime:
     help:
       info: '&eПоказывает время на сервере'
