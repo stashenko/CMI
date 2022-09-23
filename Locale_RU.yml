@@ -257,10 +257,10 @@ info:
   CommandFormat: '&cНеверный формат команды'
   ServerSwitchOut: ' &6[playerDisplayName] &eперешел на сервер &6[serverName]'
   ServerSwitchIn: ' &6[playerDisplayName] &eпришел с сервера &6[serverName]'
-  months: '&e[months] &6months '
-  oneMonth: '&e[months] &6month '
-  weeks: '&e[weeks] &6weeks '
-  oneWeek: '&e[weeks] &6week '
+  months: '&e[months] &6месяцев '
+  oneMonth: '&e[months] &6месяц '
+  weeks: '&e[weeks] &6недель '
+  oneWeek: '&e[weeks] &6неделя '
 warp:
   list: '&e[pos]. &6[warpName] &f- &7[worldName] ([x]:[y]:[z])'
 afk:
@@ -468,7 +468,7 @@ command:
         игроком &3[senderDisplayName]&e.'
   armoreffect:
     help:
-      info: '&eModifies armor effects'
+      info: '&eИзменяет эффекты брони'
       args: '[potionEffect]'
   armorstand:
     help:
@@ -2062,7 +2062,8 @@ command:
       noitem: '&cВы не держите предмет в руке.'
       removed: '&eНазвание предмета удалено для игрока &3[playerDisplayName]&e (&3[offon]&e).'
       blocked: '&eЭтот предмет нельзя переименовать'
-      maxLength: '&cNew value is to long. Max length &e[length] &ccharacters'
+      maxLength: '&cНовое значение слишком длинное. Максимальная длина &e[length]
+        &cсимволов'
   itemnbt:
     help:
       info: '&eПоказать NBT информацию предмета'
@@ -2698,7 +2699,7 @@ command:
       info: '&eИзменить личные параметры'
       args: (playerName) (option) (enable/disable/toggle/status) (-s)
       explanation:
-      - 'Posible actions: visibleHolograms, shiftSignEdit, totemBossBar, bassBarCompass,
+      - 'Возможные действия: visibleHolograms, shiftSignEdit, totemBossBar, bassBarCompass,
         tagSound, chatSpy, cmdSpy, signSpy, acceptingPM, acceptingTPA, acceptingMoney'
     info:
       title: '&8Опции'
@@ -2928,7 +2929,7 @@ command:
       requiredMcmmoList: '&e[color][name] '
       requiredMcmmoListHover: ' &e[color][current]&e/&6[needed]'
       requiredMcmmoPower: Сила
-      requiredAurelium: ' &eAurelium: '
+      requiredAurelium: ' &eАврелиум: '
       requiredAureliumList: '&e[color][name] '
       requiredAureliumListHover: ' &e[color][current]&e/&6[needed]'
       requiredJobs: ' &eРабота: '
