@@ -257,6 +257,10 @@ info:
   CommandFormat: '&cНеверный формат команды'
   ServerSwitchOut: ' &6[playerDisplayName] &eперешел на сервер &6[serverName]'
   ServerSwitchIn: ' &6[playerDisplayName] &eпришел с сервера &6[serverName]'
+  months: '&e[months] &6months '
+  oneMonth: '&e[months] &6month '
+  weeks: '&e[weeks] &6weeks '
+  oneWeek: '&e[weeks] &6week '
 warp:
   list: '&e[pos]. &6[warpName] &f- &7[worldName] ([x]:[y]:[z])'
 afk:
@@ -462,6 +466,10 @@ command:
         в руке &3[playerDisplayName](&3[offon]&e).'
       targetfeedback: '&eСтоимость ремонта вашего предмета установлена на &3[amount]&e
         игроком &3[senderDisplayName]&e.'
+  armoreffect:
+    help:
+      info: '&eModifies armor effects'
+      args: '[potionEffect]'
   armorstand:
     help:
       info: '&eОткрыть редактор стойки для брони'
@@ -587,6 +595,8 @@ command:
       topLineHover: '&6Всего валюты на сервере: &c[total]'
       list: '&e[place]. &6[playerDisplayName]: &e[balance]'
       ownLine: '&2[place]. &2[playerDisplayName]: &2[balance]'
+      # Set to empty field if you want to not show hover over message
+      hover: '&2[playerName]'
       recalculating: '&2Топ по денежнему балансу пересчитывается, пожалуйста, подождите
         пару секунд и попробуйте снова'
   ban:
@@ -2052,6 +2062,7 @@ command:
       noitem: '&cВы не держите предмет в руке.'
       removed: '&eНазвание предмета удалено для игрока &3[playerDisplayName]&e (&3[offon]&e).'
       blocked: '&eЭтот предмет нельзя переименовать'
+      maxLength: '&cNew value is to long. Max length &e[length] &ccharacters'
   itemnbt:
     help:
       info: '&eПоказать NBT информацию предмета'
@@ -2686,6 +2697,9 @@ command:
     help:
       info: '&eИзменить личные параметры'
       args: (playerName) (option) (enable/disable/toggle/status) (-s)
+      explanation:
+      - 'Posible actions: visibleHolograms, shiftSignEdit, totemBossBar, bassBarCompass,
+        tagSound, chatSpy, cmdSpy, signSpy, acceptingPM, acceptingTPA, acceptingMoney'
     info:
       title: '&8Опции'
       state: '&2Состояние: [state]'
@@ -2914,6 +2928,9 @@ command:
       requiredMcmmoList: '&e[color][name] '
       requiredMcmmoListHover: ' &e[color][current]&e/&6[needed]'
       requiredMcmmoPower: Сила
+      requiredAurelium: ' &eAurelium: '
+      requiredAureliumList: '&e[color][name] '
+      requiredAureliumListHover: ' &e[color][current]&e/&6[needed]'
       requiredJobs: ' &eРабота: '
       requiredJobsList: ' &e[color][name]'
       requiredJobsListHover: ' &e[color][current]&e/&6[needed]'
@@ -4374,14 +4391,6 @@ command:
       sunny: солнечно
       rainy: дождливо
       thundering: громово
-  whowas:
-    help:
-      info: '&eПоказывает все использованные ники игрока'
-      args: '&6[Ник_игрока]'
-    info:
-      list: ' &e[place]. &6[name] - &e[date]'
-      info: ' &e[playerName] &6[uuid]'
-      original: '&eРеальный ник'
   workbench:
     help:
       info: '&eОткрыть верстак'
