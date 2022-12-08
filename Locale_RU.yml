@@ -1889,8 +1889,8 @@ command:
       newBackHover: '&6[world] (&e[x]&6:&e[y]&6:&e[z]&6)'
       newRespawn: '&fСледующий респавн '
       newRespawnHover: '&6[world] (&e[x]&6:&e[y]&6:&e[z]&6)'
-      inv: '&fInv '
-      ender: '&fEnder '
+      inv: '&fИнв '
+      ender: '&fЭндер '
       newSee: '◕‿◕ '
       newSeeHover: '&6Может видеть вас'
       newSeeHoverNot: '&2Не может видеть вас'
@@ -3498,7 +3498,7 @@ command:
     info:
       feedback: '&eВы переключили безвучное открытие сундуков в режим &3[offon].'
       onOpen: '&eТихое открытие сундука...'
-      cantOpen: '&cUnable to open. Loot not generated yet.'
+      cantOpen: '&cНевозможно открыть. Лут еще не сгенерирован.'
   sit:
     help:
       info: '&eСядьте на свое место'
