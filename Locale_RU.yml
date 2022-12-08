@@ -1889,6 +1889,8 @@ command:
       newBackHover: '&6[world] (&e[x]&6:&e[y]&6:&e[z]&6)'
       newRespawn: '&fСледующий респавн '
       newRespawnHover: '&6[world] (&e[x]&6:&e[y]&6:&e[z]&6)'
+      inv: '&fInv '
+      ender: '&fEnder '
       newSee: '◕‿◕ '
       newSeeHover: '&6Может видеть вас'
       newSeeHoverNot: '&2Не может видеть вас'
@@ -1922,12 +1924,12 @@ command:
       newChatRoomHover:
       - '&7Комната чата: &e[name]'
       - '&7Игроки в чате: &e[count]'
-      nList:
+      List:
       - '&e------------- [enableColor]Enabled [disableColor]Disabled&e -------------'
       - '&e| [name][balance][UUID][ip]'
       - '&e| [OP][god][fly][gameMode][afk][see]'
       - '&e| [banned][muted][cuffed][jailed][alert][chatroom]'
-      - '&e| [pos][bed][respawn][death][back]'
+      - '&e| [pos][bed][respawn][death][back][ender][inv]'
       - '&e| [homes][mail][warnings]'
       - '&e-----------------------------------------'
   inv:
@@ -3496,6 +3498,7 @@ command:
     info:
       feedback: '&eВы переключили безвучное открытие сундуков в режим &3[offon].'
       onOpen: '&eТихое открытие сундука...'
+      cantOpen: '&cUnable to open. Loot not generated yet.'
   sit:
     help:
       info: '&eСядьте на свое место'
@@ -4391,7 +4394,7 @@ command:
       currentState: '&6[world] &e-> &6[weather] &eна следующие &6[time]'
       sunny: солнечно
       rainy: дождливо
-      thundering: громово
+      thundering: гром
   workbench:
     help:
       info: '&eОткрыть верстак'
