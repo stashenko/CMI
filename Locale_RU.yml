@@ -887,6 +887,8 @@ command:
       nickname: ' &eНик: '
       signs: ' &eТаблички: '
       books: ' &eКниги: '
+      itemname: ' &eItemName: '
+      itemlore: ' &eItemLore: '
       me: ' &eМне: '
       None: '&e-'
   colorpicker:
@@ -4250,6 +4252,7 @@ command:
       stopPlaytime: '&eНаигранное время не будет повышаться'
       sleepIgnore: '&eИгнорировать количество спящих'
       joinVanished: '&eВсегда присоединяйтесь в режиме ваниш'
+      deathMessages: '&eShow death message'
       bossbarTitle: '&eРежим скрытия'
   version:
     help:
