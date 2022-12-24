@@ -4252,7 +4252,7 @@ command:
       stopPlaytime: '&eНаигранное время не будет повышаться'
       sleepIgnore: '&eИгнорировать количество спящих'
       joinVanished: '&eВсегда присоединяйтесь в режиме ваниш'
-      deathMessages: '&eShow death message'
+      deathMessages: '&eПоказывать сообщение о смерти'
       bossbarTitle: '&eРежим скрытия'
   version:
     help:
