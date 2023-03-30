@@ -647,8 +647,8 @@ command:
       noteBlock: ' &eТон: &6[tone] &eОктава: &6[octave] &6Инструмент: &e[instrument]
         &6Высота: &7[pitch]'
       BlockState: ' &7[state]: &f[value]'
-      BlockHitBox: ' &7Height: &f[height] &7Length: &f[length] &7Width: &f[width]'
-      BlockHitBoxHover: '&7From Top: &f[top] &7From Bottom: &f[bottom]'
+      BlockHitBox: ' &7Высота: &f[height] &7Длина: &f[length] &7Ширина: &f[width]'
+      BlockHitBoxHover: '&7Сверху: &f[top] &7Снизу: &f[bottom]'
   blocknbt:
     help:
       info: '&eПоказать NBT информацию блока'
@@ -2725,7 +2725,7 @@ command:
         acceptingPM: '&eПрием личных сообщений'
         acceptingTPA: '&eПрием телепортации к вам'
         acceptingMoney: '&eПрием денежных платежей'
-        chatbubble: '&eChat bubbles'
+        chatbubble: '&eПузырьки чата'
   panimation:
     help:
       info: '&eВоспроизвести кастомную анимацию частиц'
@@ -3911,14 +3911,14 @@ command:
       setTimedFly: '&eВы установили временный режим полета игроку &6[playerDisplayName]&e
         на следующие [time]'
       addTimedFly: '&eВы добавили дополнительно [addTime] ([time]) для игрока &6[playerDisplayName]&e'
-      takeTimedFly: '&eYou have taken [addTime] ([time]) for &6[playerDisplayName]&e'
+      takeTimedFly: '&eВы взяли [addTime] ([time]) у игрока &6[playerDisplayName]&e'
       setUntilRelogFly: '&eВы установили временный режим полета до перезахода для
         игрока &6[playerDisplayName]&e.'
-      targetTimedEnabled: '&eВаш полет включен игроком &3[senderDisplayName]&e на
+      targetTimedEnabled: '&eВам включен полет игроком &3[senderDisplayName]&e на
         следующие [time].'
       targetTimedEnabledAdd: '&eВаше время полета увеличено на [addTime] ([time]).'
-      targetTimedEnabledTake: '&eYour flight time was decreased by [addTime] ([time]).'
-      targetUntilRelogEnabled: '&eВаш полет включен игроком &3[senderDisplayName]&e
+      targetTimedEnabledTake: '&eВаше время полета уменьшено на [addTime] ([time]).'
+      targetUntilRelogEnabled: '&eВам включен полет игроком &3[senderDisplayName]&e
         до перезахода.'
       setFor: '&eВременный режим полета включен до [time]'
       setForRelog: '&eВременный режим полета включен до перезахода'
