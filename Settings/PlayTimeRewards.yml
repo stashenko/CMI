@@ -1,0 +1,75 @@
+hourly1:
+  DisplayName: "&7Почасовая награда"
+  AutoClaim: true
+  Description:
+  - "&2Получайте вознаграждение за каждый час, проведенный на сервере"
+  - "&2Бесплатное лечение и 20 баксов в ваш карман"
+  PayEvery: 3600
+  Commands:
+  - asConsole! cmi heal [playerName] -s
+  - asConsole! cmi money give [playerName] 20
+daily1:
+  DisplayName: "&7Ежедневная награда"
+  AutoClaim: true
+  Description:
+  - "&2Получайте вознаграждение за каждые 24 часа игрового времени"
+  - "&22000 баксов в ваш карман!"
+  PayEvery: 86400
+  Commands:
+  - asConsole! cmi money give [playerName] 2000
+1hour:
+  DisplayName: "&fВознаграждение за один час"
+  AutoClaim: false
+  Description:
+  - "&2Получите вознаграждение за 1 час, проведенный на сервере"
+  - "&2500 баксов в ваш карман!"
+  PayFor: 3600
+  Commands:
+  - asConsole! cmi money give [playerName] 500
+6hour:
+  DisplayName: "&f6-часовая награда"
+  AutoClaim: false
+  Description:
+  - "&2Получите вознаграждение за 6 часов, проведенных на сервере"
+  - "&22 000 баксов в ваш карман!"
+  PayFor: 21600
+  Commands:
+  - asConsole! cmi money give [playerName] 2000
+12hour:
+  DisplayName: "&f12-часовая награда"
+  AutoClaim: false
+  Description:
+  - "&2Получите вознаграждение за 12 часов, проведенных на сервере"
+  - "&25 000 баксов в ваш карман!"
+  PayFor: 43200
+  Commands:
+  - asConsole! cmi money give [playerName] 5000
+24hour:
+  DisplayName: "&f24-часовая награда"
+  AutoClaim: false
+  Description:
+  - "&2Получите вознаграждение за 24 часа, проведенных на сервере"
+  - "&215 000 баксов в ваш карман!"
+  PayFor: 86400
+  Commands:
+  - asConsole! cmi money give [playerName] 15000
+7days:
+  DisplayName: "&f7-дневная награда"
+  AutoClaim: false
+  Description:
+  - "&2Получите вознаграждение за 7 дней на нашем сервере"
+  - "&250 000 баксов в ваш карман!"
+  PayFor: 604800
+  Commands:
+  - asConsole! cmi money give [playerName] 50000
+30days:
+  DisplayName: "&f30-дневная награда"
+  AutoClaim: false
+  Description:
+  - "&2Получите вознаграждение за 30 дней на нашем сервере"
+  - "&2500 000 баксов в ваш карман!"
+  PayFor: 2592000
+  Commands:
+  - asConsole! cmi money give [playerName] 500000
+
+  
