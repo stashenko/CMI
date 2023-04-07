@@ -2345,8 +2345,8 @@ command:
     info:
       searching: '&eПоиск &6[checked]&e/&6[total] &e(&6[found]&e)'
       List: ' &6[place]&e. &2[name] &e-> &6[time].'
-      timeFrame: '&eLast hour (&6[time1]&e), 24 hours (&6[time2]&e), 7 days (&6[time3]&e),
-        30 days (&6[time4]&e)'
+      timeFrame: '&eПоследний час (&6[time1]&e), 24 часа (&6[time2]&e), 7 дней (&6[time3]&e),
+        30 дней (&6[time4]&e)'
   launch:
     help:
       info: '&eЗапуск в направлении, в которое вы смотрите или под углом'
