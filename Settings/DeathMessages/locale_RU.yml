@@ -79,7 +79,7 @@ Custom:
     - '&2[playerDisplayName] &7задохнулся в стене'
   Custom:
     General:
-    - '&2[playerDisplayName] &умер'
+    - '&2[playerDisplayName] &7умер'
   Drowning:
     General:
     - '&2[playerDisplayName] &7утонул'
@@ -503,6 +503,11 @@ Mob:
     Item:
     - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
   Warden:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Camel:
     General:
     - '&2[playerDisplayName] &7убит мобом &2[mobName]'
     Item:
