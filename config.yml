@@ -2,7 +2,7 @@
 Language: RU
 # Defines if you want to auto download default locale files from github repository
 # You can disable this if you are using EN or you already have your locale setup and you dont need to have other languages being downloaded
-LanguageDownload: true
+LanguageDownload: false
 Economy:
   # Enable or disable CMI economy in general
   # In case CMIInjector is present, then this will be set to true automatically.
@@ -356,11 +356,20 @@ Optimizations:
       PointTo: true
       # How many lines you want to show when using /near command
       Count: 10
+    lastonline:
+      # Time in seconds to be used for lastonline command when showing aditional information about amount of players who logged off in defined period
+      Timers:
+        Time1: 3600
+        Time2: 86400
+        Time3: 604800
+        Time4: 2592000
     Inv:
       # List of players which you should not be able to open inventories
       # This can still be bypassed if you are OP
       BlackList:
       - Zrips
+      # Do you want to disable inv command on players who are offline
+      DisableOffline: false
     Clear:
       # When set to true, /cmi clear comamnd will require confirmation for it to be finalized
       Confirmation: true
@@ -432,7 +441,7 @@ Compass:
   # Compass update interval in milliseconds
   UpdateInterval: 200
   # Keep same spacing between each direction. Length can be any you want
-  Shape: '------------SW-------------W-------------NW-------------N-------------NE-------------E-------------SE-------------S-'
+  Shape: '------------ЮЗ-----------Запад-----------СЗ-----------Север-----------СВ-----------Восток----------ЮВ------------Юг-'
   Color: '&7'
   ShowHome: true
   Home: ۩
@@ -1154,11 +1163,11 @@ Warnings:
     Bug:
       LifeTime: 86400
       Points: 30
-      DefaultReason: '&7Using bugs'
+      DefaultReason: '&7Использование багов'
     Cheat:
       LifeTime: 86400
       Points: 50
-      DefaultReason: '&7Using cheats'
+      DefaultReason: '&7Использование читов'
   Perform:
     '3':
     - cmi mute [playerName] 10m
