@@ -160,6 +160,7 @@ info:
   CantTeleport: '&eВы не можете телепортироваться, потому что у вас слишком много
     ограниченных предметов. Прокрутите эту строку, чтобы увидеть максимально допустимое
     количество предметов.'
+  CantTeleportDistance: '&eSorry you cant teleport over &6[amount] &eblocks away!'
   BlackList: '&e[material] [amount] &6Максимум: [max]'
   wrongPortal: '&cВы находитесь в недопустимой зоне'
   ItemWillBreak: '!actionbar!&eВаш предмет (&6[itemName]&e) скоро сломается! &e[current]&6/&e[max]'
@@ -778,6 +779,12 @@ command:
         Owner: '&7Владелец: [playerDisplayName]'
         Ends: ' &7Истекает через: [time]'
         Names: '&7[playerDisplayName]'
+  chatcolor:
+    help:
+      info: '&ePick chat color'
+      args: (playerName)
+    info:
+      reset: '&6Reset'
   checkaccount:
     help:
       info: '&eПоиск других аккаунтов игрока'
@@ -1715,10 +1722,14 @@ command:
       bedButton: '&7Расположение кровати'
       homeButton: '&7Расположение точки дома'
       deathButton: '&7Точка смерти'
+      slot: '&7Slot: &e[slot]'
+      private: '&7Private: &e[state]'
+      favorite: '&7Favorite: &e[state]'
       lore: |-
         &7[world]
         &f[x]&7:&f[y]&7:&f[z]
-      pickerLore: '&7Средний клик мыши, чтобы изменить значок'
+      picker: '&7Click to change icon'
+      edit: '&7Click Q to edit'
   hunger:
     help:
       info: '&eУстановить голод игроку'
@@ -2818,8 +2829,8 @@ command:
       redefine: '&eПереопределить область из текущего выделения'
       particles: '&eЧастицы: &6[state]'
       particleType: '&eТип частиц: &6[type]'
-      particleColor: '&eЦвет частиц: &6[color]'
-      particleSize: '&eРазмер частиц: &6[size]'
+      particleColor: '&eParticle color: &6[color]'
+      particleSize: '&eParticle size: &6[size]'
       particleAmount: '&eКоличество частиц: &6[amount]'
       particlePercent: '&eПроцент сторон частиц: &6[amount]%'
       activationRange: '&eДиапазон активации: &6[amount]'
@@ -3394,6 +3405,7 @@ command:
       set: '&eВы установили точку дома с именем &6[homeName]&e!'
       setBed: '&eМестоположение респавна кровати установлено'
       private: ' &2(приватная)'
+      maxFavorites: '&cYou can only have &e[amount] &cfavorite homes at one time'
       noMore: '&cВы достигли максимального предела точек дома'
       exist: "&cДом с таким названием (&6[name]&c) уже существует! \n&eНажмите для\
         \ подтверждения перезаписи."
