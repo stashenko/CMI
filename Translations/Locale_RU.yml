@@ -143,7 +143,6 @@ info:
     Boss:
       DontMove: '&4Не двигайся &7[autoTimeLeft] &4сек.!'
       WaitFor: '&4Подожди &7[autoTimeLeft] &4сек.!'
-  Spawner: '&rСпавнер [type]'
   FailedSpawnerMine: '!actionbar!&cНе удалось добыть спавнер. &7[percent]% &cшанс
     выпадения'
   ClickSpawner: '!actionbar!&7[percent]% &eШанс выпадения'
@@ -155,6 +154,7 @@ info:
     немного и попробуйте снова.'
   CantUseNonEncrypted: '!actionbar!&cКоманды для этого предмета не зашифрованы. Не
     удалось использовать их!'
+  CantUseTrident: '!actionbar!&cCan''t use trident with riptide enchant at this moment!'
   CantDecode: '!actionbar!&cНе удалось декодировать сообщение/команду. Файл ключа
     содержит неверный ключ для этой задачи. Сообщите об этом администрации сервера'
   CantTeleport: '&eВы не можете телепортироваться, потому что у вас слишком много
@@ -247,6 +247,7 @@ info:
     subinvslots: '&eВаш суб инвентарь должен иметь как минимум &6[count] &eпустых
       слотов!'
   Relog: '&eЧтобы изменения вступили в силу, может потребоваться повторный вход'
+  IncorrectColor: '&4Color defined incorrectly!'
   time:
     # Mainly for placeholder playtime output
     # Use + sign at the start of line to force include it even if specific and previous time values are 0
@@ -258,10 +259,6 @@ info:
   CommandFormat: '&cНеверный формат команды'
   ServerSwitchOut: ' &6[playerDisplayName] &eперешел на сервер &6[serverName]'
   ServerSwitchIn: ' &6[playerDisplayName] &eпришел с сервера &6[serverName]'
-  months: '&e[months] &6месяцев '
-  oneMonth: '&e[months] &6месяц '
-  weeks: '&e[weeks] &6недель '
-  oneWeek: '&e[weeks] &6неделя '
 warp:
   list: '&e[pos]. &6[warpName] &f- &7[worldName] ([x]:[y]:[z])'
 afk:
@@ -402,12 +399,8 @@ command:
       added: '&eСообщение о входе игрока будет отправлено всем администраторам, если
         игрок &6[playerDisplayName] &eзайдет на сервер в следующие 24 часа'
       online: '&eИгрок &6[playerDisplayName] &eв сети'
-  alertlist:
-    help:
-      info: '&eСписок всех записанных предупреждений'
-      args: ''
-    info:
-      list: ' &e[place]. &6[playerDisplayName] &e[time] &7Причина: [reason]'
+      add: '&2Add extra day'
+      list: ' &e[place]. &6[playerDisplayName] &e[time] &7Reason: [reason]'
   aliaseditor:
     help:
       info: '&eРедактор алиасов'
@@ -650,6 +643,8 @@ command:
       BlockState: ' &7[state]: &f[value]'
       BlockHitBox: ' &7Высота: &f[height] &7Длина: &f[length] &7Ширина: &f[width]'
       BlockHitBoxHover: '&7Сверху: &f[top] &7Снизу: &f[bottom]'
+      Books: ' &eBooks: &6[list]'
+      Enchant: '&6[name]:&e[level] '
   blocknbt:
     help:
       info: '&eПоказать NBT информацию блока'
@@ -1127,7 +1122,7 @@ command:
       info: '&eПользовательский текстовый редактор'
       args: ''
     info:
-      noText: '&cНе удалось найти пользовательский текст по этому имени'
+      noCText: '&cCant find custom text by this name ([name])'
       editInfo: '&eНажмите, чтобы вставить старый текст. Введите &6cancel&e, чтобы
         отменить действие. Введите &6remove&e, чтобы убрать строку'
       addInfo: '&eВведите текст новой строки. Введите &6cancel&e, чтобы отменить'
@@ -1234,8 +1229,8 @@ command:
         (&3[offon]&e).'
       removed: '&eВы удалили зачарование &3[enchant] &eдля предмета игрока &3[playerDisplayName]&e
         (&3[offon]&e).'
-      cleared: '&eОчищены &3ВСЕ &eзачарования для предмета игрока &3[playerDisplayName]&e
-        (&3[offon]&e).'
+      clear: '&eCleared enchantments from item for &3[playerDisplayName]'
+      clearOne: '&eRemoved &3[enchant] &eenchantment from item for &3[playerDisplayName]'
       noitem: '&cВ руке ничего нет.'
       invalidEnchant: '&cУ вас нет разрешения на зачарование предмета недействительными
         зачарованиями'
@@ -1244,6 +1239,7 @@ command:
       wrongItem: '&eНеправильный предмет в вашей руке'
       enchantlimit: '&cУ вас нет доступа к этим зачарованиям'
       levellimit: '&cУровень слишком высокий, максимально допустимый &e[level].'
+      conflict: '&cConflicting enchantment &7[enchant1] &c-> &7[enchant2]'
       possible: '&eВозможные зачарования: '
       possibleList: '&6[enchant]'
   ender:
@@ -1357,7 +1353,7 @@ command:
       stoped: '&eСканирование остановлено. Вы можете проверить результаты с помощью
         команды /cmi fixchunk info'
       speedChange: '&eСкорость изменена на [amount]'
-      autospeedChange: '&eАвтоскорость ​​изменена на [state]'
+      autospeedChange: '&eАвтоскорость изменена на [state]'
       messagesChange: '&eСостояние сообщения изменено на [state]'
       NoInfo: '&eНет информации'
       InfoShow: '&6TPS: &3[tps] &6Осталось &e[left] &6(&e[min]m:[sec]s&6) &6Скорость:
@@ -1673,6 +1669,38 @@ command:
       particleWidth: '&7Дополнительная ширина частиц: &6[amount]'
       particleOffsetX: '&7Смещение частицы по X: &6[amount]'
       particleOffsetY: '&7Смещение частицы по Y: &6[amount]'
+      locationRange: '&7Modify location and range'
+      interactions: '&7Modify interactions'
+      newDisplayMethod: '&7Use new display method: &6[state]'
+      enabled: '&7Activated: &6[state]'
+      followType: '&7Follow type: &6[type]'
+      doubleSided: '&7Double sided: &6[state]'
+      holoYaw: '&7Yaw: &6[angle]'
+      holoPitch: '&7Pitch: &6[angle]'
+      pitchLimits: |-
+        &4When pitch is not at 0 degrees
+        &4interactions with hologram support
+        will be disabled
+      alignment: '&7Text alignment: &6[type]'
+      shadow: '&7Text shadow: &6[state]'
+      textAlpha: '&7Text transparency: &6[alpha]'
+      bgAlpha: '&7Background transparency: &6[alpha]'
+      bgColor: '&7Background color: &6[color]'
+      scaleWidth: '&7Scale width: &6[scale]'
+      scaleHeight: '&7Scale height: &6[scale]'
+      lightLevels: '&7Light levels'
+      levels: |-
+        &7Sky: &6[sky]
+        &7Block: &6[block]
+      iconScale: '&7Icon scale: &6[scale]'
+      iconPitch: '&7Icon pitch: &6[angle]'
+      iconYaw: '&7Icon yaw: &6[angle]'
+      reset: '&7Press &6Q &7to reset'
+      embeddedAutoButton: '&7Enabled pagination buttons: [state]'
+      # Use ctext format to define different behaviors for plain and hover over text
+      # Commands are not supported, only text and hover
+      prevPage: <T>&6<<<<  </T><H>&e<<<<  </H>
+      nextPage: <T>  &6>>>></T><H>  &e>>>></H>
       autoButton: '&7Автоматически генерировать кнопки пагинации'
       autoButtonLore:
       - '&eГолограмма не имеет созданных страниц'
@@ -1852,6 +1880,7 @@ command:
       - '[firstLogin]'
       newNameHoverNick: '&7Ник: &f[nick]'
       newNameHoverGroup: '&7Группа: &f[group]'
+      newNameHoverTitle: '&7Prefix: &f[prefix] &7Suffix: &f[suffix]'
       newNameHoverKnownAs: '&7Также известен как: &f[nameList]'
       newNameHoverIp: '&7Ip: &f[ip]'
       newNameHoverPing: '&7Пинг: &f[ping]'
@@ -2141,6 +2170,7 @@ command:
       jailList: '&6[place]. &e[jailName]&e, &7Камеры: &e[cellCount]&e, &7Заключенных:
         &6[count]'
       cellList: '&6[place]. &7ID: &e[cellId]&e, &7Заключенных: &6[count]'
+      jailedBy: '&6Jailed by: &e[playerDisplayName]'
       cellJailedList: '&6[place]. &e[playerDisplayName]&e, выйдёт на свободу через
         &e[time]'
       Release: '&7Нажмите, чтобы выпустить'
@@ -2330,6 +2360,10 @@ command:
       editDisplayName:
       - '&eНажмите, чтобы изменить отображаемое имя'
       - '&eЭто используется только для визуальных целей'
+      fileName: '&7FileName: &r&f[name]'
+      editFileName:
+      - '&eClick to change file name'
+      - '&eWill define where kit should be saved at'
       kitGroup: '&eКатегория набора: &6[group]'
       dropItems: '&eУдалить предмет, если инвентарь заполнен: &6[state]'
       commands: '&eКоманды:'
@@ -2620,7 +2654,6 @@ command:
     info:
       TargetMsg: '&7[&8[senderDisplayName] &7-> &8Я&7]&r&f [message]'
       SenderMsg: '&7[&8Я &7-> &8[playerDisplayName]&7]&r&f [message]'
-      consoleMsg: '[[senderDisplayName] -> [playerDisplayName]] [message]'
       noPM: '&cИгрок не принимает личные сообщения в данный момент'
       badGroup: '&cВы не можете отправлять личные сообщения в эту группу игроков'
   mute:
@@ -2739,6 +2772,11 @@ command:
         acceptingTPA: '&eПрием телепортации к вам'
         acceptingMoney: '&eПрием денежных платежей'
         chatbubble: '&eПузырьки чата'
+        pmSound: '&ePrivate messages sounds'
+        rideMe: '&ePlayers can ride you'
+        pveDamageNumbers: '&eShows PvE damage numbers'
+        pvpDamageNumbers: '&eShows PvP damage numbers'
+        InformDurability: '&eInform on item durability loss'
   panimation:
     help:
       info: '&eВоспроизвести кастомную анимацию частиц'
@@ -2796,7 +2834,7 @@ command:
     info:
       topLine: '&e----- Топ по времени игры &e-----'
       scanning: '&eДанные в настоящее время сканируются, пожалуйста, подождите минуту
-        и ​​попробуйте снова'
+        и попробуйте снова'
       loading: '&eДанные еще не загружены. Начинается процес сканирования, вы получите
         результат после его завершения'
       list: '&e[number]. [playerDisplayName] &e- &6[time]'
@@ -2921,7 +2959,7 @@ command:
     info:
       check: '&eПерсональная погода: &6[weather]'
       gotreseted: '&6Погода сброшена для игрока &6[playerDisplayName]'
-      setto: '&eПерсональная погода установлена ​​на &6[weather] &eдля игрока &6[playerDisplayName]'
+      setto: '&eПерсональная погода установлена на &6[weather] &eдля игрока &6[playerDisplayName]'
       gotset: '&eВаша персональная погода установлена на &6[weather]'
       reset: '&eПогода сброшена'
   rankdown:
@@ -3017,6 +3055,19 @@ command:
       args: '&6(предмет)'
     info:
       type: '&0[type]'
+      types:
+        Shaped: Shaped
+        Shapeless: Shapeless
+        Furnace: Furnace
+        Blasting: Blasting
+        Campfire: Campfire
+        Cooking: Cooking
+        Merchant: Merchant
+        Smoking: Smoking
+        Stonecutting: Stonecutting
+        Smithing: Smithing
+        Complex: Complex
+        Unknown: Unknown
       page: ' &0[current]&7/&0[total]'
       noRecipes: '&cНе удалось найти рецепты для этого предмета'
   reload:
@@ -3103,7 +3154,7 @@ command:
       continuing: '&eПроцесс замещения продолжается'
       stoped: '&eПроцесс замещения остановлен.'
       speedChange: '&eСкорость изменена на [amount]'
-      autospeedChange: '&eАвтоматическую скорость ​​изменена на [state]'
+      autospeedChange: '&eАвтоматическую скорость изменена на [state]'
       messagesChange: '&eСостояние сообщений изменено на [state]'
       infoShow: '&6TPS: &3[tps] &6Осталось &e[left] &6(&e[time]&6) &6Скорость: &e[speed]
         &6Заменено: &e[found]'
@@ -3240,7 +3291,7 @@ command:
       stoped: '&eСканирование остановлено. Вы можете проверить результаты с помощью
         команды /cmi scan info'
       speedChange: '&eСкорость изменена на [amount]'
-      autospeedChange: '&eАвто скорость ​​изменена на [state]'
+      autospeedChange: '&eАвто скорость изменена на [state]'
       messagesChange: '&eСостояние сообщения изменено на [state]'
       NoInfo: '&eНет никакой информации'
       infoShow: '&6TPS: &3[tps] &6Осталось &e[left] &6(&e[time]&6) &6Скорость: &e[speed]
@@ -4225,7 +4276,7 @@ command:
       - Любые данные игрока можно вывести при помощи %cmi_user_meta_[key]% вокруг
         плагина
     info:
-      added: '&eДобавлена ​​данные для игрока &6[playerDisplayName] &eс ключом &6[key]
+      added: '&eДобавлены данные для игрока &6[playerDisplayName] &eс ключом &6[key]
         &eи значением &6[value]'
       cleared: '&eДанные оищены для игрока &6[playerDisplayName]'
       removed: '&eДанные &6[key] &eудалены у игрока &6[playerDisplayName]'
@@ -4291,7 +4342,7 @@ command:
       CMIB: '&7CMIB '
       newVault: '&eВерсия Vault: &6[version]'
       Modules: '&eМодули -> &a[enabled] включено &7[disabled] отключено&e: &c[list]'
-      Bungee: ' &eBungeeCord '
+      Network: ' &e[type] '
       CMILib: '&eCMILib: &6[version] '
       cmilVersionNew: '&e-> [newVersion]'
   viewrange:
