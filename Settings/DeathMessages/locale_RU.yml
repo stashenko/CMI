@@ -512,3 +512,8 @@ Mob:
     - '&2[playerDisplayName] &7убит мобом &2[mobName]'
     Item:
     - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Sniffer:
+    General:
+    - '&2[playerDisplayName] &7killed by &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7killed by &2[mobName] &7with &2[item]'
