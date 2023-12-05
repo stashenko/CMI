@@ -880,8 +880,7 @@ command:
         &e, установленное игроком &3[senderName]&e.'
       targetFeedbackCustom: '&eВаш компас теперь показывает на &3[x] [z] [world] &e,
         установленное игроком &3[sourceDisplayName]&e.'
-      targetPlayerFeedback: '&3[playerDisplayName] &eset their compass towards your
-        location'
+      targetPlayerFeedback: '&3[playerDisplayName] &eнастройте компас на ваше местоположение'
       reset: '&eЦель компаса сброшена'
   condense:
     help:
@@ -2043,7 +2042,7 @@ command:
         (&3[offon]&e).'
       maxLines: '&eСуществует только &6[lines] &eстрок в описании.'
       blocked: '&eЭтот предмет заблокирован от повторного использования.'
-      nomodification: '&cYou can''t modify existing lore lines'
+      nomodification: '&cВы не можете изменять существующие линии описания.'
   itemname:
     help:
       info: '&eПереименовать предмет'
@@ -2931,7 +2930,7 @@ command:
       requiredExp: ' &eОпыта: [color][current]&e/&6[needed]'
       requiredVotes: ' &eГолосов: [color][current]&e/&6[needed]'
       requiredPerm: ' &eРазрешение: '
-      requiredPlaceholder: ' &eCustom: '
+      requiredPlaceholder: ' &eПользовательский: '
       requiredPlaceholderList: '[color][message]'
       requiredPlaceholderHover: '&e[color][current]&e/&6[needed]'
       requiredMcmmo: ' &eMcmmo: '
