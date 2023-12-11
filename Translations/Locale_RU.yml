@@ -248,7 +248,7 @@ info:
     subinvslots: '&eВаш суб инвентарь должен иметь как минимум &6[count] &eпустых
       слотов!'
   Relog: '&eЧтобы изменения вступили в силу, может потребоваться повторный вход'
-  outsideWorldBorder: '&cLocation is outside world border'
+  outsideWorldBorder: '&cМестоположение находится за пределами границы мира'
   IncorrectColor: '&4Цвет определен неверно!'
   time:
     # Mainly for placeholder playtime output
