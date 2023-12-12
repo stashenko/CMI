@@ -2250,6 +2250,10 @@ command:
       noFoundKit: '&eНе удалось найти доступные наборы'
       givenKit: '&eВы выдали набор &6[kit] &eигроку &6[playerDisplayName]'
       title: '&8Наборы'
+      # List of custom kit GUI titles based by page
+      # If title isint defined we will use default one
+      titlesByPage:
+      - '&8Наборы'
       nameCanUse: '&6[kitName]'
       nameCantUse: '&7[kitName]'
       group: '&eГруппа: &6[group]'
