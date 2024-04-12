@@ -180,7 +180,7 @@ info:
   book:
     exploit: '&cВы не можете создать книгу, содержащую более [amount] страниц'
   combat:
-    CostToOpen: '!actionbar!&eCharged for opening: [amount]'
+    CostToOpen: '!actionbar!&eПлата за открытие: [amount]'
     CantUseShulkerBox: '&cНельзя использовать шалкеры во время боя. Жди: [time]'
     CantUseCommand: '!actionbar!&cНельзя использовать команды во время боя. Жди: [time]'
     bossBarPvp: '&cРежим боя [autoTimeLeft]'
@@ -234,7 +234,7 @@ info:
       слотов!'
   Relog: '&eЧтобы изменения вступили в силу, может потребоваться повторный вход'
   outsideWorldBorder: '&cМестоположение находится за пределами границы мира'
-  noWorldAccess: '&cNo world access'
+  noWorldAccess: '&cНет доступа к миру'
   IncorrectColor: '&4Цвет определен неверно!'
   time:
     # Mainly for placeholder playtime output
@@ -836,8 +836,8 @@ command:
       - '&r&fПКМ, чтобы внести депозит'
       holdPaper: '&cВы должны держать бумагу в руке'
       cantUse: '&eНе удалось использовать этот листок бумаги. Он уже является чеком!'
-      clarification: '&cThis type of cheque is no longer accepted. Please contact
-        with staff member to update it'
+      clarification: '&cЧек такого типа больше не принимается. Пожалуйста, свяжитесь
+        с администрацией для обновления.'
   clear:
     help:
       info: '&eОчистить инвентарь игрока'
@@ -3197,11 +3197,11 @@ command:
       possible: '&eТелепортация доступна только в мирах: &6[worlds]'
       tpLimit: '&eВы не можете телепортироваться так быстро, пожалуйста, подождите
         &6[time] &eи попробуйте еще раз.'
-      cantDo: '&eYou can''t use random teleport from different world'
+      cantDo: '&eВы не можете использовать рандомный телепорт из другого мира.'
       IncorrectLocation: '&6Не удалось найти правильное местоположение для телепорации,
         пожалуйста, подождите &e[time] &6и попробуйте еще раз.'
       teleported: '!actionbar!&6ВЖУУУХ!!!'
-      searching: '!actionbar!&7Searching'
+      searching: '!actionbar!&7Идет поиск'
   sameip:
     help:
       info: '&eСписок игроков, вошедших с того же IP'
@@ -4076,9 +4076,9 @@ command:
       bad:
         msg: '&cМестоположение телепортации небезопасно. [reason]'
         extraMsg: '&eИспользуйте &6/tpbypass &eдля обхода этого. У вас есть [time]'
-        badfloor: '&cBad floor ([material])'
+        badfloor: '&cПлохой пол ([material])'
         void: '&cПустота'
-        fall: '&cFall ([distance])'
+        fall: '&cПадение ([distance])'
         suffocation: '&cУдушье'
         unknown: '&cНеизвестно'
         plugin: '&cСторонний плагин'
@@ -4328,7 +4328,7 @@ command:
       sleepIgnore: '&eИгнорировать количество спящих'
       joinVanished: '&eВсегда присоединяйтесь в режиме ваниш'
       deathMessages: '&eПоказывать сообщение о смерти'
-      hookPlayers: '&eHooking entities'
+      hookPlayers: '&eПерехват сущностей'
       bossbarTitle: '&eРежим скрытия'
   version:
     help:
