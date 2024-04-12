@@ -28,6 +28,8 @@ Player:
   - '&2[playerDisplayName] &7расстрелян игроком &2[sourceDisplayName]'
   Firework:
   - '&2[playerDisplayName] &7ушел с треском в мир иной из-за игрока &2[sourceDisplayName]'
+  Tnt:
+  - '&2[playerDisplayName] &7was blown up by &2[sourceDisplayName]'
 FallingBlocks:
   Anvil:
     General:
@@ -60,6 +62,9 @@ Custom:
   Block_explosion:
     General:
     - '&2[playerDisplayName] &7убит [Intentional Game Design]'
+  Starvation:
+    General:
+    - '&2[playerDisplayName] &7starved to death'
   Fall:
     Low:
       General:
