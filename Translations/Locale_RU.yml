@@ -91,22 +91,6 @@
 
 # If line starts with !bossbar:[name]-[timer]! then player will get bossbar message defined after this variable, in addition you can define how long this message will be visible. You need to define bossbar name which can be anything you want, but lines with same name will override each other to prevent stacking
 
-# To include clickable messages: <T>Text</T><H>Hover text</H><C>command</C><SC>Suggested text</SC>
-
-# <T> and </T> required, other is optional
-
-# Use /n to break line
-
-# To have more than one JSON message use <Next>
-
-# <C> performs command as a player who clicked
-
-# <CC> performs command from console once
-
-# <CCI> performs command from console every time player clicks text
-
-# <URL> includes url
-
 # 
 
 # 
@@ -196,6 +180,7 @@ info:
   book:
     exploit: '&cВы не можете создать книгу, содержащую более [amount] страниц'
   combat:
+    CostToOpen: '!actionbar!&eCharged for opening: [amount]'
     CantUseShulkerBox: '&cНельзя использовать шалкеры во время боя. Жди: [time]'
     CantUseCommand: '!actionbar!&cНельзя использовать команды во время боя. Жди: [time]'
     bossBarPvp: '&cРежим боя [autoTimeLeft]'
@@ -249,6 +234,7 @@ info:
       слотов!'
   Relog: '&eЧтобы изменения вступили в силу, может потребоваться повторный вход'
   outsideWorldBorder: '&cМестоположение находится за пределами границы мира'
+  noWorldAccess: '&cNo world access'
   IncorrectColor: '&4Цвет определен неверно!'
   time:
     # Mainly for placeholder playtime output
@@ -850,6 +836,8 @@ command:
       - '&r&fПКМ, чтобы внести депозит'
       holdPaper: '&cВы должны держать бумагу в руке'
       cantUse: '&eНе удалось использовать этот листок бумаги. Он уже является чеком!'
+      clarification: '&cThis type of cheque is no longer accepted. Please contact
+        with staff member to update it'
   clear:
     help:
       info: '&eОчистить инвентарь игрока'
@@ -1802,7 +1790,6 @@ command:
       exists: '&cИнтерактивная команда с таким именем уже существует'
       blockExist: '&cЭтот блок уже используется &e[name]'
       entityExist: '&cЭта сущность уже используется &e[name]'
-      cantUsePlayer: '&cВы не можете использовать обычного игрока как командную сущность'
       addInfo: '&eВведите новую команду. Введите &6cancel&e, чтобы отменить'
       addInformationHover: "&eГлобальные переменные поддерживаются в категории отп\
         равителя \n&eВключить задержку в команды: \n&edelay! 5 \n&eДополнительные\
@@ -2810,7 +2797,6 @@ command:
     info:
       feedback: '&eПинг: &6[ping]ms'
       selffeedback: '&eВаш пинг &6[ping]ms'
-      customMessage: '[message]'
   placeholders:
     help:
       info: '&eСписок всех заполнителей'
@@ -3004,6 +2990,9 @@ command:
       requiredAurelium: ' &eАврелиум: '
       requiredAureliumList: '&e[color][name] '
       requiredAureliumListHover: ' &e[color][current]&e/&6[needed]'
+      requiredAuraSkills: ' &eAuraSkills: '
+      requiredAuraSkillsList: '&e[color][name]'
+      requiredAuraSkillsListHover: ' &e[color][current]&e/&6[needed]'
       requiredJobs: ' &eРабота: '
       requiredJobsList: ' &e[color][name]'
       requiredJobsListHover: ' &e[color][current]&e/&6[needed]'
@@ -3208,10 +3197,11 @@ command:
       possible: '&eТелепортация доступна только в мирах: &6[worlds]'
       tpLimit: '&eВы не можете телепортироваться так быстро, пожалуйста, подождите
         &6[time] &eи попробуйте еще раз.'
+      cantDo: '&eYou can''t use random teleport from different world'
       IncorrectLocation: '&6Не удалось найти правильное местоположение для телепорации,
         пожалуйста, подождите &e[time] &6и попробуйте еще раз.'
       teleported: '!actionbar!&6ВЖУУУХ!!!'
-      waiting: '!actionbar!&6Ищем подходящее место. Пожалуйста подождите'
+      searching: '!actionbar!&7Searching'
   sameip:
     help:
       info: '&eСписок игроков, вошедших с того же IP'
@@ -4086,8 +4076,9 @@ command:
       bad:
         msg: '&cМестоположение телепортации небезопасно. [reason]'
         extraMsg: '&eИспользуйте &6/tpbypass &eдля обхода этого. У вас есть [time]'
-        lava: '&cЛава'
+        badfloor: '&cBad floor ([material])'
         void: '&cПустота'
+        fall: '&cFall ([distance])'
         suffocation: '&cУдушье'
         unknown: '&cНеизвестно'
         plugin: '&cСторонний плагин'
@@ -4337,6 +4328,7 @@ command:
       sleepIgnore: '&eИгнорировать количество спящих'
       joinVanished: '&eВсегда присоединяйтесь в режиме ваниш'
       deathMessages: '&eПоказывать сообщение о смерти'
+      hookPlayers: '&eHooking entities'
       bossbarTitle: '&eРежим скрытия'
   version:
     help:
