@@ -215,7 +215,7 @@ info:
   afkSymbolOn: '&8[&eAFK&8]&r'
   afkSymbolOff: ''
   beeinfo: '!actionbar!&7Уровень мёда: &e[level]&7/&e[maxlevel] &7Пчел внутри: &e[count]&7/&e[maxcount]'
-  decoratedpotinfo: '!actionbar!&7Contents: &e[items]'
+  decoratedpotinfo: '!actionbar!&7Содержание: &e[items]'
   pvp:
     noGodDamage: '!actionbar!&cВы не можете нанести урон игрокам, будучи бессмертным'
   pve:
@@ -1678,7 +1678,7 @@ command:
         будет отключено.
       alignment: '&7Выравнивание текста: &6[type]'
       shadow: '&7Тень текста: &6[state]'
-      fadeIn: '&7Fade in animation: &6[state]'
+      fadeIn: '&7Затухание анимации: &6[state]'
       textAlpha: '&7Прозрачность текста: &6[alpha]'
       bgAlpha: '&7Прозрачность фона: &6[alpha]'
       bgColor: '&7Фоновый цвет: &6[color]'
@@ -2081,7 +2081,7 @@ command:
       entityType: ' &eТип сущности: &6[type]'
       customModel: ' &eПользовательские данные модели: &6[data]'
       durability: ' &eПрочность: &6[current]&e/&6[max]'
-      unbreakable: ' &7(Unbreakable)'
+      unbreakable: ' &7(Нерушимый)'
       stackSize: ' &eМаксимальный размер стака: &6[size]'
   itemlore:
     help:
@@ -2556,20 +2556,20 @@ command:
         (&3[offon]&e).'
       targetfeedback: '&3[senderDisplayName]&e открыл &6[type] &eторговли для вас.'
       professions:
-        armorer: Armorer
-        butcher: Butcher
-        cartographer: Cartographer
-        cleric: Cleric
-        farmer: Farmer
-        fisherman: Fisherman
-        fletcher: Fletcher
-        leatherworker: Leatherworker
-        librarian: Librarian
-        mason: Mason
-        nitwit: Nitwit
-        shepherd: Shepherd
-        toolsmith: Toolsmith
-        weaponsmith: Weaponsmith
+        armorer: Бронник
+        butcher: Мясник
+        cartographer: Картограф
+        cleric: Священник
+        farmer: Фермер
+        fisherman: Рыбак
+        fletcher: Лучник
+        leatherworker: Кожевник
+        librarian: Библиотекарь
+        mason: Каменщик
+        nitwit: Бронник
+        shepherd: Пастух
+        toolsmith: Инструментальщик
+        weaponsmith: Оружейник
   migratedatabase:
     help:
       info: '&eИзменение системы базы данных и перенос всех данных'
@@ -3279,12 +3279,12 @@ command:
       updated: '&eТабличка обновлена'
   scale:
     help:
-      info: '&eSet entities scale'
-      args: set/add/take/clear (playerName) [amount] (-s)
+      info: '&eУстановить масштаб объектов'
+      args: set/add/take/clear (Ник_игрока) [количество] (-s)
     info:
-      feedback: '&eYou have set &3[scale] &e scale for &3[entityName]&e.'
-      scale: '&eScale: &3[scale]'
-      targetfeedback: '&eYour scale was set to &3[scale] &eby &3[senderDisplayName]&e.'
+      feedback: '&eВы установили &3[scale]&e масштаб для&3 [entityName]&e.'
+      scale: '&eМасштаб: &3[scale]'
+      targetfeedback: '&eВаш масштаб установлен на &3[scale] &eигроком &3[senderDisplayName]&e.'
   scan:
     help:
       info: '&eСканирование предметов в текущем мире'
@@ -3450,10 +3450,10 @@ command:
       args: '&6[название сервера] (Ник_игрока) (-f)'
   serverlinks:
     help:
-      info: '&eSet server links'
+      info: '&eУстановить ссылки на сервер'
       args: ''
       explanation:
-      - Separate display name and link with ;
+      - Отдельное отображаемое имя и ссылка на ;
   serverlist:
     help:
       info: '&eОтобразить список серверов'
@@ -3929,8 +3929,8 @@ command:
       DiskUsage: ' &eИспользование диска: &6[percent]% &e(&6[current]&e/&6[max] GB&e)'
       Worlds: '&e [number]. &6[world] &e[chunks] &eчанков, &6[entities] &eсущностей,
         &c[tiles] &eтайлов, &6[players] &eигроков'
-      MostTiles: '&7Most tiles (&f[tiles]&7) in &f[coord] &7chunk'
-      MostEntities: '&7Most entities (&f[entities]&7) in &f[coord] &7chunk'
+      MostTiles: '&7Большинство тайлов (&f[tiles]&7) в чанке &f[coord]'
+      MostEntities: '&7Большинство объектов (&f[entities]&7) в чанке &f[coord]'
   stonecutter:
     help:
       info: '&eОткрыть камнерез'
