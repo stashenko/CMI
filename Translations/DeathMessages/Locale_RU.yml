@@ -36,6 +36,9 @@ FallingBlocks:
     - '&2[playerDisplayName] &7раздавлен падающей наковальней'
     - '&2[playerDisplayName] &7раздавлен наковальней'
     - '&2[playerDisplayName] &7ударился о наковальню головой'
+  Pointed_dripstone:
+    General:
+    - '&7Игрока &2[playerDisplayName] &7пронзил падающий сталактит'
 Block:
   Cactus:
     General:
@@ -62,6 +65,9 @@ Custom:
   Block_explosion:
     General:
     - '&2[playerDisplayName] &7убит [Intentional Game Design]'
+  World_border:
+    General:
+    - '&2[playerDisplayName] &7покинул пределы этого мира'
   Starvation:
     General:
     - '&2[playerDisplayName] &7проголодался до смерти'
@@ -324,16 +330,16 @@ Mob:
     - '&2[playerDisplayName] &7убит мобом &2[mobName]'
     Item:
     - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
-  Mushroom_cow:
+  Mooshroom:
     General:
-    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    - '&2[playerDisplayName] &7killed by &2[mobName]'
     Item:
-    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
-  Snowman:
+    - '&2[playerDisplayName] &7killed by &2[mobName] &7with &2[item]'
+  Snow_golem:
     General:
-    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    - '&2[playerDisplayName] &7killed by &2[mobName]'
     Item:
-    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+    - '&2[playerDisplayName] &7killed by &2[mobName] &7with &2[item]'
   Ocelot:
     General:
     - '&2[playerDisplayName] &7убит мобом &2[mobName]'
@@ -525,6 +531,16 @@ Mob:
     Item:
     - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
   Breeze:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Armadillo:
+    General:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Bogged:
     General:
     - '&2[playerDisplayName] &7убит мобом &2[mobName]'
     Item:
