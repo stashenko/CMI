@@ -484,8 +484,9 @@
   MoneyCost: 1000000
   ExpCost: 150
   Commands:
-  - pex user [playerName] group set Admin
+  - pex user [playerName] group add VIP
   - broadcast! &6[playerDisplayName] &eРанг повышен до Маршал (&2Высший ранг сервера&e)!
+  - broadcast! &6[playerDisplayName] &eПолучил привилегию ВИП (&2Донат от сервера&e)!
   StatsRequirements:
   - PlayTime:6480000
   - travel:3000000
