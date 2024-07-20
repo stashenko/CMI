@@ -21,6 +21,8 @@ Economy:
   log:
     Unknown: true
     Transfer: true
+    IgnoredUsers:
+    - Zrips
   Cheque:
     # Determines max amount of cheque player can create
     # Set it to 0 to remove limit
@@ -29,6 +31,12 @@ Economy:
     Paper: true
     # When set to true player will be required to have cmi.command.cheque.withdraw permission node to withdraw cheque
     Permission: false
+    # Should we allow checque usage in creative mode
+    # If you have creative server, keep this at false or players could start duplicating items
+    InCreative: false
+    # Should we accept old cheque item stacks with non encoded data in them
+    # Keep it at false for most security
+    AcceptNotEncoded: false
   PaymentWithShorts:
     # When set to true players will be able to make payments by using short amount formats like 10k which results into 10000 and similar
     # In addition 10.2k will result into 10200
@@ -142,6 +150,8 @@ Optimizations:
   ShowSkullOwner: true
   # When enabled you will see beeHive information in action bar when right clicking it
   ShowBeeHiveInformation: true
+  # When enabled you will see decorated pot contents information in action bar when right clicking it
+  ShowDecoratedPotInformation: true
   # Sets indicator when creating elevator signs. Its case insensitive
   ElevatorIndicator: '[CMIElevator]'
   SignEdit:
@@ -173,6 +183,10 @@ Optimizations:
   # When set to true, commands in help page will be sorted alphabeticaly
   # If set to false, commands will be sorted by priority
   CommandSorting: true
+  # By default we will not allow Rcon type commands, if you have your server properly setup to accept remote console commands safely and you have a need then you can enable it
+  AllowRconCommands: false
+  # When enabled Rcon feedback message will not include color codes for cleaner display
+  CleanRconCommands: false
   # Percentage value (1-100) to pick best command match if command cant be found
   # Example: /cmi spawnmb will have 87.5% match with /cmi spawnmob
   # Set to 0 to disable
@@ -267,7 +281,7 @@ Optimizations:
   Hat:
     Block:
       # When enabled we will not allow to place items into head slot if item has custom lore
-      # Doesn't limitation doesn't apply to helmet items
+      # Doesn't apply to helmet items
       WithLore: false
       # When enable we wont allow to equip items which are not hat type
       NoneHatItems: true
@@ -295,6 +309,7 @@ Optimizations:
   MaxHp: 200
   # When set to true, player play time will be grabbed from user stats file instead of from CMI user data file
   # This can help to get more accurate play time if you have older server and using players stats feature
+  # Recommended to keep this at true
   PlayTimeFromStats: true
   # Do you want to run auto top playtime updater
   # This is responsible for providing players current top playtimes which gets updated on consistent intervals, useful for placeholders
@@ -433,9 +448,12 @@ Sleeping:
     # Keep in mind that time speed up only works on a normal type world and by default you will have only one
     # Set this list to [] if you want to include all possible worlds
     Worlds: []
-    # When this set to true time will be speed up only between 13000 and 24000 ticks of the day
+    # When this set to true time will be speed up only between 12542 and 24000 ticks of the day
     # When having this set to false players can speed up day durring storms or other events
     OnlyDurringNight: true
+    # Time when night starts
+    # This is in ticks, so 12542 will be 18:32:00
+    NightStartsAt: 12542
     # Type of speedup information, can be: none, title, bossbar
     InfoType: title
     # When set to true, players who are in afk mode will be excluded from speed calculations
@@ -494,8 +512,15 @@ ExploitPatcher:
   # While this is set to true players will be limited in how many pages they can create
   # Limitation is determined by cmi.book.pages.§f[20to100]§6 permission node and by default players can create 20 pages
   LimitBooks: true
+  # While enabled we will prevent items being teleported with end portal and end beacons
+  BlockEndPortalItemTransfers: true
   # When enabled we will not allow usage of riptide while player has pweather set to rain while players world is in sunny state
   Riptide: true
+  Placeholders:
+    blocked:
+      # By default we are blocking PAPI %checkitem_...% placeholder to avoid potential serious issues with it
+      # Only disable this if you have dedicated protection for it
+      checkItem: true
 Vault:
   # If your having issues with vault grabbing correct players' group or balance, consider to turn this to false
   Money: true
@@ -553,7 +578,7 @@ ReSpawn:
     - spawn
     - homeLocation
     - worldSpawn
-  # Defines respawn order for defines worlds
+  # Defines respawn order for defined worlds
   # Set respawn priority to [] or to random respawn criteria if you want to leave respawn handling for server or 3rd party plugin
   Specific:
     world:
@@ -630,6 +655,8 @@ Afk:
   SmartInteractCheck: true
   # Prevents from players abusing afk by constantly moving in afk machine
   AntiAfkMachines: true
+  # Prevents players from being  pooled around while player is in afk mode
+  PreventHook: true
   # EXPERIMENTAL! Prevents players from being pushed around while player is in afk mode
   # Keep in mind that player can still be moved around the same block he is in
   PreventPushing: false
@@ -681,7 +708,6 @@ Holograms:
     # Defines default page change interval
     # When value is set to 0 or lower, pages will not be changed
     pageChangeInterval: 0.0
-    # Possible values: down, up
     # Defines if we should place lines up from starting position or down
     placeUp: true
 Votifier:
@@ -780,9 +806,13 @@ Notes:
   # When enebled, when player logs in who has alert set on him, staff member will get notification that this player have some notes attached to him
   ShowOnAlertEvent: true
 GroundClean:
-  # List of item types not to be removed on ground clean action
   WhiteList:
-  - itemType
+    # List of item types not to be removed on ground clean action
+    Material:
+    - itemType
+    # List of item types not to be removed on ground clean action
+    EntityType:
+    - entityType
 Command:
   CommandFilter:
     Duplicate:
@@ -800,6 +830,11 @@ Command:
       - tell
       - login
       - register
+    # Priority of command spam listener
+    # Changed priority will only take effect on full server restart
+    # Possible options: LOWEST, LOW, NORMAL, HIGH, HIGHEST
+    # Default: LOW
+    Priority: LOW
   Spy:
     # Commands in this list will not be shown when command spy is enabled for player for security/privacy reasons
     # This can be bypassed with cmi.command.commandspy.bypass permission node
@@ -854,7 +889,7 @@ NickName:
   MaxLength: 16
   # Adds prefix for players nickname to indicate that its not real name. This can be added to display name with {nicknameprefix}
   Prefix: '~'
-  # When true, will only add nickname prefix when its not same as original name. This can allow colorization or capitalization change without addign prefix
+  # When true, will only add nickname prefix when its not same as original name. This can allow colorization or capitalization change without adding prefix
   PrefixWhenDifferent: false
   TabComplete:
     # When true, online players nick name will be used instead of real name in tabcomplete
@@ -1131,7 +1166,7 @@ FlightCharge:
   # Set this to 'none' if you want to disable it
   GlowColor: none
 Point:
-  # Default particle for point command. Options: fireworks_spark, crit, magic_crit, potion_swirl, potion_swirl_transparent, spell, instant_spell, witch_magic, note, portal, flying_glyph, flame, lava_pop, footstep, splash, particle_smoke, explosion_huge, explosion_large, explosion, void_fog, small_smoke, cloud, coloured_dust, snowball_break, waterdrip, lavadrip, snow_shovel, slime, heart, villager_thundercloud, happy_villager, large_smoke, water_bubble, water_wake, suspended, barrier, mob_appearance, end_rod, damage_indicator, sweep_attack, totem, spit, squid_ink, bubble_pop, current_down, bubble_column_up, nautilus, dolphin, water_splash, campfire_signal_smoke, campfire_cosy_smoke, sneeze, composter, flash, falling_lava, landing_lava, falling_water, dripping_honey, falling_honey, landing_honey, falling_nectar, soul_fire_flame, ash, crimson_spore, warped_spore, soul, dripping_obsidian_tear, falling_obsidian_tear, landing_obsidian_tear, reverse_portal, white_ash, light, falling_spore_blossom, spore_blossom_air, small_flame, snowflake, dripping_dripstone_lava, falling_dripstone_lava, dripping_dripstone_water, falling_dripstone_water, glow_squid_ink, glow, wax_on, wax_off, electric_spark, scrape, block_marker, sonic_boom, sculk_soul, sculk_charge_pop, cherry_leaves, 
+  # Default particle for point command. Options: fireworks_spark, crit, magic_crit, potion_swirl, potion_swirl_transparent, spell, instant_spell, witch_magic, note, portal, flying_glyph, flame, lava_pop, footstep, splash, particle_smoke, explosion_huge, explosion_large, explosion, void_fog, small_smoke, cloud, coloured_dust, dust, snowball_break, waterdrip, lavadrip, snow_shovel, slime, heart, villager_thundercloud, happy_villager, large_smoke, water_bubble, water_wake, suspended, barrier, mob_appearance, end_rod, damage_indicator, sweep_attack, totem, spit, squid_ink, bubble_pop, current_down, bubble_column_up, nautilus, dolphin, water_splash, campfire_signal_smoke, campfire_cosy_smoke, sneeze, composter, flash, falling_lava, landing_lava, falling_water, dripping_honey, falling_honey, landing_honey, falling_nectar, soul_fire_flame, ash, crimson_spore, warped_spore, soul, dripping_obsidian_tear, falling_obsidian_tear, landing_obsidian_tear, reverse_portal, white_ash, light, falling_spore_blossom, spore_blossom_air, small_flame, snowflake, dripping_dripstone_lava, falling_dripstone_lava, dripping_dripstone_water, falling_dripstone_water, glow_squid_ink, glow, wax_on, wax_off, electric_spark, scrape, block_marker, sonic_boom, sculk_soul, sculk_charge_pop, cherry_leaves, small_gust, trial_spawner_detection_ominous, vault_connection, infested, item_cobweb, ominous_spawning, raid_omen, trial_omen, poof, explosion_emitter, firework, bubble, fishing, underwater, enchanted_hit, effect, instant_effect, entity_effect, witch, dripping_water, dripping_lava, mycelium, enchant, item_snowball, item_slime, item, block, rain, elder_guardian, falling_dust, totem_of_undying, dust_color_transition, vibration, sculk_charge, shriek, egg_crack, dust_plume, white_smoke, gust, gust_emitter_large, gust_emitter_small, trial_spawner_detection, dust_pillar, 
   DefaultParticle: COLOURED_DUST
 Messages:
   Login:
@@ -1327,12 +1362,8 @@ WorldLimits:
     - None
     world_the_end:
     - None
-# Checks and shows on players login if he have been changed hes name over Mojang
-# Looks to be working only with online servers, duhhhh
+# Checks if players name changed from last known
 CheckForNameChange:
-  OnLogin: false
-  AmountToShow: 3
-  OnInfoShow: true
   # Do you want to perform commands
   PerformCommandsOnNewName: false
   # Command list to be performed in case player logs in with new name
@@ -1499,6 +1530,9 @@ Combat:
     # When set to true player will see boss bar message indicating how long until combat mode ends
     # This only applies for pve type combat
     ShowBossBar: false
+    # When enabled we will include damage from environmental damage into mob combat timer
+    # This can include damage from cactus, magma blocks, suffocation, burning, fall damage and similar
+    IncludeEnvironment: true
     # When enabled we will show damage numbers in a form of holograms when damaging mobs
     ShowDamageNumbers: true
     DamageNumbersFormat: '&c❤[damage]'
@@ -1577,6 +1611,7 @@ Vanish:
     sleepIgnore: true
     joinVanished: false
     deathMessages: false
+    hookPlayers: false
 Player:
   Options:
     CloseButton:
@@ -1638,7 +1673,7 @@ WarmUps:
   # tp:5:false means that when player performs /tp command he will need to wait 5 sec
   # false variable is optional and when its set to false player cant move while warmup is counting
   # If you dont want to deny empty warp command but want to deny any extra variable after that, then just add space, in example 'warp :5:false'
-  # When setting warmups for CMI commands, use full command name and not allias, in example 'cmi warp:5false'
+  # When setting warmups for CMI commands, use full command name and not allias, in example 'cmi warp:5:false'
   # Administration can bypass limitations with cmi.warmupbypass.[commandname] permission node
   # ATTENTION! cmi home command is being handled in special way and to prevent double warmup, add space, example: - cmi home :5:false
   # Experimental: add GlyphHead to the warmup to show particle effect while command is on warmup period. Like
@@ -1646,7 +1681,11 @@ WarmUps:
   Enabled: false
   InformOnNoMove: true
   showCounterBarInfo: false
-  showBossBarInfo: false
+  BossBarInfo:
+    Enabled: false
+    Color: blue
+    # Options: 1, 6, 10, 12, 20
+    Segments: '1'
   List:
   - cmi tp :5:false
   - cmi back:3:true
@@ -1787,45 +1826,48 @@ Enchanting:
     # This only applies for enchant command not for natural enchanting
     Enabled: true
     MaxLevel:
-      protection_fire: 4
-      damage_all: 5
-      arrow_fire: 1
-      soul_speed: 3
-      water_worker: 1
-      arrow_knockback: 2
-      loyalty: 3
-      depth_strider: 3
-      vanishing_curse: 1
-      durability: 3
-      knockback: 2
-      luck: 3
-      binding_curse: 1
-      loot_bonus_blocks: 3
-      protection_environmental: 4
-      dig_speed: 5
-      mending: 1
-      frost_walker: 2
-      lure: 3
-      loot_bonus_mobs: 3
-      piercing: 4
-      protection_explosions: 4
-      damage_undead: 5
-      multishot: 1
+      density: 5
       swift_sneak: 3
-      fire_aspect: 2
-      channeling: 1
-      sweeping_edge: 3
-      thorns: 3
-      damage_arthropods: 5
-      oxygen: 3
-      riptide: 3
-      silk_touch: 1
-      quick_charge: 3
-      protection_projectile: 4
-      impaling: 5
+      breach: 4
       protection_fall: 4
-      arrow_damage: 5
       arrow_infinite: 1
+      arrow_fire: 1
+      impaling: 5
+      protection_environmental: 4
+      knockback: 2
+      depth_strider: 3
+      luck: 3
+      silk_touch: 1
+      loyalty: 3
+      vanishing_curse: 1
+      protection_fire: 4
+      channeling: 1
+      binding_curse: 1
+      quick_charge: 3
+      damage_arthropods: 5
+      frost_walker: 2
+      multishot: 1
+      protection_projectile: 4
+      water_worker: 1
+      soul_speed: 3
+      wind_burst: 3
+      loot_bonus_mobs: 3
+      damage_undead: 5
+      piercing: 4
+      lure: 3
+      riptide: 3
+      arrow_damage: 5
+      protection_explosions: 4
+      mending: 1
+      fire_aspect: 2
+      oxygen: 3
+      thorns: 3
+      sweeping_edge: 3
+      arrow_knockback: 2
+      damage_all: 5
+      dig_speed: 5
+      loot_bonus_blocks: 3
+      durability: 3
   # When set to true, players will be required to have cmi.enchantments.[enchantname] permission node
   RequireSpecificPermission: false
   # When enabled we will only allow to enchant items with valid enchantments
@@ -1922,6 +1964,9 @@ BungeeCord:
   Enabled: true
   # When set to true player names from entire bungee network will be included into tab complete
   NamesInTabComplete: false
+  # When enabled player can return to previous server when using /back comand instead of being teleported to previous location on that server
+  # This only applies if player came to this server without teleporting around
+  BackToPreviousServer: false
 Recipes:
   Condense:
     # When enabled trying to condsense or uncondense we will check for backwards recipe and will not allow to perform those actions if player is unable to revert his actions
