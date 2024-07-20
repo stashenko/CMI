@@ -6,6 +6,7 @@
 # PermissionRequirement section defines list of permissions player should have to rankup to that rank. Optional - For each permission node you can add its name which will be shown in /cmi rankinfo with : In example cmi.command.fly:Fly
 # McMMORequirement section defines list of McMMO skills and levels player should have to rankup to that rank.
 # AureliumRequirement section defines list of Aurelium skills and levels player should have to rankup to that rank.
+# AuraSkillsRequirement section defines list of Aura skills and levels player should have to rankup to that rank.
 # McMMO and Aurelium sections can use skill name as Power to indicate total sum of all skills
 # JobsRequirement section defines list of Jobs and levels player should have to rankup to that rank.
 # ItemRequirement section defines list of items player should have to rankup to that rank. Items will be taken after succesfull rankup from players inventory.
@@ -83,126 +84,413 @@
 #         MonsterKills - defines amount of monster kills. If specific monster is not defined, then total amount is used
 #         KilledBy - defines amount of deaths by monster. If specific monster is not defined, then total amount is used
 
-Newbie:
+Рядовой:
   Enabled: true
-  DisplayName: '&2Новичок'
+  DisplayName: '&2Рядовой'
   DefaultRank: true
   AutoRankup: true
   NextRanks:
-  - Branch1
-  - Branch2
-Branch1:
+  - Ефрейтор
+  Commands:
+  - broadcast! &6[playerDisplayName] &eВаш ранг Рядовой, скоро станете Ефрейтор!
+  StatsRequirements:
+  - PlayTime:300
+Ефрейтор:
   Enabled: true
-  DisplayName: '&2Отряд1'
+  DisplayName: '&2Ефрейтор'
   AutoRankup: true
   RankupConfirmation: true
-  Votes: 5
-  PermissionRequirement:
-  - cmi.command.fly:Fly
-  McMMORequirement:
-  - woodcutting:10
-  - power:20
-  JobsRequirement:
-  - miner:10
-  - totallevel:20
   ItemRequirement:
   - stone:10
   - stone:1:20
   - book:20
   NextRanks:
-  - Branch1Rank1
+  - Младший_сержант
   MoneyCost: 100
   Commands:
-  - broadcast! &6[playerDisplayName] &eпрокачан до ранга Отряд1 !
+  - broadcast! &6[playerDisplayName] &eРанг повышен до Ефрейтор!
   StatsRequirements:
-  - PlayTime:3600
+  - PlayTime:36000
   - travel:1000
   - MonsterKills:zombie:10
   - MonsterKills:slime:5
   - MonsterKills:wolf:5
-  - AccountAge:1209600
-Branch1Rank1:
+  - AccountAge:36000
+Младший_сержант:
   Enabled: true
-  DisplayName: '&2Отряд1Ранг1'
-  DefaultRank: false
-  AutoRankup: true
-  RankupConfirmation: false
-  PermissionRequirement:
-  - cmi.command.heal:Heal
-  NextRanks:
-  - Last
-  MoneyCost: 300
-  ExpCost: 350
-  Commands:
-  - broadcast! &6[playerDisplayName] &eпрокачан до ранга Отряд1Ранг1 !
-  StatsRequirements:
-  - travel:10000
-  - blocksmined:3000
-  - blocksmined:diamond_ore:30
-  - MonsterKills:1000
-  - AccountAge:1209600
-  McMMORequirement:
-  - taming:10
-  - unarmed:30
-Branch2:
-  Enabled: true
-  DisplayName: '&2Отряд2'
+  DisplayName: '&2Младший сержант'
   AutoRankup: true
   RankupConfirmation: true
-  MoneyCost: 150
+  ItemRequirement:
+  - stone:10
+  - stone:1:20
+  - book:20
   NextRanks:
-  - Branch2Rank1
+  - Сержант
+  MoneyCost: 200
   Commands:
-  - broadcast! &6[playerDisplayName] &eпрокачан до ранга Отряд2 !
-  PermissionRequirement:
-  - cmi.command.tp:Teleport
+  - broadcast! &6[playerDisplayName] &eРанг повышен до Младший сержант!
   StatsRequirements:
-  - PlayTime:3600
-  - travel:2000
-  - MonsterKills:zombie:15
-  - MonsterKills:slime:10
-Branch2Rank1:
+  - PlayTime:60000
+  - travel:1000
+  - MonsterKills:zombie:10
+  - MonsterKills:slime:5
+  - MonsterKills:wolf:5
+  - AccountAge:72000
+Сержант:
   Enabled: true
-  DisplayName: '&2Отряд2Ранг1'
+  DisplayName: '&2Сержант'
   AutoRankup: true
-  RankupConfirmation: false
-  MoneyCost: 100
+  RankupConfirmation: true
+  ItemRequirement:
+  - stone:10
+  - stone:1:20
+  - book:20
+  NextRanks:
+  - Старший_сержант
+  MoneyCost: 300
+  Commands:
+  - broadcast! &6[playerDisplayName] &eРанг повышен до Сержант!
+  StatsRequirements:
+  - PlayTime:80000
+  - travel:1000
+  - MonsterKills:zombie:10
+  - MonsterKills:slime:5
+  - MonsterKills:wolf:5
+  - AccountAge:144000
+Старший_сержант:
+  Enabled: true
+  DisplayName: '&2Старший сержант'
+  AutoRankup: true
+  RankupConfirmation: true
+  ItemRequirement:
+  - stone:10
+  - stone:1:20
+  - book:20
+  NextRanks:
+  - Старшина
+  MoneyCost: 400
+  Commands:
+  - broadcast! &6[playerDisplayName] &eРанг повышен до Старший сержант!
+  StatsRequirements:
+  - PlayTime:100000
+  - travel:1000
+  - MonsterKills:zombie:10
+  - MonsterKills:slime:5
+  - MonsterKills:wolf:5
+  - AccountAge:288000
+Старшина:
+  Enabled: true
+  DisplayName: '&2Старшина'
+  AutoRankup: true
+  RankupConfirmation: true
+  ItemRequirement:
+  - stone:10
+  - stone:1:20
+  - book:20
+  NextRanks:
+  - Прапорщик
+  MoneyCost: 500
+  Commands:
+  - broadcast! &6[playerDisplayName] &eРанг повышен до Старшина!
+  StatsRequirements:
+  - PlayTime:150000
+  - travel:1000
+  - MonsterKills:zombie:10
+  - MonsterKills:slime:5
+  - MonsterKills:wolf:5
+  - AccountAge:576000
+Прапорщик:
+  Enabled: true
+  DisplayName: '&2Прапорщик'
+  AutoRankup: true
+  RankupConfirmation: true
+  ItemRequirement:
+  - stone:10
+  - stone:1:20
+  - book:20
+  NextRanks:
+  - Старший_прапорщик
+  MoneyCost: 1000
+  Commands:
+  - broadcast! &6[playerDisplayName] &eРанг повышен до Прапорщик!
+  StatsRequirements:
+  - PlayTime:200000
+  - travel:1000
+  - MonsterKills:zombie:10
+  - MonsterKills:slime:5
+  - MonsterKills:wolf:5
+  - AccountAge:600000
+Старший_прапорщик:
+  Enabled: true
+  DisplayName: '&2Старший прапорщик'
+  AutoRankup: true
+  RankupConfirmation: true
+  ItemRequirement:
+  - stone:10
+  - stone:1:20
+  - book:20
+  NextRanks:
+  - Младший_лейтенант
+  MoneyCost: 2000
+  Commands:
+  - broadcast! &6[playerDisplayName] &eРанг повышен до Старший прапорщик!
+  StatsRequirements:
+  - PlayTime:250000
+  - travel:1000
+  - MonsterKills:zombie:10
+  - MonsterKills:slime:5
+  - MonsterKills:wolf:5
+  - AccountAge:700000
+Младший_лейтенант:
+  Enabled: true
+  DisplayName: '&2Младший лейтенант'
+  AutoRankup: true
+  RankupConfirmation: true
+  ItemRequirement:
+  - stone:10
+  - stone:1:20
+  - book:20
+  NextRanks:
+  - Лейтенант
+  MoneyCost: 200000
+  Commands:
+  - money give [playerName] 200000
+  - broadcast! &6[playerDisplayName] &eРанг повышен до Младший лейтенант!
+  StatsRequirements:
+  - PlayTime:300000
+  - travel:9000
+  - blocksmined:9000
+  - MonsterKills:zombie:700
+  - MonsterKills:slime:80
+  - MonsterKills:wolf:80
+  - AccountAge:800000
+Лейтенант:
+  Enabled: true
+  DisplayName: '&2Лейтенант'
+  AutoRankup: true
+  RankupConfirmation: true
+  ItemRequirement:
+  - stone:10
+  - stone:1:20
+  - book:20
+  NextRanks:
+  - Старший_лейтенант
+  MoneyCost: 200000
+  Commands:
+  - money give [playerName] 200000
+  - broadcast! &6[playerDisplayName] &eРанг повышен до Лейтенант!
+  StatsRequirements:
+  - PlayTime:330000
+  - travel:10000
+  - blocksmined:10000
+  - MonsterKills:zombie:700
+  - MonsterKills:slime:80
+  - MonsterKills:wolf:80
+  - AccountAge:900000
+Старший_лейтенант:
+  Enabled: true
+  DisplayName: '&2Старший лейтенант'
+  AutoRankup: true
+  RankupConfirmation: true
+  ItemRequirement:
+  - stone:10
+  - stone:1:20
+  - book:20
+  NextRanks:
+  - Капитан
+  MoneyCost: 250000
+  Commands:
+  - money give [playerName] 250000
+  - broadcast! &6[playerDisplayName] &eРанг повышен до Старший лейтенант!
+  StatsRequirements:
+  - PlayTime:350000
+  - travel:11000
+  - blocksmined:11000
+  - MonsterKills:zombie:700
+  - MonsterKills:slime:80
+  - MonsterKills:wolf:80
+  - AccountAge:1000000
+Капитан:
+  Enabled: true
+  DisplayName: '&2Капитан'
+  AutoRankup: true
+  RankupConfirmation: true
+  ItemRequirement:
+  - stone:10
+  - stone:1:20
+  - book:20
+  NextRanks:
+  - Подполковник
+  MoneyCost: 200000
+  Commands:
+  - money give [playerName] 200000
+  - broadcast! &6[playerDisplayName] &eРанг повышен до Капитан!
+  StatsRequirements:
+  - PlayTime:400000
+  - travel:12000
+  - blocksmined:12000
+  - MonsterKills:zombie:700
+  - MonsterKills:slime:80
+  - MonsterKills:wolf:80
+  - AccountAge:1100000
+Подполковник:
+  Enabled: true
+  DisplayName: '&2Подполковник'
+  AutoRankup: true
+  RankupConfirmation: true
+  ItemRequirement:
+  - stone:10
+  - stone:1:20
+  - book:20
+  NextRanks:
+  - Полковник
+  MoneyCost: 250000
+  Commands:
+  - money give [playerName] 250000
+  - broadcast! &6[playerDisplayName] &eРанг повышен до Подполковник!
+  StatsRequirements:
+  - PlayTime:430000
+  - travel:13000
+  - blocksmined:13000
+  - MonsterKills:zombie:700
+  - MonsterKills:slime:80
+  - MonsterKills:wolf:80
+  - AccountAge:1200000
+Полковник:
+  Enabled: true
+  DisplayName: '&2Полковник'
+  AutoRankup: true
+  RankupConfirmation: true
+  ItemRequirement:
+  - stone:10
+  - stone:1:20
+  - book:20
+  NextRanks:
+  - Генерал_майор
+  MoneyCost: 250000
+  Commands:
+  - money give [playerName] 250000
+  - broadcast! &6[playerDisplayName] &eРанг повышен до Полковник!
+  StatsRequirements:
+  - PlayTime:450000
+  - travel:14000
+  - blocksmined:14000
+  - MonsterKills:zombie:700
+  - MonsterKills:slime:80
+  - MonsterKills:wolf:80
+  - AccountAge:1300000
+Генерал_майор:
+  Enabled: true
+  DisplayName: '&2Генерал-майор'
+  AutoRankup: true
+  RankupConfirmation: true
+  ItemRequirement:
+  - stone:10
+  - stone:1:20
+  - book:20
+  NextRanks:
+  - Генерал_лейтенант
+  MoneyCost: 300000
+  Commands:
+  - money give [playerName] 300000
+  - broadcast! &6[playerDisplayName] &eРанг повышен до Генерал-майор!
+  StatsRequirements:
+  - PlayTime:500000
+  - travel:15000
+  - blocksmined:15000
+  - MonsterKills:zombie:700
+  - MonsterKills:slime:80
+  - MonsterKills:wolf:80
+  - AccountAge:1400000
+Генерал_лейтенант:
+  Enabled: true
+  DisplayName: '&2Генерал-лейтенант'
+  AutoRankup: true
+  RankupConfirmation: true
+  ItemRequirement:
+  - stone:10
+  - stone:1:20
+  - book:20
+  NextRanks:
+  - Генерал_полковник
+  MoneyCost: 350000
+  Commands:
+  - money give [playerName] 350000
+  - broadcast! &6[playerDisplayName] &eРанг повышен до Генерал-лейтенант!
+  StatsRequirements:
+  - PlayTime:600000
+  - travel:18000
+  - blocksmined:18000
+  - MonsterKills:zombie:700
+  - MonsterKills:slime:80
+  - MonsterKills:wolf:80
+  - AccountAge:1500000
+Генерал_полковник:
+  Enabled: true
+  DisplayName: '&2Генерал-полковник'
+  AutoRankup: true
+  RankupConfirmation: true
+  ItemRequirement:
+  - stone:10
+  - stone:1:20
+  - book:20
+  NextRanks:
+  - Генерал
+  MoneyCost: 400000
+  Commands:
+  - money give [playerName] 400000
+  - broadcast! &6[playerDisplayName] &eРанг повышен до Генерал-полковник!
+  StatsRequirements:
+  - PlayTime:700000
+  - travel:20000
+  - blocksmined:20000
+  - MonsterKills:zombie:700
+  - MonsterKills:slime:80
+  - MonsterKills:wolf:80
+  - AccountAge:1600000
+Генерал:
+  Enabled: true
+  DisplayName: '&2Генерал'
+  AutoRankup: true
+  RankupConfirmation: true
+  ItemRequirement:
+  - stone:10
+  - stone:1:20
+  - book:20
+  NextRanks:
+  - Маршал
+  MoneyCost: 500000
+  Commands:
+  - money give [playerName] 500000
+  - broadcast! &6[playerDisplayName] &eРанг повышен до Генерал!
+  StatsRequirements:
+  - PlayTime:800000
+  - travel:25000
+  - blocksmined:25000
+  - MonsterKills:zombie:800
+  - MonsterKills:slime:100
+  - MonsterKills:wolf:100
+  - AccountAge:1700000
+Маршал:
+  Enabled: true
+  DisplayName: '&2Маршал'
+  AutoRankup: true
+  RankupConfirmation: true
+  ItemRequirement:
+  - stone:10
+  - stone:1:20
+  - book:200
+  MoneyCost: 1000000
   ExpCost: 150
-  NextRanks:
-  - Branch2Rank2
   Commands:
-  - broadcast! &6[playerDisplayName] &eпрокачан до ранга Отряд2Ранг1 !
+  - pex user [playerName] group set Admin
+  - broadcast! &6[playerDisplayName] &eРанг повышен до Маршал (&2Высший ранг сервера&e)!
   StatsRequirements:
-  - PlayTime:4600
-  - Swim:1000
-  - SneakTime:180
-  - MonsterKills:100
-Branch2Rank2:
-  Enabled: true
-  DisplayName: '&2Отряд2Rank2'
-  AutoRankup: true
-  RankupConfirmation: false
-  MoneyCost: 100
-  ExpCost: 150
-  NextRanks:
-  - Last
-  Commands:
-  - broadcast! &6[playerDisplayName] &eпрокачан до ранга Отряд2Ранг2 !
-  StatsRequirements:
-  - walk:15000
-  - HorseTravel:1000
-  - ItemsUsed:10000
-  - PlayerKills:10
-Last:
-  Enabled: true
-  DisplayName: '&2Высший'
-  AutoRankup: true
-  StatsRequirements:
-  - PlayTime:21600
-  - walk:30000
-  - MonsterKills:1000
-  - blocksmined:30000
-  Commands:
-  - broadcast! &6[playerDisplayName] &eпрокачан до ранга Высший !
-  - cmi heal [playerName]
-  - money give [playerName] 100
+  - PlayTime:6480000
+  - travel:3000000
+  - blocksmined:300000
+  - MonsterKills:zombie:10000
+  - MonsterKills:slime:500
+  - MonsterKills:wolf:500
+  - AccountAge:2000000
