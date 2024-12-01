@@ -258,6 +258,7 @@ afk:
     с нами в группе VK или Discord'
 BossBar:
   hpBar: '&f[victim] &e[current]&f/&e[max] &f(&c-[damage]&f)'
+  playerhpBar: '&f%cmi_user_display_name% &7[current]&f/&7[max] &f(&c-[damage]&f)'
 Potion:
   Effects: '&8Эффекты зелья'
   List: '&e[PotionName] [PotionAmplifier] &eПродолжительность: &e[LeftDuration] &eсек'
@@ -486,6 +487,7 @@ command:
       name: '&7Видимое имя'
       nameEdit: '&7Средний клик мыши для редактирования имени'
       interactable: '&7Взаимодействие'
+      scale: '&7Scale: &f[amount]'
       explanation: '&8Левая или правая кнопка мыши регулирует значение'
       explanation2: '&8Удерживайте SHIFT, чтобы сделать его в 10 раз быстрее'
       disableGravity: '&eОтключите гравитацию, если хотите изменить это значение'
@@ -518,6 +520,7 @@ command:
         glow: '&7Свечение'
         invulnerable: '&7Неуязвимый'
         interactable: '&7Интерактивный'
+        scale: '&7Scale'
         head: '&7Голова'
         torso: '&7Торс'
         leftArm: '&7Левая рука'
@@ -553,9 +556,9 @@ command:
       info: '&eПереключение автоматической подзарядки в полете'
       args: '&6(Ник_игрока) [exp/money/off] (-s)'
     info:
-      disabled: '&eАвтоматическая подзарядка отключена'
-      moneyEnabled: '&eВключена автоматическая подзарядка полёта с помощью &6денег'
-      expEnabled: '&eВключена автоматическая подзарядка полетё с помощью &2exp'
+      moneyState: '&eMoney recharge: [state]'
+      expState: '&eExp recharge: [state]'
+      updated: '&eState changed to [state]'
   back:
     help:
       info: '&eТелепортация к последнему сохраненному местоположению'
@@ -1424,6 +1427,8 @@ command:
     help:
       info: '&eУправление gamerules'
       args: ''
+    info:
+      updated: '&eGame rule (&6[rule]&e) changed for &6[world] &eto &6[value]'
   generateworth:
     help:
       info: '&eАвтоматически генерировать возможные значения стоимости предмета'
@@ -1436,6 +1441,16 @@ command:
       list: '&eКниги: &6'
       check: '&eПроверить: &6[text]'
       title: '&7[title]'
+  giftpet:
+    help:
+      info: '&eGift your tamed pet to another player'
+      args: '[playerName] (-s)'
+    info:
+      notTameable: '&eThis entity isin''t tameable'
+      notTamed: '&eThis entity isin''t tamed'
+      notOwner: '&eYou are not owner of this entity'
+      gifted: '&eYou gifted &6[type] &eentity &eto &6[playerDisplayName]'
+      received: '&eYou received &6[type] &eentity &efrom &6[sourceDisplayName]'
   give:
     help:
       info: '&eВыдать предмет игроку'
@@ -1691,6 +1706,7 @@ command:
       iconScale: '&7Масштаб значка: &6[scale]'
       iconPitch: '&7Шаг значка: &6[angle]'
       iconYaw: '&7Поворот значка: &6[angle]'
+      iconXoff: '&7Icon offset on X: &6[amount]'
       reset: '&7Нажмите &6Q &7для сброса'
       embeddedAutoButton: '&7Включены кнопки нумерации страниц. [state]'
       # Use ctext format to define different behaviors for plain and hover over text
@@ -1746,6 +1762,7 @@ command:
       bedButton: '&7Расположение кровати'
       homeButton: '&7Расположение точки дома'
       deathButton: '&7Точка смерти'
+      backButton: '&7Back location'
       slot: '&7Slot: &e[slot]'
       private: '&7Private: &e[state]'
       favorite: '&7Favorite: &e[state]'
@@ -2556,20 +2573,20 @@ command:
         (&3[offon]&e).'
       targetfeedback: '&3[senderDisplayName]&e открыл &6[type] &eторговли для вас.'
       professions:
+        leatherworker: Кожевник
+        mason: Каменщик
+        fletcher: Лучник
+        weaponsmith: Оружейник
+        toolsmith: Инструментальщик
+        librarian: Библиотекарь
+        shepherd: Пастух
+        farmer: Фермер
+        cleric: Священник
+        nitwit: Бронник
+        cartographer: Картограф
         armorer: Бронник
         butcher: Мясник
-        cartographer: Картограф
-        cleric: Священник
-        farmer: Фермер
         fisherman: Рыбак
-        fletcher: Лучник
-        leatherworker: Кожевник
-        librarian: Библиотекарь
-        mason: Каменщик
-        nitwit: Бронник
-        shepherd: Пастух
-        toolsmith: Инструментальщик
-        weaponsmith: Оружейник
   migratedatabase:
     help:
       info: '&eИзменение системы базы данных и перенос всех данных'
@@ -2782,7 +2799,7 @@ command:
         visibleHolograms: '&eВидимые голограммы'
         shiftSignEdit: '&eРедактирование табличек'
         totemBossBar: '&eБоссБар Тотема'
-        bassBarCompass: '&eБоссБар Компаса'
+        bossBarCompass: '&eCompass BossBar'
         tagSound: '&eЗвук пометки чата'
         chatSpy: '&eЧат-шпион'
         cmdSpy: '&eШпион за командами'
@@ -2796,6 +2813,7 @@ command:
         pveDamageNumbers: '&eПоказывает цифры урона в PvE.'
         pvpDamageNumbers: '&eПоказывает цифры урона в PvP.'
         InformDurability: '&eИнформировать о потере прочности предмета'
+        receivePets: '&eDo you want to receive pets as gifts'
   panimation:
     help:
       info: '&eВоспроизвести кастомную анимацию частиц'
@@ -3094,6 +3112,12 @@ command:
         Unknown: Неизвестный
       page: ' &0[current]&7/&0[total]'
       noRecipes: '&cНе удалось найти рецепты для этого предмета'
+  releasepet:
+    help:
+      info: '&eRelease your tamed pet'
+      args: (-s)
+    info:
+      released: '&eYou have released &6[type] &einto wilderness!'
   reload:
     help:
       info: '&eПерезагрузить конфигурации и локализации плагина'
