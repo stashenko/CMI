@@ -57,10 +57,10 @@ Block:
     - '&2[playerDisplayName] &7заколот сладким ягодным кустом'
   Campfire:
     General:
-    - '&2[playerDisplayName] &7got roasted on campfire'
+    - '&2[playerDisplayName] &7поджарился на костре'
   Soul_campfire:
     General:
-    - '&2[playerDisplayName] &7soul was taken away'
+    - '&2[playerDisplayName] &7отдал душу'
   Lava:
     General:
     - '&2[playerDisplayName] &7пытался плавать в лаве'
@@ -138,7 +138,7 @@ Mob:
     - '&2[playerDisplayName] &7взорван'
   Tnt_minecart:
     General:
-    - '&2[playerDisplayName] &7blew up'
+    - '&2[playerDisplayName] &7взорван'
   Elder_guardian:
     General:
     - '&2[playerDisplayName] &7убит мобом &2[mobName]'
@@ -556,6 +556,6 @@ Mob:
     - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
   Creaking:
     General:
-    - '&2[playerDisplayName] &7killed by &2[mobName]'
+    - '&2[playerDisplayName] &7убит мобом &2[mobName]'
     Item:
-    - '&2[playerDisplayName] &7killed by &2[mobName] &7with &2[item]'
+    - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
