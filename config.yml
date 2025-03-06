@@ -5,14 +5,14 @@
 # Language file you want to use
 Language: RU
 # Defines if you want to auto download default locale files from github repository
-# You can disable this if you are using EN or you already have your locale setup and you dont need to have other languages being downloaded
+# You can disable this if you are using EN or you already have your locale set up and you don't need other languages to be downloaded.
 LanguageDownload: false
 Economy:
-  # Enable or disable CMI economy in general
-  # In case CMIInjector is present, then this will be set to true automatically.
-  # Attention! For economy to work properly with other plugins you will need ether an injector or recompiled Vault version. 
+  # Enable or disable the CMI economy in general
+  # If CMIInjector is present, this will be set to true automatically
+  # Attention! For economy to work properly with other plugins you will need either an injector or a recompiled Vault version.
   # You can find both option at top of plugins page
-  # ATTENTION! If you disabled CMI economy while server was running, you will need to perform full server restart for this to take correct effect and avoid any issues while getting players balances
+  # ATTENTION! If you disabled CMI economy while server was running, you will need to perform a full server restart for this to take effect and avoid issues when retrieving players' balances.
   Enabled: true
   # Determines if player needs to confirm money payment by clicking on chat message
   Confirmation: false
@@ -25,23 +25,23 @@ Economy:
     - Zrips
   Cheque:
     # Determines max amount of cheque player can create
-    # Set it to 0 to remove limit
+    # Set it to 0 to remove the limit
     MaxValue: 1.0E8
-    # If set to true player will be required to hold peace of paper to create cheque
+    # If set to true, the player will be required to hold a piece of paper to create a cheque.
     Paper: true
-    # When set to true player will be required to have cmi.command.cheque.withdraw permission node to withdraw cheque
+    # When set to true, the player will be required to have cmi.command.cheque.withdraw permission node to withdraw cheque
     Permission: false
-    # Should we allow checque usage in creative mode
+    # Should we allow cheque usage in creative mode?
     # If you have creative server, keep this at false or players could start duplicating items
     InCreative: false
     # Should we accept old cheque item stacks with non encoded data in them
-    # Keep it at false for most security
+    # Keep it set to false for maximum security
     AcceptNotEncoded: false
   PaymentWithShorts:
     # When set to true players will be able to make payments by using short amount formats like 10k which results into 10000 and similar
     # In addition 10.2k will result into 10200
     Allow: true
-    # List of suffixes we should accept and into what amount it results into
+    # List of suffixes we should accept and what amount they result in.
     # Only one letter is acceptable when defining suffix
     values:
     - k-1000
@@ -111,12 +111,12 @@ InteractiveCommands:
   # Default format is [ic:[icName]] in example [ic:trash]
   # If you want clean format use regex like: (\[([a-zA-Z0-9]+)\])
   SignRegex: (\[ic:([a-zA-Z0-9]+)\])
-  # Sorting of IC list ether by distance from you or alphabetically
+  # Sorting of IC list either by distance from you or alphabetically
   SortByDistance: true
 Optimizations:
   # When disabled we wont try to deop fake operator on server starup or unload while at same time disabling asFakeOp! specialized command usage
   UseFakeOperator: true
-  # When disabled we will not check for posible infinite loops while performing custom alias commands
+  # When disabled we will not check for possible infinite loops while performing custom alias commands
   InfiniteLoopDetection: true
   # When this set to true any message sent to console will be strip out of any colors
   # In case you have mohochrome console, keep this at true
@@ -136,15 +136,15 @@ Optimizations:
   DisableTeamManagement: false
   ArmorStands:
     # When set to true, plugin will check if player can manipulate armor stand by sending fake block place event and checking if any plugin would want to prevent this action
-    # This can help out to minimize posibility for players to manipulate armor stands when they dont have build permission in area where armorstand is standing
+    # This can help out to minimize posibility for players to manipulate armor stands when they don't have build permission in area where armorstand is standing
     CheckBlockPlace: false
     Templates:
-      # When set to true player will be required to have cmi.command.armorstand.template.[templatename] permission node to deploy saved template
+      # When set to true, the player will be required to have cmi.command.armorstand.template.[templatename] permission node to deploy saved template
       SpecificPermission: false
   AutoDownload:
-    # In case you dont have GeoIP.dat it will be downloaded automatically on server start. Restart can be needed for it to take effect
+    # In case you don't have GeoIP.dat it will be downloaded automatically on server start. Restart can be needed for it to take effect
     GeoIp: false
-    # In case you dont have GeoLiteCity.dat it will be downloaded automatically on server start. Restart can be needed for it to take effect
+    # In case you don't have GeoLiteCity.dat it will be downloaded automatically on server start. Restart can be needed for it to take effect
     GeoLiteCity: false
   # When enabled you will see skull owner name in action bar when right clicking it
   ShowSkullOwner: true
@@ -153,7 +153,8 @@ Optimizations:
   # When enabled you will see decorated pot contents information in action bar when right clicking it
   ShowDecoratedPotInformation: true
   # Sets indicator when creating elevator signs. Its case insensitive
-  ElevatorIndicator: '[CMIElevator]'
+  ElevatorIndicator:
+  - '[CMIElevator]'
   SignEdit:
     # Defines sign top line by which player will not be able to edit sign with /cmi se command
     BlackList:
@@ -171,6 +172,9 @@ Optimizations:
   ShortDateFormat: dd/MM/yy
   # Do you want to record sell hand actions into file
   SellLog: true
+  # When set to true players with same name but different capitalization will be denyied from joining server to avoid possible issues. In example if on first day player Zrips joined server and on second day player zRips tries to join server, he will be rejected
+  # RECOMMENDED to keep this at true
+  PreventDifferentCapitalizationNames: false
   # When this set to true by using any command, requiring players name, in case plugin cant determine player by given full name, then partial matches from online players will be used. In example: /cmi heal rips can heal player Zrips 
   # Useful when you have players with complicated names
   PartialPlayerName: false
@@ -185,6 +189,7 @@ Optimizations:
   CommandSorting: true
   # By default we will not allow Rcon type commands, if you have your server properly setup to accept remote console commands safely and you have a need then you can enable it
   AllowRconCommands: false
+  CustomCommandSender: []
   # When enabled Rcon feedback message will not include color codes for cleaner display
   CleanRconCommands: false
   # Percentage value (1-100) to pick best command match if command cant be found
@@ -214,10 +219,12 @@ Optimizations:
     # Set this to 0 if you want to disable it
     # Max 60 seconds
     Invulnerability: 5
-    # When this set to true each time player teleports to any destination he will be teleported to spawn point
-    # This is to prevent from people knowing to which direction you have teleported too
-    # As everyone noticed, teleportation doesnt actually teleport you, but moves to targetdestination in short time
-    ToSpawnBefore: false
+    # Situations where teleport invulnerability gets disabled
+    DisableInvulnerability:
+      # Disables if player breaks or places block
+      OnBlockBreakPlace: true
+      # Disables if player interacts with a block or entity
+      OnInteraction: true
     # Set to true if you want to use tp commands as /cmi tp [WhoYouWantToTeleport] [WhereToTeleport] when its false, its /cmi tp [whereToTeleport] [WhoYouWantToTeleport]
     SwitchPlaces: true
     CurrentLoc:
@@ -270,14 +277,23 @@ Optimizations:
       - DiamondBlock
       - DiamondOre
       - ironore:5
-    # Back location will not be triggered if player teleports closer than defined amount of blocks
-    BackMinDistance: 5
-    # When set to false we will not include teleport location when teleporting around with worldedit compass
-    # When set to true we will include each teleport action, even if you simply jumped around with compass
-    BackWithWE: true
-    # List of worlds to which players can't return using the /back command
-    BackBlackList:
-    - TeztWorldz
+    Back:
+      # Back location will not be triggered if player teleports closer than defined amount of blocks
+      MinDistance: 5
+      # When set to false we will not include teleport location when teleporting around with worldedit compass
+      # When set to true we will include each teleport action, even if you simply jumped around with compass
+      WithWE: true
+      # List of worlds to which players can't return using the /back command
+      BlackList:
+      - TeztWorldz
+      # Time in seconds /back command should expire. Set to 0 to disable
+      Expiration: 0
+    DBack:
+      # List of worlds to which players can't return using the /dback command
+      BlackList:
+      - TeztWorldz
+      # Time in seconds /dback command should expire. Set to 0 to disable
+      Expiration: 0
   Hat:
     Block:
       # When enabled we will not allow to place items into head slot if item has custom lore
@@ -292,6 +308,7 @@ Optimizations:
       # When disabled player will need to have cmi.inventoryhat to put on mob heads as hats
       MobHeads: true
     # List of materials to be allowed on players head
+    # Keep it empty to allow all materials on player head
     WhiteList:
     - bedrock
   helpop:
@@ -300,6 +317,7 @@ Optimizations:
   IP:
     # When set to true, players ip will be recorded for future use, like recognizing players other accounts
     # Some commands will have limited usage when this is disabled
+    # Keep in mind that this could increase cached data size due to how much data this stores for each player, especially if users have dynamic ip's
     Record: true
     # How long in second to wait until players ip is being recorded into data base
     # This only applies for offline servers to allow for player first of all to login before recording ip
@@ -437,7 +455,7 @@ PlaytimeRewards:
   # This will show next X amount rewards from your current playtime
   # No point in listing all rewards if player is still far away
   OneTimeAmount: 2
-  # When set to true player will be required to have cmi.prewards.[name] permission node to get particular playtime reward
+  # When set to true, the player will be required to have cmi.prewards.[name] permission node to get particular playtime reward
   RequiresPermission: false
 Sleeping:
   Speedup:
@@ -599,99 +617,6 @@ ReSpawn:
     - spawn
     - homeLocation
     - worldSpawn
-Afk:
-  # Enable or disable auto afk system entirely
-  Enabled: false
-  # When enabled shows title message informing that player is in afk mode
-  TitleMessage: true
-  # When enabled shows random subtitle message
-  SubTitleMessage: true
-  # Prevents jumping in one place to avoid afk status
-  PreventJumping: true
-  # Prevents damage while afk
-  PreventDamage: true
-  # Defines how often in seconds plugin will check for afk players state
-  CheckInterval: 10
-  # When set to true, players playtime counter stops
-  # As of nature how this system works you can see +-1second jumping up and down while checking players playtime
-  StopPlayTime: false
-  # Defines how long to wait after player stops moving to set him as afk
-  # Player needs to have cmi.command.afk.auto permission node
-  # Set to 0 if you want to disable it
-  AutoAfkIn: 300
-  # Defines commands to be performed when player enters afk mode automatically while addling
-  # Supports specialized commands
-  AutoAfkCmds:
-  - cmi broadcast !&6[playerDisplayName] &eв АФК
-  # Defines commands to be performed when player enters /cmi afk
-  # Supports specialized commands
-  ManualAfkCmds:
-  - cmi broadcast !&6[playerDisplayName] &eв АФК
-  # Defines commands to be performed when player leaves afk mode
-  AfkLeaveCmds:
-  - cmi broadcast !&6[playerDisplayName] &eбольше не в АФК
-  # Defines how long to wait after player stops moving to kick player
-  # This is additional timer to AutoAfkIn and in case player entered afk mode manually he will get kicked after AutoAfkIn+AutoKickIn seconds
-  # This can be used not only to kick but to perform repeating action every x seconds if needed
-  # Keep it at -1 to disable auto kick
-  # Can be bypassed with cmi.command.afk.kickbypass permission node
-  # Additionally players kick time can be changed with cmi.command.afk.kickOutIn.[seconds] permission node where bigger value takes priority
-  AutoKickIn: -1
-  # This will define how long to wait before performing kick commands again
-  RepeatingAutoKickInterval: 300
-  # When set to true, kick command will be repeated each RepeatingAutoKickInterval seconds
-  RepeatKickCommand: false
-  # Defines commands to be performed when player can be kicked
-  # If player is not kicked then commands will be repeated every RepeatingAutoKickInterval seconds
-  AutoKickCmds:
-  - cmi kick [playerName] &eВас кикнули за бездействие более [time]
-  # Defines worlds where players will not be placed into afk mode after they idled for defined time
-  DisabledWorlds:
-  - oneTestWorld
-  - secondTestWorld
-  # Disables afk on interaction
-  DisableOnInteract: true
-  # Prevents player from going bypassing afk mode while continuously holding one button with particular items or on particular blocks
-  SmartInteractCheck: true
-  # Prevents from players abusing afk by constantly moving in afk machine
-  AntiAfkMachines: true
-  # Prevents players from being  pooled around while player is in afk mode
-  PreventHook: true
-  # EXPERIMENTAL! Prevents players from being pushed around while player is in afk mode
-  # Keep in mind that player can still be moved around the same block he is in
-  PreventPushing: false
-  # Disables afk on inventory click
-  DisableOnInventoryClick: true
-  # Disables afk on item drop
-  DisableOnitemDrop: true
-  # Disables afk on command usage
-  DisableOnCommand: true
-  # Disables afk on public chat message
-  DisableOnPublicChat: true
-  # Disables afk on private chat message
-  DisableOnPrivateChat: true
-  # Disables afk on move
-  DisableOnMove: true
-  # Disables afk on camera movement
-  DisableOnLookAround: false
-  # Disables afk on fishing when you catch fish
-  DisableOnFishing: false
-  # Disables item pickup while afk
-  DisableItemPickup: false
-  PreventMobSpawning:
-    # When enabled we can prevent mob spawning near players who are afk
-    Enabled: false
-    # Prevents natural mob spawning
-    # This can be more on heavy side of the server as it will try constantly to spawn in monsters near afk players
-    Natural: false
-    # Prevent mob spawning from spawners
-    Spawners: true
-    # Usually responsible for spawning in iron golems
-    VillageDefence: true
-  # Disables exp pickup while afk
-  # Attention! Because of weird minecraft handling of exp orbs, best way is to set orb to 0exp and allow it to be obsorbed
-  # So by enabling this exp obsorbed by afk players will have no effect
-  DisableExpPickup: false
 Holograms:
   # Defines in milliseconds how often to check if player entered holograms trigger area
   # Bigger numbers can help slightly lower server load
@@ -728,7 +653,7 @@ Votifier:
   CommandsOnVote:
   - cmi broadcast !&6[playerDisplayName] &eпроголосовал!
   - cmi give [playerName] diamond
-  # Keep it at false if you dont want to give out extra rewards
+  # Keep it at false if you don't want to give out extra rewards
   ExtraRewardsEnabled: false
   # Commands will be performed when player collect determined amount of votes
   ExtraRewards:
@@ -836,6 +761,11 @@ Command:
     # Default: LOW
     Priority: LOW
   Spy:
+    # Delay in seconds for commands spy to turn on after relog
+    # This will prevent some one from loging in with admin account and seeing commands before loging in
+    # Keep it at same or higher than your login plugin delay for entering password
+    # This includes social spy too
+    DelayForTrigger: 60
     # Commands in this list will not be shown when command spy is enabled for player for security/privacy reasons
     # This can be bypassed with cmi.command.commandspy.bypass permission node
     BlackListed:
@@ -843,6 +773,7 @@ Command:
     - login
     - l
     # Players without cmi.security.admin will only see commands from this list with command spy feature
+    # Keeping it empty will include all commands except the black listed ones
     CommandList:
     - cmi spawn
     - cmi tp
@@ -922,6 +853,16 @@ Spawners:
     SilkTouchLevel: 1
     # Number in percentage from 0 up to 100 for a spawner to be dropped when you break one
     BaseDropChance: 100
+    StopDropping:
+      # Enable or disable spawner dropping stopping after certain amount of spawners being mined
+      Enabled: false
+      # Number of spawners player is able to actually mine before its drop chance is set to 0
+      # This is based on players statistics records of mined spawners in total, this INCLUDES failed drops as well, so adjust acordingly
+      # Permission as cmi.dropspawner.stopafter.[positivevalue] can be used to define limit with permission node instead
+      After: 0
+      # When enabled drop change will slowly drop down based on previous set value and how many spawners player has mined
+      # This will not go lower than 1% of drop chance until previous set value is reached
+      Linear: false
   Place:
     # Enable or disable spawner handler for spawner place
     # If enabled player will place spawner depending from what it is by its type
@@ -934,9 +875,14 @@ Spawners:
     # If set to false, then player will need to have basic cmi.placespawner permission to place any type of spawner
     RequiresExactPermission: false
   Interact:
-    # When set to true, players trying to change spawner with monster egg will require appropriate permission node
-    # In example: player should have cmi.egginteract.pig to change spawner into pig, or cmi.egginteract.zombie to change into zombie spawner
-    EggRequiresPermission: false
+    Spawner:
+      # When set to true, players trying to change spawner with monster egg will require appropriate permission node
+      # In example: player should have cmi.egginteract.pig to change spawner into pig, or cmi.egginteract.zombie to change into zombie spawner
+      RequiresPermission: false
+    TrialSpawner:
+      # When set to true, players trying to change trial spawner with monster egg will require appropriate permission node
+      # In example: player should have cmi.trialegginteract.pig to change spawner into pig, or cmi.trialegginteract.zombie to change into zombie spawner
+      RequiresPermission: false
   # If set to true, spawners will have chance to be dropped when destroying with tnt
   TnTExplosionDrop:
     use: false
@@ -987,6 +933,12 @@ ItemRenaming:
   # Defines maximum length of item name excluding color codes for itemname command
   # Set it to 0 if you want to remove restrictions
   MaxLength: 64
+  Anvil:
+    # When enabled and items name is being colorized, we will enforce it to be in Italic to mimic vanilla item renaming
+    ItalicByDefault: true
+  # When enabled we will check source item in adition to final one
+  # This can prevent items with specific names being completely disabled from being renamed and prevent other items being renamed into them
+  CheckSource: true
   # List of materials followed with optional regex code which can prevent specific naming, like renaming mob spawners into another type while still allowing renaming spawner into anything else
   List:
   - mobspawner:([A-z]+ (?i)\w*spawner)
@@ -1040,7 +992,7 @@ Animations:
   DoubleClickDelay: 200
   # Range in blocks from player to look up for valid chair block
   ChairRange: 4
-# All possible damage causes: kill, world_border, contact, entity_attack, entity_sweep_attack, projectile, suffocation, fall, fire, fire_tick, melting, lava, drowning, block_explosion, entity_explosion, void, lightning, suicide, starvation, poison, magic, wither, falling_block, thorns, dragon_breath, custom, fly_into_wall, hot_floor, cramming, dryout, freeze, sonic_boom, 
+# All possible damage causes: kill, world_border, contact, entity_attack, entity_sweep_attack, projectile, suffocation, fall, fire, fire_tick, melting, lava, drowning, block_explosion, entity_explosion, void, lightning, suicide, starvation, poison, magic, wither, falling_block, thorns, dragon_breath, custom, fly_into_wall, hot_floor, campfire, cramming, dryout, freeze, sonic_boom, 
 # Syntax should be [permissionNode]:[damageCause]:[multiplier]
 # Example: nolavadamage:lava:0 will prevent lava damage with cmi.damagecontrol.nolavadamage permission node
 # Negative values will heal player instead of damaging him
@@ -1051,6 +1003,9 @@ DamageControl:
 Totem:
   # When this set to true, on players death totem will be used even if he is not holding it in hand
   RemoveFromInventory: false
+  # Require permission node for totem to be taken from inventory
+  # RemoveFromInventory should be set to true and if this enabled player will need cmi.totem.frominventory
+  RequirePermission: false
   Cooldown:
     # When this set to true player can use totem only every X second's
     Use: false
@@ -1210,9 +1165,13 @@ Books:
 # Defines name of customtext on players login to server. To disable just set name to non existing customText
 Motd: welcomeMessage
 Warnings:
+  # Should be always present. This will be used when category of warning isint being defined when warning player
   Default:
+    # Time in seconds for how long this warning applies to player
     LifeTime: 86400
+    # Warning point amount player receives for warning
     Points: 1
+    # Default reason used when reason is not provided when warning player
     DefaultReason: '&7Нарушены правила сервера'
   Categories:
     Swear:
@@ -1247,6 +1206,7 @@ Spawn:
   IgnoredWorlds: []
   # Defines players spawn point after death if set to true, if not, then it will be used only for /cmi spawn command
   # RespawnLocation will indicate if you want to use this location as possible respawn point for player after death
+  # TeleportFrom will indicate list of worlds from which player should be teleported to this spawn point
   Main:
     World: world
     X: -15.300000011920929
@@ -1256,6 +1216,7 @@ Spawn:
     Yaw: -42.150635
     RespawnLocation: false
     Rng: 0
+    TeleportFrom: []
   # Defines players first spawn point when he logs into server for the first time
   FirstSpawn:
     Use: true
@@ -1330,7 +1291,7 @@ DynamicViewRange:
   # Don't enable if you are not using this feature on your server
   Enabled: false
 WorldLimits:
-  # By setting to true fly and gamemode limitations per world will be aplied for player on world change if they dont have appropiate permission node
+  # By setting to true fly and gamemode limitations per world will be aplied for player on world change if they don't have appropiate permission node
   Enabled: false
   # World list with default game modes
   # If player will have cmi.worldlimit.gamemode.bypass permission node, game mode wont be changed
@@ -1354,7 +1315,7 @@ WorldLimits:
   # If player will have cmi.worldlimit.god.bypass permission node, god mode wont be changed
   GodMode:
   - testWorld:False
-  # Prevents particular entity spawn reasons in defined worlds. All possible reasons: NATURAL, JOCKEY, CHUNK_GEN, SPAWNER, EGG, SPAWNER_EGG, LIGHTNING, BUILD_SNOWMAN, BUILD_IRONGOLEM, BUILD_WITHER, VILLAGE_DEFENSE, VILLAGE_INVASION, BREEDING, SLIME_SPLIT, REINFORCEMENTS, NETHER_PORTAL, DISPENSE_EGG, INFECTION, CURED, OCELOT_BABY, SILVERFISH_BLOCK, MOUNT, TRAP, ENDER_PEARL, SHOULDER_ENTITY, DROWNED, SHEARED, EXPLOSION, RAID, PATROL, BEEHIVE, PIGLIN_ZOMBIFIED, SPELL, FROZEN, METAMORPHOSIS, DUPLICATION, COMMAND, CUSTOM, DEFAULT
+  # Prevents particular entity spawn reasons in defined worlds. All possible reasons: NATURAL, JOCKEY, CHUNK_GEN, SPAWNER, TRIAL_SPAWNER, EGG, SPAWNER_EGG, LIGHTNING, BUILD_SNOWMAN, BUILD_IRONGOLEM, BUILD_WITHER, VILLAGE_DEFENSE, VILLAGE_INVASION, BREEDING, SLIME_SPLIT, REINFORCEMENTS, NETHER_PORTAL, DISPENSE_EGG, INFECTION, CURED, OCELOT_BABY, SILVERFISH_BLOCK, MOUNT, TRAP, ENDER_PEARL, SHOULDER_ENTITY, DROWNED, SHEARED, EXPLOSION, RAID, PATROL, BEEHIVE, PIGLIN_ZOMBIFIED, SPELL, FROZEN, METAMORPHOSIS, DUPLICATION, COMMAND, ENCHANTMENT, OMINOUS_ITEM_SPAWNER, POTION_EFFECT, CUSTOM, DEFAULT
   SpawnReasons:
     world:
     - None
@@ -1485,100 +1446,6 @@ Cooldowns:
   List:
   - cmi heal:180
   - cmi feed:120
-Combat:
-  # Defines combat timer to be used in particular features
-  Timer: 15
-  # When enabled we will allow for players to be damaged in safe zone if they are tagged for pvp
-  safeZoneDamage: false
-  # If set to true, then attacked player will be included into combat mode even if he doesnt fight back
-  # If set to false then only attacker will be marked for pvp mode
-  IncludeVictim: true
-  Player:
-    # If set to true, then player who gets placed into combat mode will get its fly mode disabled
-    # This will disable players fly mode which will result in player dropping down and will disable option to start flying
-    # This can be bypassed by player performing fly command if he has access to it and commands durring combat are not blocked
-    # Can be bypassed with cmi.pvp.PFlyBypass permission node
-    DisableFlight: false
-    # If set to true player whose fly mode got disabled will not suffer fall damage, once
-    DisableFallDamage: false
-    # When set to true player will see boss bar message indicating how long until combat mode ends
-    # This only applies for pvp type combat
-    ShowBossBar: false
-    # When enabled we will show damage numbers in a form of holograms when damaging players
-    ShowDamageNumbers: true
-    DamageNumbersFormat: '&c⚔[damage]'
-    # Prevents damage from players with god mode enabled
-    # Can be bypassed with cmi.pvp.godBypass permission node
-    noGodDamage: false
-    # Informs player that he cant damage players while in god mode
-    noGodDamageInform: false
-    # When set to true players will be only able to use commands defined in the list
-    # This only applies for pvp type combat
-    BlockCommands: false
-    AllowedCommands:
-    - msg
-    - r
-    - tell
-    # When set to true AllowedCommands become black list which will define which commands player cant use
-    MakeBlackList: false
-  Mob:
-    # If set to true, then player who gets placed into combat mode will get its fly mode disabled
-    # Can be bypassed with cmi.pvp.MFlyBypass permission node
-    DisableFlight: false
-    # If set to true player whose fly mode got disabled will not suffer fall damage, once
-    DisableFallDamage: false
-    # When set to true player will see boss bar message indicating how long until combat mode ends
-    # This only applies for pve type combat
-    ShowBossBar: false
-    # When enabled we will include damage from environmental damage into mob combat timer
-    # This can include damage from cactus, magma blocks, suffocation, burning, fall damage and similar
-    IncludeEnvironment: true
-    # When enabled we will show damage numbers in a form of holograms when damaging mobs
-    ShowDamageNumbers: true
-    DamageNumbersFormat: '&c❤[damage]'
-    # Prevents damage from players with god mode enabled
-    # Can be bypassed with cmi.pve.godBypass permission node
-    noGodDamage: false
-    # Informs player that he cant damage mobs while in god mode
-    noGodDamageInform: false
-    # When set to true players will be only able to use commands defined in the list
-    # This only applies for pve type combat
-    BlockCommands: false
-    AllowedCommands:
-    - msg
-    - r
-    - tell
-    # When set to true AllowedCommands become black list which will define which commands player cant use
-    MakeBlackList: false
-  Heads:
-    Player:
-      Drop: false
-      # Percentage from 0 to 100 for head to be dropped. Decimals are acceptable, like 0.2
-      # 100 will mean that head will be dropped every time player kills another player
-      # 1 will mean that there is 1% that player will drop head if he is killed by another player
-      Percentage: 1.0
-      # Percentage from 0 to 100 for lowering chance in getting second head of same player
-      # This will reset on each server restart
-      LowerChanceOfterDrop: 50.0
-      # When enabled player heads will have bigger chance to drop when using tools with looting enchantment
-      # Value is in % and it will add appropriate percentage to current drop chance by using drop chance itself
-      # For example player who has head drop change of 1% with looting 3 which has 30% bonus will have 1.3% as end value (default values)
-      # This only applies for player heads
-      # You can add as many levels as you want, simply duplicate line and set new number, in example
-      # Lvl33: 35.5
-      LootBonus:
-        Enabled: true
-        Lvl1: 5.0
-        Lvl2: 15.0
-        Lvl3: 30.0
-      # List of worlds where we should drop player heads. Keep it empty if you want to include all possible ones
-      Worlds: []
-    Mob:
-      # Enables custom mob heads dropping from mobs with particular chance
-      # Check CustomHeads.yml for customization by entityType
-      Drop: false
-      # List of worlds where we should drop mob heads. Keep it empty if you want to include all possible ones
-      Worlds: []
 ShulkerBoxes:
   # When set to true, players will not have option to open shulker boxes while in combat
   # Combat timer can be defined under combat section
@@ -1612,6 +1479,7 @@ Vanish:
     joinVanished: false
     deathMessages: false
     hookPlayers: false
+    level: true
 Player:
   Options:
     CloseButton:
@@ -1633,7 +1501,7 @@ Player:
       visibleHolograms: true
       shiftSignEdit: true
       totemBossBar: true
-      bassBarCompass: true
+      bossBarCompass: true
       tagSound: true
       # !Strongly not recommended to be enabled!
       chatSpy: false
@@ -1650,11 +1518,12 @@ Player:
       pveDamageNumbers: true
       pvpDamageNumbers: true
       InformDurability: true
+      receivePets: true
     Icons:
       visibleHolograms: BLACK_STAINED_GLASS
       shiftSignEdit: OAK_SIGN
       totemBossBar: TOTEM_OF_UNDYING
-      bassBarCompass: COMPASS
+      bossBarCompass: COMPASS
       tagSound: PAPER
       chatSpy: BUCKET
       cmdSpy: WATER_BUCKET
@@ -1668,11 +1537,12 @@ Player:
       pveDamageNumbers: WOODEN_SWORD
       pvpDamageNumbers: DIAMOND_SWORD
       InformDurability: ANVIL
+      receivePets: LEAD
 WarmUps:
   # You can enable any command warmup to prevent instant command usage
   # tp:5:false means that when player performs /tp command he will need to wait 5 sec
   # false variable is optional and when its set to false player cant move while warmup is counting
-  # If you dont want to deny empty warp command but want to deny any extra variable after that, then just add space, in example 'warp :5:false'
+  # If you don't want to deny empty warp command but want to deny any extra variable after that, then just add space, in example 'warp :5:false'
   # When setting warmups for CMI commands, use full command name and not allias, in example 'cmi warp:5:false'
   # Administration can bypass limitations with cmi.warmupbypass.[commandname] permission node
   # ATTENTION! cmi home command is being handled in special way and to prevent double warmup, add space, example: - cmi home :5:false
@@ -1718,6 +1588,7 @@ Jail:
     # Commands to be performed when player gets unjailed
     OnUnJail:
     - ''
+  # If you want to white list base CMI command then use its full name and not its shortened alias version
   WhiteListedCmds:
   - cmi msg
   - cmi reply
@@ -1878,92 +1749,17 @@ Enchanting:
   # Keep in mind that this will not prevent player from enchanting item to lower levels then permission was set too
   # And keep in mind that players without defined permission node will have access to level 1 enchants by default
   PermissionLevelLimit: false
-Scavenge:
-  ItemBreak:
-    # Defined percentage for item to break when salvaging it
-    # Value can be from 0 to 100, where 100 means that each time player extract enchant, item breaks
-    # This can allow player to extract enchantments without breaking item itself
-    # Set it to 100 if you want to always break item
-    # Keep in mind that broken item will go throw ingredient return process
-    # Attention! Items without enchants will have 100% break chance
-    Base: 8.0
-    # Adds extra chance to break item depending on how many enchants item has
-    # In example having base chance of 8% and having this set to 2 while having item with 3 enchants will result into 8+(2*3)=14% chance to break item
-    ForEachEnchant: 2.0
-    # Adds extra chance to break item depending on enchant level
-    # This will take into consideration enchantment max and current levels
-    # Having this set to 7.5 means, that enchantment at max level will have 7.5% extra chance to to break item
-    # But if you have sharpness 2 which has max level of 5, then only 3% fail chance will be added
-    ForEachEnchantLevel: 2.0
-    # Defines in percentage a max chance to break item when extracting enchants
-    # This can limit chance to particular one in case it gets to 100% and it would always break
-    MaxBreakChance: 100.0
-    # Value between 0 and 100 which defines extra fail chance when items doesnt have max durability
-    # Having this set to 50 will mean that item at 1 left durability will have fail chance increase by 50%
-    # Items which are not damaged will not experience any fail chance increase
-    BreakDurabilityCheck: 50.0
-    # When set to true, items durability will be taken into consideration when extracting ingredients
-    # In example if item has 100 max durability and current is at 50, then only half of ingredients will be considered for extraction
-    # This doesnt mean that player gets 50% of them, it only means that half of possible ingredients will go throw IngredientReturn process
-    DurabilityCheck: true
-    IngredientReturn:
-      # Defines in percentage a max chance to return ingredients of item if it fails extraction process
-      # This will apply for each ingredient that item has
-      # Recipe to make that item should exist in database, or it will not return any ingredients
-      Base: 25.0
-  EnchantExtractionFail:
-    # Adds base chance to fail enchantment extraction
-    # When enchantment fails, player will not get enchant book with appropriate enchantment
-    Base: 10.0
-    # Adds extra chance to fail enchantment extraction depending on enchantment level
-    # This will take into consideration enchantment max and current levels
-    # Having this set to 75 means, that enchantment at max level will have 75% chance to fail extraction process
-    # But if you have sharpness 2 which has max level of 5, then only 30% chance to fail will get applied
-    # While enchants like Aquaaffinity will always have max fail chance as you can only have it at level 1
-    ForEachLevel: 10.0
-    # Defines in percentage a max chance to fail enchantment extraction
-    # This can limit chance to particular one in case it gets to 100% and it would always fail
-    MaxFailChance: 75.0
-    LevelLower:
-      # Defines a chance lowering enchant level if it fails extraction
-      # This is secondary step when extraction fails and will only apply when it does
-      # If Enchant is at level 1 already, then player will not get enchanted book at all
-      # If you want to avoid lowering level of enchant when it fails extraction, set this to 100
-      # If you want to always lower level down when extracting enchantments, then set EnchantExtractionFail.Base to 100 and set this to 100
-      Base: 50.0
-      # Will adjust level lowering chance depending on enchant level to defined max amount at max level
-      # This will mean that higher levels will have higher chance to be lowered
-      ForEachLevel: 5.0
-      # Will adjust level lower chance depending on enchant level to defined max amount at max level
-      MaxChance: 75.0
-  Cost:
-    # Defined base cost of extraction. Set to 0 if you want to make it free
-    Base: 100.0
-    # Extra cost which depends on enchantment worth which can be defined with /cmi setenchantworth 
-    # This value is in percentage from worth value of that each enchantment and item
-    # So if you have base cost of 100, extra cost of 5% and you are trying to extract sharpness 5 which worth is 1000 and item sell hand worth is 100, then you will have to pay 155 for extraction process
-    Extra: 5.0
-  # List of materials to block from being scavenged
-  BlackList:
-  - diamond
-  - ironingot
-  - goldingot
-  - coal
-  - IRON_NUGGET
-  - GOLD_NUGGET
-  # When set to true, balck list becomes whitelist and will allow scavanging of items defined in a blacklist only
-  BlackToWhiteList: false
-  # When set to false while player have open scavange UI they will not be able to pickup item from ground
-  AllowItemPickups: false
-  # When enabled items, likes swords, after being salvagted if they dint broke then their repair cost will be reset so players can enchant it as like its a new one instead of making it to dificult to be enchanted
-  ResetRepairCost: true
 BungeeCord:
   # You can disable bungeecord support entirely if you are exrperiencing issues with it
   # When setting this to false some features like public messages over bungee cord, private messages over bungeecord, portals over bungecoord and other features will stop working
   # Keep in mind that regular behavior of those features will remain intacted
   Enabled: true
-  # When set to true player names from entire bungee network will be included into tab complete
-  NamesInTabComplete: false
+  TabComplete:
+    # When set to true player names from entire bungee network will be included into tab complete
+    PlayerNames: false
+    # List of servers we want to include into tab complete
+    # If list is empty then all servers will be used
+    Servers: []
   # When enabled player can return to previous server when using /back comand instead of being teleported to previous location on that server
   # This only applies if player came to this server without teleporting around
   BackToPreviousServer: false
@@ -1976,12 +1772,27 @@ Recipes:
     # Should we condense recipes with 4 same ingredients
     # While this is enabled and RequireBackwards disabled then oak plants might be converted into workbenches
     4Sized: true
+BlueMap:
+  Warps:
+    # Do you want to show warps in BlueMap?
+    # For most settings to take effect you need to restart the server
+    Enabled: true
+    ToggledOffDefault: false
+    # Name of the markers in BlueMap
+    Label: CMIWarps
+    # Path to an icon image. Make sure to have correctly sized icon which normally should be around 32x32 pixels
+    Icon: https://www.zrips.net/ICON_Warp.png
+    # This should generally be half the size of icon's size
+    IconAnchor: 16
+    # List of warp names we should not show. Keep in mind that hidden warps are not shown by default already
+    BlackList: []
 # If you want to disable particular sound entirely, set it to "" 
 Sounds:
   Enabled: true
   WarpGuiOpen: entity_bat_takeoff:0.5:1
   TeleportHome: block_beacon_activate:2:1
   TeleportWarp: entity_enderman_teleport:0.5:1
+  TeleportSpawn: entity_enderman_teleport:0.5:1
   TeleportFail: entity_villager_no:2:1
   PrivateMessage: entity_endermite_death:2:1
   TpaRequest: block_anvil_land:0.5:2
