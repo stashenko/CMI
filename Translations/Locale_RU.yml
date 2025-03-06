@@ -361,9 +361,9 @@ command:
       fileExplanation: '&7Текущий файл назначения: &e[file]'
       addTabComplete: ' Добавить вкладку'
       addTabExplanation: '&6При включении мы добавим определенные вкладки к существующим.'
-      exact: ' Exact'
-      addExactExplanation: '&6When enabled we will only use this alias when exact
-        command is provided'
+      exact: ' Точно'
+      addExactExplanation: '&6Если включено, мы будем использовать этот псевдоним
+        только тогда, когда указана точная команда'
       newAliasInfo: '&eВведите новое имя алиаса команды и нажмите Enter'
       addInfo: '&eВведите новую команду. Введите &6cancel&e, чтобы отменить'
       addInformationHover: "&eГлобальные переменные, поддерживаемые с задержкой ка\
@@ -3052,7 +3052,7 @@ command:
       types:
         Shaped: Формованный
         Shapeless: Бесформенный
-        Transmute: Transmute
+        Transmute: Трансмутация
         Furnace: Печь
         Blasting: Взрывные работы
         Campfire: Костер
@@ -4347,7 +4347,7 @@ command:
       joinVanished: '&eВсегда присоединяйтесь в режиме ваниш'
       deathMessages: '&eПоказывать сообщение о смерти'
       hookPlayers: '&eПерехват сущностей'
-      level: '&eVanish level'
+      level: '&eУровень ваниша'
       bossbarTitle: '&eРежим скрытия'
   version:
     help:
