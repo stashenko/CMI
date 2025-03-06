@@ -1,5 +1,10 @@
 ChatFilter:
   Enabled: false
+  # Priority of chat filter listener
+  # Changed priority will only take effect on full server restart
+  # Possible options: LOWEST, LOW, NORMAL, HIGH, HIGHEST
+  # Default: LOW
+  Priority: LOW
   Deny:
     ipBlock:
       # If not set to true, this filter will not be used
@@ -58,6 +63,11 @@ ChatFilter:
   DuplicatedMessagePrevention:
     # When set to true, plugin will prevent spaming of same or similar messages in short time range. Can be bypased with cmi.chatfilter.spambypass permission
     Use: false
+    # Priority of chat spam listener
+    # Changed priority will only take effect on full server restart
+    # Possible options: LOWEST, LOW, NORMAL, HIGH, HIGHEST
+    # Default: LOW
+    Priority: LOW
     # How much in percentage message is counted as same
     Percentage: 80
     # Defines how often in seconds you can send same/similar message
@@ -68,12 +78,21 @@ ChatFilter:
     # When nebaled we will try to prevent chat messages with multiple capitalized letters by defined criteria
     # Can be bypassed with cmi.chatfilter.capbypass permission node
     Filter: true
+    # Priority of chat capitalization listener
+    # Changed priority will only take effect on full server restart
+    # Possible options: LOWEST, LOW, NORMAL, HIGH, HIGHEST
+    # Default: LOW
+    Priority: MONITOR
     # Defines amount of letters we can ignore
     # For example ':DDD' would be made of 2 letters with 3 capitalized letters which would make it 75% capitalized
     IgnoreUnder: 6
     # Amount in percentage of capitalized letters we should not cross over.
-    # In example 'GOOD thing' would be 4 capitalized and 5 not, spaces gets ignored, whic makes it 44% capitalized and passes check
+    # In example 'GOOD thing' would be 4 capitalized and 5 not, spaces gets ignored, which makes it 44% capitalized and passes check
     Percentage: 50
+    # When capitalized text is detected, should we lower case text
+    LowerCase: true
+    # Should we cancel chat event if we detect too many caps
+    CancelEvent: false
     # List of commands you want to perform when player uses too many caps
     Commands:
     - asConsole! cmi titlemsg [playerName] &cСлишком много заглавных букв! -keep:20
