@@ -55,6 +55,12 @@ Block:
   Sweet_berry_bush:
     General:
     - '&2[playerDisplayName] &7заколот сладким ягодным кустом'
+  Campfire:
+    General:
+    - '&2[playerDisplayName] &7got roasted on campfire'
+  Soul_campfire:
+    General:
+    - '&2[playerDisplayName] &7soul was taken away'
   Lava:
     General:
     - '&2[playerDisplayName] &7пытался плавать в лаве'
@@ -130,6 +136,9 @@ Mob:
   Primed_tnt:
     General:
     - '&2[playerDisplayName] &7взорван'
+  Tnt_minecart:
+    General:
+    - '&2[playerDisplayName] &7blew up'
   Elder_guardian:
     General:
     - '&2[playerDisplayName] &7убит мобом &2[mobName]'
@@ -545,3 +554,8 @@ Mob:
     - '&2[playerDisplayName] &7убит мобом &2[mobName]'
     Item:
     - '&2[playerDisplayName] &7убит мобом &2[mobName] &7предметом &2[item]'
+  Creaking:
+    General:
+    - '&2[playerDisplayName] &7killed by &2[mobName]'
+    Item:
+    - '&2[playerDisplayName] &7killed by &2[mobName] &7with &2[item]'
